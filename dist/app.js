@@ -1,0 +1,195 @@
+'use strict';
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').toLowerCase();
+const byId=new Map(TOOLS.map(t=>[t.id,t]));
+const catById=new Map(CATEGORIES.map(c=>[c.id,c]));
+const ended=t=>['Sunset','Đã đóng','API đã ngừng'].includes(t.status);
+const hasCode=t=>['Có mã nguồn','Source-available','Hỗn hợp'].includes(t.openness);
+const readStore=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}};
+const writeStore=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value));}catch{/* Storage may be unavailable in private browsing. */}};
+const savedRaw=readStore('ai-atlas-saved',[]);
+const saved=new Set(Array.isArray(savedRaw)?savedRaw.filter(id=>byId.has(id)):[]);
+const compareRaw=readStore('ai-atlas-compare',[]);
+let comparison=Array.isArray(compareRaw)?[...new Set(compareRaw)].filter(id=>byId.has(id)).slice(0,3):[];
+let detailId=null,toastTimer;
+let state={q:'',category:'all',layer:'all',surface:'all',source:'all',status:'all',view:'map',savedOnly:false};
+const symbols={chatgpt:'✳',claude:'✹','claude-code':'✹',gemini:'✦',muse:'m',opencode:'[ ]',openclaw:'⌁',antigravity:'Λ',cursor:'◩',qoder:'Q',perplexity:'⌘','gemini-notebook':'N','github-copilot':'◉','midjourney':'⛵',ollama:'o',mcp:'⤳',n8n:'⑂',manus:'m',dify:'D',v0:'v0',bolt:'ϟ','elevenlabs':'Ⅱ','hugging-face':'Hf'};
+const initials=t=>t.name.split(/[\s.\/-]+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('');
+function avatar(t,extra=''){
+ const c=catById.get(t.category),symbol=symbols[t.id];
+ return `<span class="tool-avatar ${esc(t.id)} ${symbol?'symbol':''} ${extra}" aria-hidden="true" style="--avatar-color:${c.color};--avatar-bg:${c.color}12">${esc(symbol||initials(t))}</span>`;
+}
+function statusChip(t){return t.status!=='Đang hoạt động'?`<span class="status-chip ${ended(t)?'ended':''}">${esc(t.status)}</span>`:'';}
+function readURL(){
+ const p=new URLSearchParams(location.search);
+ state.q=p.get('q')||'';
+ state.category=catById.has(p.get('category'))?p.get('category'):'all';
+ state.layer=LAYERS.some(l=>l.id===p.get('layer'))?p.get('layer'):'all';
+ state.surface=['Web','Desktop','Mobile','CLI','IDE','API','SDK','Messaging','Protocol'].includes(p.get('surface'))?p.get('surface'):'all';
+ state.source=['code','local','service','protocol'].includes(p.get('source'))?p.get('source'):'all';
+ state.status=['current','changed','ended'].includes(p.get('status'))?p.get('status'):'all';
+ state.view=p.get('view')==='list'?'list':'map';state.savedOnly=p.get('saved')==='1';
+ return p.get('tool');
+}
+function updateURL(){
+ const p=new URLSearchParams();
+ for(const key of ['q','category','layer','surface','source','status','view']){
+  if(state[key]&&state[key]!=='all'&&!(key==='view'&&state[key]==='map'))p.set(key,state[key]);
+ }
+ if(state.savedOnly)p.set('saved','1');
+ if(detailId)p.set('tool',detailId);
+ const query=p.toString();history.replaceState(null,'',location.pathname+(query?'?'+query:'')+location.hash);
+}
+const searchable=new Map(TOOLS.map(t=>[t.id,norm([t.name,t.org,t.kind,t.description,t.best,t.note,t.hosting,...t.aliases,catById.get(t.category).name].join(' '))]));
+function filtered(){
+ const words=norm(state.q).trim().split(/\s+/).filter(Boolean);
+ return TOOLS.filter(t=>{
+  if(state.savedOnly&&!saved.has(t.id))return false;
+  if(state.category!=='all'&&t.category!==state.category)return false;
+  if(state.layer!=='all'&&catById.get(t.category).layer!==state.layer)return false;
+  if(state.surface!=='all'&&!t.surfaces.includes(state.surface))return false;
+  if(state.source==='code'&&!hasCode(t))return false;
+  if(state.source==='local'&&!/local|self-host/i.test(t.hosting))return false;
+  if(state.source==='service'&&!['Dịch vụ','Hỗn hợp','Source-available'].includes(t.openness))return false;
+  if(state.source==='protocol'&&t.openness!=='Chuẩn mở')return false;
+  if(state.status==='current'&&ended(t))return false;
+  if(state.status==='changed'&&t.status==='Đang hoạt động')return false;
+  if(state.status==='ended'&&!ended(t))return false;
+  return words.every(w=>searchable.get(t.id).includes(w));
+ });
+}
+function renderNav(){
+ $('#category-nav').innerHTML=LAYERS.map(l=>`<div class="nav-group-title"><span>${esc(l.title.toUpperCase())}</span><span>${l.name}</span></div>${CATEGORIES.filter(c=>c.layer===l.id).map(c=>`<button class="category-button ${state.category===c.id?'active':''}" data-category="${c.id}" aria-pressed="${state.category===c.id}"><span class="category-icon" aria-hidden="true" style="color:${c.color}">${c.icon}</span><span>${esc(c.name)}</span><span class="count">${TOOLS.filter(t=>t.category===c.id).length}</span></button>`).join('')}`).join('');
+ const all=$('[data-category="all"]');all.classList.toggle('active',state.category==='all'&&state.layer==='all');all.setAttribute('aria-pressed',String(state.category==='all'&&state.layer==='all'));
+ $('#all-count').textContent=TOOLS.length;
+}
+function compareButton(t,klass='tile-check'){
+ const selected=comparison.includes(t.id);
+ return `<button class="${klass} ${selected?'selected':''}" data-compare="${t.id}" aria-pressed="${selected}" aria-label="${selected?'Bỏ':'Thêm'} ${esc(t.name)} ${selected?'khỏi':'vào'} so sánh" title="${selected?'Bỏ khỏi':'Thêm vào'} so sánh">${selected?'✓':'+'}</button>`;
+}
+function tile(t){return `<article class="tool-tile" data-entry="${t.id}"><span class="tile-status">${hasCode(t)?'<i class="legend-dot open" title="Có mã nguồn"></i>':''}${t.status!=='Đang hoạt động'?`<i class="legend-dot change" title="${esc(t.status)}"></i>`:''}</span><button class="tile-main" data-tool="${t.id}" aria-label="Xem ${esc(t.name)}${t.status!=='Đang hoạt động'?', '+esc(t.status):''}">${avatar(t)}<span class="tool-name">${esc(t.name)}</span><span class="tile-org">${esc(t.org)}</span></button>${compareButton(t)}${saved.has(t.id)?'<span class="tile-saved" title="Đã lưu">◆</span>':''}</article>`;}
+function renderMap(items){
+ const activeLayers=LAYERS.filter(l=>items.some(t=>catById.get(t.category).layer===l.id));
+ return `<div class="landscape ${activeLayers.length<4?'filtered':''}">${activeLayers.map(l=>`<div class="layer-column" style="--group:${l.color}"><div class="layer-heading"><span class="layer-number">${l.name}</span><div><h3>${esc(l.title)}</h3><p>${esc(l.desc)}</p></div></div>${CATEGORIES.filter(c=>c.layer===l.id).map(c=>{
+  const group=items.filter(t=>t.category===c.id);if(!group.length)return '';
+  return `<section class="category-group" style="--group:${c.color}" aria-label="${esc(c.name)}"><button class="category-header" data-category="${c.id}" title="Chỉ xem nhóm ${esc(c.name)}"><span aria-hidden="true">${c.icon}</span><h4>${esc(c.name)}</h4><span class="group-count">${group.length}</span></button><div class="tiles">${group.map(tile).join('')}</div></section>`;
+ }).join('')}</div>`).join('')}</div>`;
+}
+function renderList(items){return `<div class="list-view"><div class="list-header" aria-hidden="true"><span>Công cụ / nền tảng</span><span>Làm được gì?</span><span>Nhóm chức năng</span><span>±</span></div>${items.map(t=>`<article class="list-row" style="--group:${catById.get(t.category).color}"><button class="list-title" data-tool="${t.id}">${avatar(t)}<span><b>${esc(t.name)}</b><small>${esc(t.org)}</small>${statusChip(t)}</span></button><div class="list-description">${esc(t.description)}</div><div class="list-category">${esc(catById.get(t.category).name)}<br><span style="color:#929d86">${esc(t.surfaces.join(' · '))}</span></div>${compareButton(t,'tile-check list-check')}</article>`).join('')}</div>`;}
+function render(){
+ const items=filtered();
+ $('#stat-tools').textContent=TOOLS.length;
+ $('#saved-count').textContent=saved.size;
+ $('#saved-nav').setAttribute('aria-pressed',String(state.savedOnly));
+ $('#search').value=state.q;$('#surface-filter').value=state.surface;$('#source-filter').value=state.source;$('#status-filter').value=state.status;
+ $('#section-title').textContent=state.savedOnly?'Bộ sưu tập của bạn.':state.category!=='all'?catById.get(state.category).name:'Một hệ sinh thái. Nhiều khả năng.';
+ for(const b of document.querySelectorAll('[data-view]'))b.setAttribute('aria-pressed',String(b.dataset.view===state.view));
+ for(const b of document.querySelectorAll('[data-layer]'))b.classList.toggle('active',b.dataset.layer===state.layer);
+ const hasFilters=state.q||state.category!=='all'||state.layer!=='all'||state.surface!=='all'||state.source!=='all'||state.status!=='all'||state.savedOnly;
+ $('#reset-filters').hidden=!hasFilters;
+ $('#results-label').innerHTML=`<strong>${items.length}</strong> / ${TOOLS.length} mục${state.savedOnly?' · Đã lưu':''}${state.category!=='all'?' · '+esc(catById.get(state.category).name):''}`;
+ $('#results').innerHTML=items.length?(state.view==='map'?renderMap(items):renderList(items)):`<div class="empty-state"><span aria-hidden="true">⌕</span><h3>${state.savedOnly&&!saved.size?'Bộ sưu tập đang để trống.':'Chưa tìm thấy công cụ phù hợp.'}</h3><p>${state.savedOnly&&!saved.size?'Mở một công cụ và chọn “Lưu công cụ” để tạo danh sách của bạn.':'Thử một từ khóa ngắn hơn hoặc bỏ bớt bộ lọc.'}</p><button data-action="reset">Khám phá toàn bộ bản đồ →</button></div>`;
+ renderNav();renderCompareBar();updateURL();
+}
+function showToast(message){clearTimeout(toastTimer);$('#toast').textContent=message;$('#toast').hidden=false;toastTimer=setTimeout(()=>$('#toast').hidden=true,3000);}
+function renderCompareBar(){
+ $('#compare-bar').hidden=!comparison.length;
+ $('#compare-items').innerHTML=comparison.map(id=>`<span class="compare-pill"><span>${esc(byId.get(id).name)}</span><button data-compare="${id}" aria-label="Bỏ ${esc(byId.get(id).name)} khỏi so sánh">×</button></span>`).join('');
+ $('#compare-open').disabled=comparison.length<2;
+ $('#compare-open').innerHTML=`So sánh ${comparison.length}/3 <span>→</span>`;
+ document.body.style.paddingBottom=comparison.length?(innerWidth<=600?'120px':'85px'):'';
+}
+function toggleComparison(id){
+ if(!byId.has(id))return;
+ if(comparison.includes(id))comparison=comparison.filter(x=>x!==id);
+ else {if(comparison.length===3){showToast('Bạn có thể so sánh tối đa 3 mục. Bỏ một mục để chọn thêm.');return;}comparison.push(id);}
+ writeStore('ai-atlas-compare',comparison);render();refreshDetailButtons();
+ if($('#compare-dialog').open){if(comparison.length>=2)fillComparison();else $('#compare-dialog').close();}
+}
+function toggleSaved(id){
+ if(!byId.has(id))return;
+ const removing=saved.has(id);if(removing)saved.delete(id);else saved.add(id);
+ writeStore('ai-atlas-saved',[...saved]);render();refreshDetailButtons();showToast(removing?'Đã bỏ khỏi bộ sưu tập.':'Đã lưu công cụ trên trình duyệt này.');
+}
+function refreshDetailButtons(){
+ if(!detailId)return;
+ const sb=$('#detail-save'),cb=$('#detail-compare');
+ if(sb){sb.classList.toggle('selected',saved.has(detailId));sb.setAttribute('aria-pressed',String(saved.has(detailId)));sb.textContent=saved.has(detailId)?'◆ Đã lưu':'▱ Lưu công cụ';}
+ if(cb){cb.classList.toggle('selected',comparison.includes(detailId));cb.setAttribute('aria-pressed',String(comparison.includes(detailId)));cb.textContent=comparison.includes(detailId)?'✓ Đã chọn so sánh':'+ So sánh';}
+}
+function closeDialogs(except){for(const d of document.querySelectorAll('dialog'))if(d!==except&&d.open)d.close();}
+function openDetail(id){
+ const t=byId.get(id);if(!t)return;
+ const dialog=$('#detail-dialog');closeDialogs(dialog);detailId=id;
+ const c=catById.get(t.category),same=TOOLS.filter(x=>x.category===t.category&&x.id!==id&&!ended(x)).slice(0,4);
+ dialog.innerHTML=`<div class="dialog-top"><span style="color:${c.color}">${c.icon} &nbsp;${esc(c.name)}</span><button class="close-btn" data-close="detail-dialog" aria-label="Đóng chi tiết">×</button></div><div class="detail-content"><div class="detail-identity">${avatar(t)}<div><h2 id="detail-title">${esc(t.name)}</h2><p>${esc(t.org)}</p>${statusChip(t)}</div></div><p class="detail-description">${esc(t.description)}</p><dl class="detail-meta"><div><dt>VAI TRÒ</dt><dd>${esc(t.kind)}</dd></div><div><dt>GIAO DIỆN</dt><dd>${esc(t.surfaces.join(' · '))}</dd></div><div><dt>TRIỂN KHAI</dt><dd>${esc(t.hosting)}</dd></div><div><dt>MÔ HÌNH CUNG CẤP</dt><dd>${esc(t.openness)}</dd></div></dl><section class="detail-section"><h3>Phù hợp khi</h3><p>${esc(t.best)}</p></section><section class="detail-section detail-note"><h3>Ghi chú biên tập</h3><p>${esc(t.note)}</p></section><div class="detail-actions"><a class="primary" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">Xem nguồn chính thức <span>↗</span></a><button class="secondary" id="detail-save" data-save="${t.id}"></button><button class="secondary" id="detail-compare" data-compare="${t.id}"></button></div>${t.aliases.length?`<p class="alias-note">Tên liên quan / tên trước đây: ${esc(t.aliases.join(' · '))}</p>`:''}<div class="source-box"><span class="source-label">NGUỒN & MỐC ĐỐI CHIẾU</span><a href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">${esc(new URL(t.url).hostname)} ↗</a><p>Đối chiếu nguồn ngày 08/11/2026.<br>Mô tả dựa trên thông tin nhà cung cấp. “Phù hợp khi” và “Ghi chú” là nhận định biên tập, không phải kết quả benchmark. Giá và quyền truy cập cần xem trực tiếp.</p></div><div class="detail-bottom"><button data-action="share-tool">Sao chép link mục này ↗</button><button data-action="method">Cách phân loại & nguồn</button></div>${same.length?`<div class="related-section"><h3>Khám phá cùng nhóm</h3><div class="related-links">${same.map(x=>`<button data-tool="${x.id}">${esc(x.name)} ↗</button>`).join('')}</div></div>`:''}</div>`;
+ refreshDetailButtons();updateURL();if(!dialog.open)dialog.showModal();dialog.scrollTop=0;
+}
+function fillComparison(){
+ const tools=comparison.map(id=>byId.get(id));
+ const rows=[['Nhóm',t=>catById.get(t.category).name],['Vai trò',t=>t.kind],['Làm được gì?',t=>t.description],['Phù hợp khi',t=>t.best],['Giao diện',t=>t.surfaces.join(' · ')],['Triển khai',t=>t.hosting],['Mô hình cung cấp',t=>t.openness],['Trạng thái',t=>t.status],['Ghi chú biên tập',t=>t.note]];
+ $('#compare-dialog').innerHTML=`<div class="dialog-top"><span>ĐỐI CHIẾU CÔNG CỤ</span><button class="close-btn" data-close="compare-dialog" aria-label="Đóng bảng so sánh">×</button></div><div class="compare-content"><h2 id="compare-title">Đặt các lựa chọn cạnh nhau.</h2><p>So sánh theo vai trò và cách sử dụng. Các công cụ khác nhóm có thể bổ sung cho nhau trong cùng một hệ thống.</p><div class="compare-scroll"><table class="compare-table"><thead><tr><th scope="col">${tools.length} LỰA CHỌN</th>${tools.map(t=>`<th scope="col">${avatar(t)}<h3>${esc(t.name)}</h3><small>${esc(t.org)}</small></th>`).join('')}</tr></thead><tbody>${rows.map(([label,fn])=>`<tr class="${label==='Ghi chú biên tập'?'compare-note':''}"><td>${label}</td>${tools.map(t=>`<td>${esc(fn(t))}</td>`).join('')}</tr>`).join('')}<tr><td>Nguồn chính thức</td>${tools.map(t=>`<td><a href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">${esc(new URL(t.url).hostname)} ↗</a></td>`).join('')}</tr></tbody></table></div></div><div class="compare-foot">Snapshot 08/11/2026 · Nhận định biên tập, không chấm điểm hay xếp hạng chất lượng.</div>`;
+}
+function openComparison(){if(comparison.length<2)return;const d=$('#compare-dialog');closeDialogs(d);fillComparison();d.showModal();}
+function openInfo(type){
+ const d=$('#info-dialog');closeDialogs(d);
+ const content=type==='guide'?`<h2 id="info-title">Bắt đầu từ việc bạn muốn làm.</h2><p class="lead">Bản đồ chia theo vai trò chính, từ công cụ dùng ngay đến các thành phần để tự xây một hệ thống AI.</p><div class="guide-cards">${[
+ ['01 / SỬ DỤNG','Tôi muốn AI hỗ trợ công việc.','Bắt đầu ở trợ lý đa năng. Chọn nhóm nghiên cứu nếu cần nguồn tài liệu, hoặc agent thực thi nếu muốn giao một đầu ra nhiều bước.','use','Khám phá trợ lý & công việc'],
+ ['02 / XÂY DỰNG','Tôi muốn làm phần mềm.','Dùng coding agent khi đã có repo. Tìm app builder nếu muốn đi từ ý tưởng đến bản ứng dụng. Automation giúp nối các dịch vụ thành một luồng.','build','Khám phá công cụ xây sản phẩm'],
+ ['03 / SÁNG TẠO','Tôi muốn tạo nội dung.','Chọn theo đầu ra: ảnh, video, avatar, giọng nói hay âm nhạc. Thử một mẫu thực tế để kiểm tra chất lượng và khả năng chỉnh sửa.','create','Khám phá công cụ sáng tạo'],
+ ['04 / HẠ TẦNG','Tôi muốn tự xây agent.','Ghép framework, model/runtime, dữ liệu và đánh giá. MCP kết nối công cụ; A2A phục vụ giao tiếp giữa agent.','infra','Khám phá nền tảng AI']
+ ].map(([n,h,p,l,b])=>`<article class="guide-card"><span>${n}</span><h3>${h}</h3><p>${p}</p><button data-pick-layer="${l}">${b} →</button></article>`).join('')}</div><h3>Đọc một mục như thế nào?</h3><p>Nhấn vào ô công cụ để xem công dụng, gợi ý tình huống sử dụng, ghi chú và nguồn. Nút “+” thêm vào bảng so sánh tối đa 3 mục. “Lưu công cụ” tạo bộ sưu tập trên trình duyệt hiện tại.</p><h3>Model, tool, agent và framework</h3><p>Model sinh đầu ra. Tool đóng gói khả năng để làm một công việc. Agent dùng model và công cụ để thực hiện nhiều bước. Framework giúp lập trình các hành vi đó. Một sản phẩm có thể đảm nhiệm nhiều vai trò; vị trí trên bản đồ thể hiện vai trò chính.</p><h3>Ba câu hỏi trước khi chọn</h3><ul><li><b>Đầu ra cần gì?</b> Một câu trả lời, file hoàn chỉnh, thay đổi trong repo hay hành động trong ứng dụng?</li><li><b>Chạy ở đâu?</b> Giao diện local không bảo đảm model và dữ liệu cũng được xử lý local.</li><li><b>Kiểm chứng bằng gì?</b> Dùng một tác vụ đại diện, xem nguồn, sửa được đầu ra và đo tổng chi phí.</li></ul>`:
+ `<h2 id="info-title">Một bản đồ có nguồn.<br>Một phạm vi rõ ràng.</h2><p class="lead">${TOOLS.length} công cụ, nền tảng, họ model và giao thức trong ${CATEGORIES.length} nhóm. Biên tập bằng tiếng Việt, đối chiếu ngày 08/11/2026.</p><div class="method-grid"><div><strong>Phạm vi tuyển chọn</strong><p>Bao quát các vai trò chính và các tên được yêu cầu: ChatGPT, Claude, Gemini, Muse của Meta, Antigravity, OpenCode, OpenClaw và Qoder. Đây là snapshot mở rộng dần, không phải toàn bộ công cụ AI đang tồn tại.</p></div><div><strong>Phân loại theo công dụng</strong><p>Mỗi mục xuất hiện một lần ở nhóm chính. Một bộ sản phẩm có thể có nhiều giao diện và khả năng. Vị trí không thể hiện thị phần, độ phổ biến hay thứ hạng.</p></div><div><strong>Nguồn chính thức</strong><p>Ưu tiên trang sản phẩm, tài liệu và repository của nhà cung cấp. Mỗi mục có link để bạn kiểm tra trực tiếp. Ngày đối chiếu là ngày biên tập, không phải cam kết mọi tính năng đã được thử nghiệm.</p></div><div><strong>Nhận định biên tập</strong><p>“Phù hợp khi” và “Ghi chú” là gợi ý dựa trên vai trò, không phải benchmark độc lập. Giá, hạn mức, phiên bản model và mức truy cập theo quốc gia cần xem tại nguồn.</p></div></div><h3>Cách đọc nhãn</h3><ul><li><b>Có mã nguồn:</b> có thành phần công khai. Bộ lọc bao gồm cả sản phẩm hỗn hợp và source-available; không đồng nghĩa mọi phần đều có giấy phép OSI hay được dùng thương mại không điều kiện.</li><li><b>Local / self-host:</b> có thành phần có thể chạy trên máy hoặc hạ tầng riêng. Việc gọi model hay connector vẫn có thể đi lên cloud.</li><li><b>Đổi tên / sáp nhập / chuyển hướng:</b> ghi nhận thông tin trên nguồn chính thức. Alias giúp tìm bằng tên cũ; không mặc định hai sản phẩm tương đương.</li><li><b>Sunset / đã ngừng:</b> giữ để tra cứu lịch sử, cần xem chi tiết phạm vi. Ví dụ Sora 2 API ghi nhận trạng thái API, không khẳng định trạng thái mọi sản phẩm Sora.</li></ul><h3>Dữ liệu & cập nhật</h3><p>Dữ liệu được biên tập thủ công, không tự cập nhật. Bản này tập trung vào công cụ dùng phổ biến và hạ tầng agent; chưa bao quát mọi ngành dọc, plugin, model checkpoint hay nhà cung cấp địa phương. Để bổ sung, mở issue hoặc sửa danh mục trong repo.</p><p>Bộ sưu tập và mục so sánh lưu bằng localStorage trong trình duyệt, không đồng bộ tài khoản. Không cần API key để xem bản đồ. Tìm kiếm và bộ lọc chạy ngay trên thiết bị.</p><div class="detail-actions"><a class="primary" href="catalog.csv" download>Tải toàn bộ CSV ↓</a><a class="secondary" href="catalog.json" download>Tải JSON ↓</a><a class="secondary" href="https://github.com/devoralabsapp/ai-landscape" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><p>Giao diện dùng ký hiệu chữ để nhận diện, không phải logo chính thức. Tên sản phẩm thuộc chủ sở hữu tương ứng. Bản đồ lấy cảm hứng từ CNCF Landscape và không liên kết với CNCF.</p>`;
+ d.innerHTML=`<div class="dialog-top"><span>AI ATLAS / ${type==='guide'?'HƯỚNG DẪN':'PHƯƠNG PHÁP'}</span><button class="close-btn" data-close="info-dialog" aria-label="Đóng thông tin">×</button></div><div class="info-content">${content}</div><div class="info-footer"><span>AI ATLAS · VIETNAMESE EDITION · 08.11.2026</span><a href="https://landscape.cncf.io/" target="_blank" rel="noopener noreferrer">Cảm hứng từ CNCF Landscape ↗</a></div>`;
+ d.showModal();
+}
+function reset(){state={...state,q:'',category:'all',layer:'all',surface:'all',source:'all',status:'all',savedOnly:false};render();}
+function setCategory(id){if(id!=='all'&&!catById.has(id))return;state.category=id;state.layer='all';state.savedOnly=false;render();hideMenu();$('#explore').scrollIntoView({behavior:'smooth'});}
+function setLayer(id){if(id!=='all'&&!LAYERS.some(l=>l.id===id))return;state.layer=id;state.category='all';state.savedOnly=false;render();}
+function hideMenu(){$('#sidebar').classList.remove('visible');$('.mobile-menu').setAttribute('aria-expanded','false');}
+async function copyText(value){
+ try{await navigator.clipboard.writeText(value);showToast('Đã sao chép link.');}
+ catch{const input=document.createElement('textarea');input.value=value;input.style.cssText='position:fixed;opacity:0';document.body.append(input);input.select();let done=false;try{done=document.execCommand('copy');}catch{}input.remove();showToast(done?'Đã sao chép link.':'Không thể sao chép tự động. Bạn có thể lấy link từ thanh địa chỉ.');}
+}
+function downloadCSV(){
+ const fields=[['Tên',t=>t.name],['Đơn vị',t=>t.org],['Nhóm',t=>catById.get(t.category).name],['Vai trò',t=>t.kind],['Giao diện',t=>t.surfaces.join(', ')],['Triển khai',t=>t.hosting],['Mô hình cung cấp',t=>t.openness],['Mô tả',t=>t.description],['Phù hợp khi',t=>t.best],['Ghi chú biên tập',t=>t.note],['Trạng thái',t=>t.status],['Nguồn chính thức',t=>t.url],['Đối chiếu',t=>t.checked],['Tên liên quan',t=>t.aliases.join(', ')]];
+ const cell=v=>'"'+String(v).replace(/"/g,'""')+'"';
+ const content='\uFEFF'+[fields.map(([n])=>cell(n)).join(','),...filtered().map(t=>fields.map(([,fn])=>cell(fn(t))).join(','))].join('\r\n');
+ const url=URL.createObjectURL(new Blob([content],{type:'text/csv;charset=utf-8;'}));const link=document.createElement('a');link.href=url;link.download='ai-atlas-2026-11-08.csv';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);showToast(`Đã xuất ${filtered().length} mục theo bộ lọc hiện tại.`);
+}
+document.addEventListener('click',e=>{
+ const b=e.target.closest('button,a');if(!b)return;
+ if(b.dataset.close){$('#'+b.dataset.close).close();return;}
+ if(b.dataset.tool){openDetail(b.dataset.tool);return;}
+ if(b.dataset.compare){toggleComparison(b.dataset.compare);return;}
+ if(b.dataset.save){toggleSaved(b.dataset.save);return;}
+ if(b.dataset.category){setCategory(b.dataset.category);return;}
+ if(b.dataset.layer){setLayer(b.dataset.layer);return;}
+ if(b.dataset.pickLayer){$('#info-dialog').close();setLayer(b.dataset.pickLayer);$('#explore').scrollIntoView({behavior:'smooth'});return;}
+ if(b.dataset.view){state.view=b.dataset.view;render();return;}
+ switch(b.dataset.action){
+  case 'guide':openInfo('guide');break;
+  case 'method':openInfo('method');break;
+  case 'saved':state.savedOnly=!state.savedOnly;state.category='all';state.layer='all';state.q='';state.surface='all';state.source='all';state.status='all';render();$('#explore').scrollIntoView({behavior:'smooth'});break;
+  case 'reset':reset();break;
+  case 'menu':{const visible=$('#sidebar').classList.toggle('visible');b.setAttribute('aria-expanded',String(visible));break;}
+  case 'export':downloadCSV();break;
+  case 'compare':openComparison();break;
+  case 'clear-compare':comparison=[];writeStore('ai-atlas-compare',[]);render();refreshDetailButtons();break;
+  case 'share-tool':copyText(location.href);break;
+ }
+});
+$('#search').addEventListener('input',e=>{state.q=e.target.value;render();});
+for(const [id,key] of [['surface-filter','surface'],['source-filter','source'],['status-filter','status']])$('#'+id).addEventListener('change',e=>{state[key]=e.target.value;render();});
+for(const d of document.querySelectorAll('dialog')){
+ d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});
+}
+$('#detail-dialog').addEventListener('close',()=>{detailId=null;updateURL();});
+document.addEventListener('keydown',e=>{
+ if(e.key==='/'&&!/input|textarea|select/i.test(document.activeElement?.tagName)&&!document.querySelector('dialog[open]')){e.preventDefault();$('#search').focus();}
+ if(e.key==='Escape')hideMenu();
+});
+window.addEventListener('popstate',()=>{const tool=readURL();render();if(tool)openDetail(tool);else if($('#detail-dialog').open)$('#detail-dialog').close();});
+window.addEventListener('resize',renderCompareBar);
+const initialTool=readURL();render();if(initialTool&&byId.has(initialTool))openDetail(initialTool);

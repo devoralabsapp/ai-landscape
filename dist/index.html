@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="theme-color" content="#f6f7f5">
+ <title>AI Atlas — Bản đồ hệ sinh thái AI</title>
+ <meta name="description" content="Khám phá 120 công cụ và nền tảng AI qua 15 nhóm. Bản đồ tiếng Việt có ghi chú thực dụng, bộ lọc, so sánh và nguồn chính thức.">
+ <link rel="icon" type="image/svg+xml" href="favicon.svg">
+ <link rel="stylesheet" href="styles.css">
+ <script src="data.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+ <a class="skip" href="#explore">Đến bản đồ</a>
+ <header class="topbar">
+  <a class="brand" href="./" aria-label="AI Atlas, trang chủ"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>AI<span class="brand-light">Atlas</span><small>THE AI ECOSYSTEM, MAPPED.</small></span></a>
+  <div class="top-nav"><button data-action="guide">Cách đọc bản đồ <span>↗</span></button><button data-action="method">Phương pháp & nguồn</button></div>
+  <button class="saved-nav" id="saved-nav" data-action="saved" aria-pressed="false"><span aria-hidden="true">▱</span> Đã lưu <b id="saved-count">0</b></button>
+  <button class="mobile-menu" data-action="menu" aria-label="Mở danh mục" aria-expanded="false">☰</button>
+ </header>
+ <aside class="sidebar" id="sidebar" aria-label="Danh mục công cụ">
+  <div class="side-eyebrow">KHÁM PHÁ HỆ SINH THÁI</div>
+  <button class="side-all active" data-category="all"><span class="nav-symbol">⊞</span> Toàn bộ bản đồ <span class="count" id="all-count">120</span></button>
+  <nav id="category-nav"></nav>
+  <div class="sidebar-note"><span class="note-cross">✳</span><p>Một bản đồ để định hướng.<br>Một điểm bắt đầu để khám phá.</p><button data-action="method">Về bản đồ này <span>↗</span></button></div>
+  <div class="edition">VIETNAMESE EDITION <span>V1.0</span></div>
+ </aside>
+ <main>
+  <section class="hero" aria-labelledby="hero-title">
+   <div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> AI LANDSCAPE <span class="eyebrow-slash">/</span> BẢN ĐỒ MỞ RỘNG</div><h1 id="hero-title">Thế giới AI.<br><span>Nhìn rõ hơn.</span></h1><p>Từ trợ lý hàng ngày đến hệ thống agent.<br>Khám phá công cụ, hiểu vai trò, tìm đúng lựa chọn.</p><button class="text-link" data-action="guide">Bắt đầu từ đâu? <span>↗</span></button></div>
+   <div class="hero-visual" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><span class="orbit-label label-model">MODELS</span><span class="orbit-label label-tools">TOOLS</span><span class="orbit-label label-agents">AGENTS</span><span class="orbit-core">ai<span>an expanding universe</span></span><i class="planet p1"></i><i class="planet p2"></i><i class="planet p3"></i><i class="planet p4"></i></div>
+   <div class="hero-stats"><div><strong id="stat-tools">120</strong><span>Công cụ & nền tảng</span></div><div><strong>15</strong><span>Nhóm chức năng</span></div><div class="stat-date"><span class="date-dot"></span><span>Đối chiếu nguồn<br><b>08.11.2026</b></span></div></div>
+  </section>
+  <section class="explore" id="explore" aria-label="Tra cứu hệ sinh thái AI">
+   <div class="explore-head"><div><span class="eyebrow">THE LANDSCAPE</span><h2 id="section-title">Một hệ sinh thái. Nhiều khả năng.</h2></div><div class="view-switch" role="group" aria-label="Kiểu hiển thị"><button id="view-map" data-view="map" aria-pressed="true"><span aria-hidden="true">⊞</span> Bản đồ</button><button id="view-list" data-view="list" aria-pressed="false"><span aria-hidden="true">☷</span> Danh mục</button></div></div>
+   <div class="search-row"><label class="search"><span class="sr-only">Tìm kiếm công cụ</span><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Tìm công cụ, hãng hoặc công việc bạn cần…" autocomplete="off"><kbd>/</kbd></label><label class="select-wrap"><span class="sr-only">Bề mặt sử dụng</span><select id="surface-filter"><option value="all">Mọi giao diện</option><option>Web</option><option>Desktop</option><option>Mobile</option><option>CLI</option><option>IDE</option><option>API</option><option>SDK</option><option>Messaging</option><option>Protocol</option></select></label><label class="select-wrap"><span class="sr-only">Mô hình cung cấp</span><select id="source-filter"><option value="all">Mọi mô hình cung cấp</option><option value="code">Có mã nguồn</option><option value="local">Có local / self-host</option><option value="service">Dịch vụ</option><option value="protocol">Chuẩn mở</option></select></label><button class="export-btn" data-action="export" title="Tải kết quả hiện tại dưới dạng CSV" aria-label="Tải danh mục CSV">↓<span> CSV</span></button></div>
+   <div class="filter-line"><div class="layer-filters" id="layer-filters"><button data-layer="all" class="active">Tất cả</button><button data-layer="use">Sử dụng AI</button><button data-layer="build">Xây sản phẩm</button><button data-layer="create">Sáng tạo</button><button data-layer="infra">Hạ tầng AI</button></div><label class="lifecycle-select"><span class="sr-only">Vòng đời sản phẩm</span><select id="status-filter"><option value="all">Mọi trạng thái</option><option value="current">Đang cung cấp / chuyển đổi</option><option value="changed">Có thay đổi cần chú ý</option><option value="ended">Sunset / đã ngừng</option></select></label></div>
+   <div class="result-line"><span id="results-label" role="status" aria-live="polite"></span><div class="legend"><span><i class="legend-dot open"></i>Có mã nguồn</span><span><i class="legend-dot change"></i>Vòng đời thay đổi</span><button id="reset-filters" data-action="reset" hidden>Xóa bộ lọc ×</button></div></div>
+   <div id="results"></div>
+  </section>
+  <section class="understanding"><div class="understanding-title"><span class="eyebrow">HIỂU ĐÚNG ĐỂ CHỌN ĐÚNG</span><h2>Cùng là AI.<br>Khác nhau ở vai trò.</h2><button class="text-link" data-action="guide">Đọc hướng dẫn <span>↗</span></button></div><div class="understanding-grid"><article><span class="term-index">01 / MODEL</span><h3>Bộ máy suy luận</h3><p>Nhận đầu vào, sinh đầu ra. Model là thành phần nền tảng cho nhiều ứng dụng khác nhau.</p></article><article><span class="term-index">02 / TOOL</span><h3>Công cụ cho một việc</h3><p>Giúp bạn tạo ảnh, làm slide, tìm kiếm hay chỉnh âm thanh trong một luồng sử dụng cụ thể.</p></article><article><span class="term-index">03 / AGENT</span><h3>Từ mục tiêu đến hành động</h3><p>Dùng model và công cụ, theo dõi tiến độ và thực hiện nhiều bước để hoàn thành việc được giao.</p></article><article><span class="term-index">04 / FRAMEWORK</span><h3>Bộ khung để tự xây</h3><p>Các thành phần lập trình giúp bạn thiết kế, điều phối và vận hành ứng dụng agent của riêng mình.</p></article></div></section>
+  <footer><div class="footer-brand">AI<span>Atlas</span><p>Định hướng trong một thế giới đang thay đổi.</p></div><div><p>Danh mục tuyển chọn · Không phải bảng xếp hạng</p><p>Lấy cảm hứng từ <a href="https://landscape.cncf.io/" target="_blank" rel="noopener noreferrer">CNCF Landscape ↗</a> · Không liên kết với CNCF.</p><button data-action="method">Phạm vi, nguồn & cách biên tập ↗</button></div><span class="footer-date">SNAPSHOT<br><b>08 NOV 2026</b></span></footer>
+ </main>
+ <div class="compare-bar" id="compare-bar" hidden><div><span class="compare-label">SO SÁNH</span><div id="compare-items"></div></div><div class="compare-actions"><button data-action="clear-compare" class="text-button">Xóa</button><button data-action="compare" id="compare-open" class="primary">So sánh <span>→</span></button></div></div>
+ <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title"></dialog>
+ <dialog id="info-dialog" class="info-dialog" aria-labelledby="info-title"></dialog>
+ <dialog id="compare-dialog" class="compare-dialog" aria-labelledby="compare-title"></dialog>
+ <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+ <noscript><p class="noscript">Bật JavaScript để tìm kiếm và xem bản đồ. Bạn cũng có thể tải <a href="catalog.csv">danh mục CSV</a> để đọc nội dung.</p></noscript>
+</body>
+</html>

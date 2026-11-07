@@ -1,0 +1,70 @@
+# AI Atlas · AI Landscape tiếng Việt
+
+Bản đồ tương tác lấy cảm hứng từ [CNCF Landscape](https://landscape.cncf.io/): **120 công cụ, nền tảng, họ model và giao thức**, chia thành **15 nhóm** trong 4 lớp sử dụng.
+
+**Đối chiếu nguồn: 08/11/2026.** Đây là danh mục tuyển chọn mở rộng dần, không phải toàn bộ công cụ AI đang tồn tại hay bảng xếp hạng. Không liên kết với CNCF hoặc các hãng được liệt kê.
+
+## Chức năng
+
+- Bản đồ theo nhóm và chế độ danh mục có mô tả.
+- Tìm kiếm tiếng Việt có/không dấu, tên cũ, tên hãng và công việc.
+- Lọc giao diện, mô hình cung cấp, local/self-host và vòng đời sản phẩm.
+- Chi tiết từng mục: công dụng, tình huống sử dụng, ghi chú, nguồn chính thức.
+- So sánh tối đa 3 công cụ; lưu danh sách bằng localStorage.
+- Deep link cho từng mục và bộ lọc; xuất kết quả lọc thành CSV.
+- Responsive, điều khiển bàn phím, dialog có focus management từ trình duyệt.
+
+## Nội dung
+
+1. **Sử dụng AI:** trợ lý đa năng, agent thực thi, nghiên cứu, công việc & tài liệu, họp & ghi chú.
+2. **Xây sản phẩm:** coding agent, app builder, automation.
+3. **Sáng tạo:** hình ảnh, video & avatar, âm thanh & âm nhạc.
+4. **Hệ thống AI:** framework, inference & API, dữ liệu & đánh giá, giao thức & browser.
+
+Các tên được yêu cầu có trong danh mục: ChatGPT, Claude, **Muse của Meta**, Gemini, Antigravity, OpenCode, OpenClaw và Qoder.
+
+Đọc bản tổng hợp đầy đủ trong [AI-Landscape.vi.md](AI-Landscape.vi.md), hoặc lấy dữ liệu từ [CSV](dist/catalog.csv) / [JSON](dist/catalog.json).
+
+## Nguồn và cách biên tập
+
+Mỗi mục trỏ đến nguồn chính thức: trang sản phẩm, tài liệu hoặc repository của nhà cung cấp. `checked` là mốc đối chiếu biên tập, không khẳng định đã thử mọi khả năng.
+
+- `description`: tóm tắt công dụng từ nguồn.
+- `best`, `note`: gợi ý và lưu ý biên tập; không phải benchmark độc lập.
+- `status`: ghi nhận thông báo hoặc chuyển hướng ở nguồn. Chuyển hướng URL không chứng minh hai sản phẩm hoàn toàn tương đương.
+- `aliases`: tên trước đây hoặc tên liên quan để hỗ trợ tìm kiếm; không nhất thiết là sản phẩm đồng nhất.
+- `openness`: mô hình cung cấp ở mức khái quát. “Có mã nguồn”, “Hỗn hợp” và “Source-available” không có nghĩa mọi thành phần đều có giấy phép OSI hay quyền dùng thương mại không điều kiện. Xem LICENSE của từng phiên bản.
+- `hosting`: có thành phần chạy local/self-host không bảo đảm mọi lời gọi model hoặc connector đều local.
+
+Giá, quota, model version và quốc gia hỗ trợ không được đóng cứng trong bảng so sánh. Hãy kiểm tra nguồn trực tiếp khi lựa chọn. Một số mục lịch sử được giữ lại với nhãn rõ ràng, như Relay.app đã đóng và Sora 2 **API** đã ngừng; trạng thái API không được suy rộng sang mọi sản phẩm Sora.
+
+Chưa bao quát mọi ngành dọc, plugin, checkpoint model hoặc nhà cung cấp địa phương. Dữ liệu không tự cập nhật. Gửi issue/PR để bổ sung hoặc sửa nguồn.
+
+## Chạy local
+
+Yêu cầu Node.js 22 trở lên. Ứng dụng không có dependency runtime hoặc API key.
+
+```sh
+npm run build
+npm run dev
+```
+
+Mở `http://127.0.0.1:4173`. `npm run check` kiểm tra tính toàn vẹn dữ liệu, URL nguồn, mục bắt buộc, liên kết asset và cú pháp JavaScript.
+
+## Sửa nội dung
+
+Sửa `dist/data.js`. Mỗi dòng trong `RAW` có 12 trường ngăn bằng `|`:
+
+```text
+name|organization|kind|surfaces|hosting|openness|description|best|note|official URL|aliases|status
+```
+
+`surfaces` và `aliases` ngăn bằng dấu phẩy. Để trống `status` cho mục đang hoạt động. Cập nhật mốc `checked` và snapshot khi rà soát phiên bản mới. Chạy `npm run build` để sinh CSV, JSON và Markdown trước khi commit. Nếu thay số lượng mục, cập nhật README và mô tả HTML.
+
+Giao diện dùng ký hiệu chữ riêng thay logo nhà cung cấp. Tên và nhãn hiệu thuộc chủ sở hữu tương ứng. Font Be Vietnam Pro được tải từ Google Fonts, với system font dự phòng. Danh sách lưu và so sánh nằm trên trình duyệt, không có tài khoản hoặc backend.
+
+## Deploy Vercel
+
+Import repo, chọn framework **Other**. `vercel.json` cấu hình lệnh build `npm run build` và thư mục output `dist`. Không cần biến môi trường. Git integration deploy lại khi push nhánh production `main`.
+
+Mã nguồn và phần ghi chú tự biên tập: MIT. Tên, nhãn hiệu và nội dung của bên thứ ba giữ các quyền tương ứng; giấy phép repo không cấp quyền dùng nhãn hiệu hoặc thay đổi giấy phép của sản phẩm được liệt kê.

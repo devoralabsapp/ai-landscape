@@ -1,0 +1,2753 @@
+{
+  "snapshot": "2026-11-08",
+  "scope": "Curated, not exhaustive. Descriptions are sourced; suitability and notes are editorial. Availability and pricing must be checked with the provider.",
+  "tools": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "org": "OpenAI",
+      "category": "assistant",
+      "kind": "Trợ lý",
+      "surfaces": [
+        "Web",
+        "Desktop",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Trợ lý hội thoại đa năng; hỗ trợ viết, phân tích, nghiên cứu và tạo đầu ra công việc.",
+      "best": "Một nơi bắt đầu cho công việc tri thức và trao đổi nhiều vòng.",
+      "note": "Khả năng phụ thuộc gói và công cụ được bật; cần kiểm tra nguồn và đầu ra.",
+      "url": "https://learn.chatgpt.com/docs/working-with-agents",
+      "aliases": [
+        "GPT",
+        "Chat GPT"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "org": "Anthropic",
+      "category": "assistant",
+      "kind": "Trợ lý",
+      "surfaces": [
+        "Web",
+        "Desktop",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Trợ lý để đọc tài liệu, viết, phân tích và tạo các sản phẩm công việc.",
+      "best": "Làm việc nhiều vòng với tài liệu, bản thảo hoặc nguyên mẫu.",
+      "note": "Tách Claude là ứng dụng khỏi Claude Code là công cụ lập trình; đối chiếu các kết luận quan trọng.",
+      "url": "https://claude.com/product/overview",
+      "aliases": [
+        "Anthropic Claude"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "org": "Google",
+      "category": "assistant",
+      "kind": "Trợ lý",
+      "surfaces": [
+        "Web",
+        "Mobile",
+        "Desktop"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Trợ lý đa phương thức với Live, Deep Research và khả năng tạo nội dung.",
+      "best": "Người dùng muốn làm việc trong hệ sinh thái Google.",
+      "note": "Gemini là tên cả ứng dụng lẫn họ model; quyền dùng tính năng thay đổi theo gói và khu vực.",
+      "url": "https://gemini.google/about/",
+      "aliases": [
+        "Bard",
+        "Google Gemini"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "microsoft-copilot",
+      "name": "Microsoft Copilot",
+      "org": "Microsoft",
+      "category": "assistant",
+      "kind": "Trợ lý",
+      "surfaces": [
+        "Web",
+        "Desktop",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Trợ lý giúp nghiên cứu, tạo nội dung và phân tích trong hệ sinh thái Microsoft.",
+      "best": "Cá nhân thường dùng các ứng dụng Microsoft.",
+      "note": "Phân biệt Copilot cho cá nhân, Microsoft 365 Copilot và GitHub Copilot khi chọn sản phẩm.",
+      "url": "https://www.microsoft.com/en-us/copilot/solutions/individuals",
+      "aliases": [
+        "Bing Chat"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "org": "xAI",
+      "category": "assistant",
+      "kind": "Trợ lý",
+      "surfaces": [
+        "Web",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Trợ lý hội thoại có giọng nói, tạo ảnh và tích hợp với X.",
+      "best": "Trao đổi, tạo nội dung và khai thác ngữ cảnh từ hệ sinh thái X.",
+      "note": "Bài đăng thời gian thực là một nguồn đầu vào; nên mở nguồn gốc để đối chiếu.",
+      "url": "https://x.ai/grok",
+      "aliases": [
+        "xAI"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "meta-ai",
+      "name": "Meta AI",
+      "org": "Meta",
+      "category": "assistant",
+      "kind": "Trợ lý",
+      "surfaces": [
+        "Web",
+        "Mobile",
+        "Messaging"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Trợ lý để hỏi đáp và tạo nội dung trong hệ sinh thái ứng dụng Meta.",
+      "best": "Người muốn gọi AI từ những ứng dụng nhắn tin quen thuộc.",
+      "note": "Khác với Muse là sản phẩm agent cá nhân; tính năng trong từng ứng dụng có thể khác nhau.",
+      "url": "https://about.fb.com/news/2024/04/meta-ai-assistant-built-with-llama-3/",
+      "aliases": [
+        "Facebook AI"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "org": "DeepSeek",
+      "category": "assistant",
+      "kind": "Trợ lý",
+      "surfaces": [
+        "Web",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Ứng dụng chat và nền tảng API của DeepSeek phục vụ hỏi đáp, suy luận và lập trình.",
+      "best": "Khám phá một lựa chọn trợ lý ngoài các hệ sinh thái lớn.",
+      "note": "Dịch vụ chat, API và các model tải về có điều khoản và giới hạn riêng.",
+      "url": "https://www.deepseek.com/",
+      "aliases": [
+        "Deep Seek"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "org": "Alibaba / Qwen",
+      "category": "assistant",
+      "kind": "Trợ lý",
+      "surfaces": [
+        "Web",
+        "Mobile",
+        "Desktop"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Trợ lý dựa trên các model Qwen, có tìm kiếm, nghiên cứu và tạo nội dung.",
+      "best": "Viết, học tập và thử khả năng đa phương thức của Qwen.",
+      "note": "Qwen Chat là dịch vụ; giấy phép của từng model Qwen cần xem riêng.",
+      "url": "https://qwen.ai/",
+      "aliases": [
+        "Qwen Chat",
+        "Tongyi"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi",
+      "org": "Moonshot AI",
+      "category": "assistant",
+      "kind": "Trợ lý / agent",
+      "surfaces": [
+        "Web",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Ứng dụng chat và agent của Moonshot AI, có không gian dự án và plugin.",
+      "best": "Trao đổi, xử lý nội dung và thử tác vụ agent trong hệ sinh thái Kimi.",
+      "note": "Phân biệt dịch vụ Kimi với từng model tải về hoặc API; quyền truy cập và giới hạn có thể khác.",
+      "url": "https://www.kimi.com/",
+      "aliases": [
+        "Moonshot",
+        "Kimi Chat"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "z-ai",
+      "name": "Z.ai",
+      "org": "Z.ai",
+      "category": "assistant",
+      "kind": "Trợ lý / model API",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Ứng dụng và nền tảng cung cấp các model GLM cho hội thoại, code và agent.",
+      "best": "Khám phá hệ sinh thái GLM và tích hợp vào các công cụ tương thích.",
+      "note": "Gói coding dùng endpoint riêng; không mặc định hạn mức chat, coding và API là một.",
+      "url": "https://docs.z.ai/guides/overview/quick-start",
+      "aliases": [
+        "Zhipu",
+        "GLM",
+        "ChatGLM"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "poe",
+      "name": "Poe",
+      "org": "Quora",
+      "category": "assistant",
+      "kind": "Multi-model chat",
+      "surfaces": [
+        "Web",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Một ứng dụng để trò chuyện với nhiều model và bot từ các hệ sinh thái khác nhau.",
+      "best": "Thử nhiều model mà không chuyển giữa nhiều giao diện.",
+      "note": "Poe là lớp truy cập; khả năng công cụ và hạn mức có thể khác ứng dụng chính thức của từng hãng.",
+      "url": "https://poe.com/",
+      "aliases": [
+        "Quora Poe"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "mistral-vibe",
+      "name": "Mistral Vibe",
+      "org": "Mistral AI",
+      "category": "assistant",
+      "kind": "Trợ lý / agent",
+      "surfaces": [
+        "Web",
+        "Desktop"
+      ],
+      "hosting": "Cloud / riêng",
+      "openness": "Hỗn hợp",
+      "description": "Không gian AI cho tác vụ dài, làm việc với tri thức, công cụ và cả code.",
+      "best": "Tìm một trợ lý gắn với hệ sinh thái Mistral.",
+      "note": "Trang Le Chat hiện chuyển đến Vibe; cần xem phạm vi triển khai và gói cụ thể.",
+      "url": "https://mistral.ai/products/vibe/",
+      "aliases": [
+        "Le Chat"
+      ],
+      "status": "Đổi tên",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "muse",
+      "name": "Muse",
+      "org": "Meta",
+      "category": "personal",
+      "kind": "Agent cá nhân",
+      "surfaces": [
+        "Web",
+        "Mobile",
+        "Messaging"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Agent cá nhân chủ động, phối hợp các ứng dụng và tiếp tục làm việc cho mục tiêu đã giao.",
+      "best": "Theo dõi công việc đời sống, lịch trình và tác vụ qua nhiều dịch vụ.",
+      "note": "Xem điều kiện truy cập theo khu vực; cần xác định quyền ứng dụng và mức tự chủ trước khi giao việc.",
+      "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "aliases": [
+        "muse.ai",
+        "Meta Muse"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "manus",
+      "name": "Manus",
+      "org": "Manus AI",
+      "category": "personal",
+      "kind": "Agent đa nhiệm",
+      "surfaces": [
+        "Web",
+        "Desktop",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Nền tảng giao việc cho AI để nghiên cứu, tạo slide, website và nội dung.",
+      "best": "Giao một đầu ra cụ thể thay vì chỉ xin câu trả lời.",
+      "note": "Nên mô tả tiêu chí hoàn thành và kiểm tra tài liệu, dữ liệu hoặc ứng dụng được tạo.",
+      "url": "https://manus.im/",
+      "aliases": [
+        "Manus AI"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "genspark",
+      "name": "Genspark",
+      "org": "Genspark",
+      "category": "personal",
+      "kind": "AI workspace",
+      "surfaces": [
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Workspace AI tập hợp agent và công cụ cho tài liệu, thiết kế, nghiên cứu và nội dung.",
+      "best": "Tạo nhiều loại đầu ra trong cùng một không gian.",
+      "note": "Nhiều chức năng nằm trong một bộ sản phẩm; kiểm tra chất lượng từng loại đầu ra riêng.",
+      "url": "https://www.genspark.ai/",
+      "aliases": [
+        "Super Agent"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "openclaw",
+      "name": "OpenClaw",
+      "org": "OpenClaw community",
+      "category": "personal",
+      "kind": "Agent cá nhân",
+      "surfaces": [
+        "Desktop",
+        "CLI",
+        "Messaging"
+      ],
+      "hosting": "Local / self-host",
+      "openness": "Có mã nguồn",
+      "description": "Trợ lý chạy trên máy của bạn, có bộ nhớ và kết nối nhiều kênh nhắn tin cùng công cụ.",
+      "best": "Tự quản lý một trợ lý có thể thao tác file, web và dịch vụ cá nhân.",
+      "note": "Chạy local không đồng nghĩa model cũng local; cấu hình provider và quyền truy cập quyết định luồng dữ liệu.",
+      "url": "https://openclaw.ai/",
+      "aliases": [
+        "Clawdbot",
+        "Moltbot",
+        "Open Claw"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "claude-duet",
+      "name": "Claude Duet",
+      "org": "Anthropic",
+      "category": "personal",
+      "kind": "Agent chủ động",
+      "surfaces": [
+        "Web",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Agent chủ động theo dõi ứng dụng kết nối, chuẩn bị công việc và chạy tác vụ khi bạn rời đi.",
+      "best": "Theo dõi ưu tiên, lịch và việc vận hành cá nhân hoặc doanh nghiệp nhỏ.",
+      "note": "Đang research preview qua danh sách chờ tại Mỹ; không nên mặc định tài khoản ở Việt Nam truy cập được.",
+      "url": "https://claude.com/resources/articles/claude-duet",
+      "aliases": [
+        "Duet"
+      ],
+      "status": "Preview",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "org": "Perplexity",
+      "category": "research",
+      "kind": "Tìm kiếm / agent",
+      "surfaces": [
+        "Web",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Tìm kiếm và tổng hợp câu trả lời có nguồn; mở rộng sang quy trình agent với Computer.",
+      "best": "Tìm hiểu chủ đề mới và lần theo các nguồn web.",
+      "note": "Trích dẫn giúp truy vết nhưng không bảo đảm diễn giải đúng; nên mở các nguồn quan trọng.",
+      "url": "https://www.perplexity.ai/hub",
+      "aliases": [
+        "Perplexity Computer"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "gemini-notebook",
+      "name": "Gemini Notebook",
+      "org": "Google",
+      "category": "research",
+      "kind": "Nghiên cứu tài liệu",
+      "surfaces": [
+        "Web",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Không gian nghiên cứu dựa trên nguồn tài liệu, trước đây có tên NotebookLM.",
+      "best": "Hỏi đáp và hệ thống hóa kiến thức từ bộ tài liệu đã chọn.",
+      "note": "Đang đổi tên từ NotebookLM; chất lượng phụ thuộc nguồn đưa vào và phạm vi được truy xuất.",
+      "url": "https://knowledge.workspace.google.com/admin/generative-ai/gemini-notebook/turn-gemini-notebook-on-or-off-for-users",
+      "aliases": [
+        "NotebookLM",
+        "Notebook LM"
+      ],
+      "status": "Đổi tên",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "elicit",
+      "name": "Elicit",
+      "org": "Elicit",
+      "category": "research",
+      "kind": "Nghiên cứu khoa học",
+      "surfaces": [
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Tìm bài nghiên cứu, trích xuất bằng chứng và tạo báo cáo khoa học có trích dẫn.",
+      "best": "Tổng quan tài liệu và lập bảng bằng chứng cho một câu hỏi nghiên cứu.",
+      "note": "Kiểm tra tiêu chí chọn bài, chất lượng nghiên cứu và số liệu được trích xuất.",
+      "url": "https://elicit.com/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "consensus",
+      "name": "Consensus",
+      "org": "Consensus",
+      "category": "research",
+      "kind": "Tìm kiếm học thuật",
+      "surfaces": [
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Tìm và tổng hợp câu trả lời dựa trên các bài nghiên cứu khoa học.",
+      "best": "Khởi đầu một câu hỏi cần bằng chứng học thuật.",
+      "note": "Mức đồng thuận trong kết quả không thay thế việc đọc phương pháp và giới hạn của từng nghiên cứu.",
+      "url": "https://help.consensus.app/en/articles/9922673-how-consensus-works",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "scispace",
+      "name": "SciSpace",
+      "org": "SciSpace",
+      "category": "research",
+      "kind": "Trợ lý nghiên cứu",
+      "surfaces": [
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Bộ công cụ tìm bài, chat với PDF, tổng quan tài liệu và trích xuất dữ liệu.",
+      "best": "Đọc và giải thích tài liệu chuyên môn khó.",
+      "note": "Đối chiếu trích dẫn và nội dung PDF gốc; nên kiểm tra công thức, bảng và thuật ngữ.",
+      "url": "https://scispace.com/",
+      "aliases": [
+        "Typeset"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "codex",
+      "name": "Codex",
+      "org": "OpenAI",
+      "category": "coding",
+      "kind": "Coding agent",
+      "surfaces": [
+        "Desktop",
+        "CLI",
+        "IDE",
+        "Web"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Hỗn hợp",
+      "description": "Agent kỹ thuật hỗ trợ khảo sát code, chỉnh sửa, chạy lệnh, kiểm thử và review.",
+      "best": "Phát triển tính năng và sửa lỗi có thể kiểm chứng trong repository.",
+      "note": "Chất lượng phụ thuộc ngữ cảnh repo, môi trường và kiểm thử; cần review thay đổi trước khi đưa vào hệ thống.",
+      "url": "https://learn.chatgpt.com/learn/codex",
+      "aliases": [
+        "OpenAI Codex"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "org": "Anthropic",
+      "category": "coding",
+      "kind": "Coding agent",
+      "surfaces": [
+        "CLI",
+        "IDE",
+        "Desktop",
+        "Web"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Dịch vụ",
+      "description": "Đọc codebase, sửa file, chạy lệnh và phối hợp các công cụ phát triển.",
+      "best": "Làm việc trực tiếp với repo và tự động hóa các bước kỹ thuật.",
+      "note": "Lệnh chạy trên môi trường nào và quyền được cấp cần được xác định; không chỉ là một hộp chat.",
+      "url": "https://code.claude.com/docs/en/overview",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "antigravity",
+      "name": "Antigravity",
+      "org": "Google",
+      "category": "coding",
+      "kind": "Nền tảng coding agent",
+      "surfaces": [
+        "Desktop",
+        "IDE",
+        "CLI",
+        "SDK"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Dịch vụ",
+      "description": "Nền tảng phát triển có App, IDE, CLI và SDK để làm việc với nhiều agent.",
+      "best": "Quản lý công việc lập trình và theo dõi các đầu ra từ agent.",
+      "note": "Đã vượt khỏi phạm vi IDE; xem đúng sản phẩm trong họ Antigravity khi so sánh.",
+      "url": "https://antigravity.google/",
+      "aliases": [
+        "Google Antigravity"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "org": "Cursor",
+      "category": "coding",
+      "kind": "Coding agent / IDE",
+      "surfaces": [
+        "Desktop",
+        "CLI",
+        "IDE"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Dịch vụ",
+      "description": "Môi trường làm phần mềm với coding agent và ngữ cảnh codebase.",
+      "best": "Người muốn biên tập mã và giao việc cho agent trong một luồng.",
+      "note": "So sánh cả cách quản lý ngữ cảnh, quyền chạy lệnh và giới hạn sử dụng ngoài khả năng gợi ý mã.",
+      "url": "https://cursor.com/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "qoder",
+      "name": "Qoder",
+      "org": "Qoder",
+      "category": "coding",
+      "kind": "Nền tảng coding agent",
+      "surfaces": [
+        "Desktop",
+        "IDE",
+        "CLI",
+        "Mobile"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Dịch vụ",
+      "description": "Họ sản phẩm có agent hiểu codebase, IDE, CLI và công cụ quản lý từ xa.",
+      "best": "Từ lập trình tương tác đến giao một tác vụ phát triển hoàn chỉnh.",
+      "note": "Các bề mặt có thể khác tính năng; nên thử trên repo và ngôn ngữ thực tế của bạn.",
+      "url": "https://qoder.com/",
+      "aliases": [
+        "Quest Mode"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode",
+      "org": "Anomaly",
+      "category": "coding",
+      "kind": "Coding agent",
+      "surfaces": [
+        "Desktop",
+        "CLI",
+        "Mobile",
+        "SDK"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Coding agent có mã nguồn, cho phép chọn nhiều provider và kết nối model local.",
+      "best": "Người muốn linh hoạt nhà cung cấp và mở rộng bằng plugin hoặc MCP.",
+      "note": "Phần mềm có mã nguồn không có nghĩa chi phí model bằng không; tài khoản provider được quản lý riêng.",
+      "url": "https://opencode.ai/",
+      "aliases": [
+        "Open Code"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "gemini-cli",
+      "name": "Gemini CLI",
+      "org": "Google",
+      "category": "coding",
+      "kind": "CLI agent",
+      "surfaces": [
+        "CLI"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Agent mã nguồn mở mang Gemini vào terminal để xử lý tác vụ cùng công cụ.",
+      "best": "Luồng làm việc dựa trên terminal và script.",
+      "note": "CLI chạy local nhưng lời gọi model có thể đi lên cloud; xem phương thức đăng nhập và quota.",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "org": "GitHub",
+      "category": "coding",
+      "kind": "Coding agent",
+      "surfaces": [
+        "IDE",
+        "CLI",
+        "Web"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Dịch vụ",
+      "description": "AI hỗ trợ lập trình và giao việc theo luồng GitHub, IDE và pull request.",
+      "best": "Team đã dùng GitHub và muốn AI tham gia quá trình phát triển.",
+      "note": "Tên Copilot dùng cho nhiều sản phẩm; cần chọn đúng agent, IDE và chính sách tổ chức.",
+      "url": "https://github.com/features/copilot",
+      "aliases": [
+        "Copilot coding agent"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "cline",
+      "name": "Cline",
+      "org": "Cline",
+      "category": "coding",
+      "kind": "Coding agent",
+      "surfaces": [
+        "IDE",
+        "CLI",
+        "Desktop"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Coding agent mở với nhiều bề mặt sử dụng và lựa chọn model.",
+      "best": "Người muốn kiểm soát provider cùng công cụ mà agent được phép gọi.",
+      "note": "Cần quản lý quyền lệnh, MCP và token; trải nghiệm còn phụ thuộc model phía sau.",
+      "url": "https://cline.bot/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "roo-code-roomote",
+      "name": "Roo Code / Roomote",
+      "org": "Roo Code team",
+      "category": "coding",
+      "kind": "Coding agent",
+      "surfaces": [
+        "IDE",
+        "Web"
+      ],
+      "hosting": "Local / self-host",
+      "openness": "Có mã nguồn",
+      "description": "Roo Code là dự án coding agent; nhóm phát triển hiện giới thiệu Roomote cho cloud agent tự quản.",
+      "best": "Tham khảo hệ sinh thái Roo và hướng agent chạy trên hạ tầng riêng.",
+      "note": "Trang Roo chuyển sang Roomote; hai sản phẩm cần được đánh giá riêng, không mặc định tính năng tương đương.",
+      "url": "https://roomote.dev/",
+      "aliases": [
+        "Roo Code",
+        "RooCode",
+        "Roomote"
+      ],
+      "status": "Chuyển hướng",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "aider",
+      "name": "Aider",
+      "org": "Aider community",
+      "category": "coding",
+      "kind": "Pair programming",
+      "surfaces": [
+        "CLI"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Công cụ lập trình trong terminal, có bản đồ codebase và tích hợp Git.",
+      "best": "Sửa mã có diff và theo dõi thay đổi bằng Git.",
+      "note": "Phù hợp luồng terminal; phạm vi file và model lựa chọn ảnh hưởng mạnh đến kết quả.",
+      "url": "https://aider.chat/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "continue",
+      "name": "Continue",
+      "org": "Continue",
+      "category": "coding",
+      "kind": "Coding agent",
+      "surfaces": [
+        "IDE",
+        "CLI"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Dự án coding agent có mã nguồn; đội ngũ đã gia nhập Cursor.",
+      "best": "Tham khảo hoặc tái sử dụng nền tảng mã nguồn của dự án.",
+      "note": "Trang chính thức xác nhận được Cursor mua lại; kiểm tra khả năng duy trì trước khi triển khai mới.",
+      "url": "https://continue.dev/",
+      "aliases": [
+        "Continue.dev"
+      ],
+      "status": "Sáp nhập",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "augment-code",
+      "name": "Augment Code",
+      "org": "Augment / Harness",
+      "category": "coding",
+      "kind": "Coding agent",
+      "surfaces": [
+        "CLI",
+        "IDE",
+        "Web"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Dịch vụ",
+      "description": "Agent phát triển phần mềm với Context Engine và quy trình từ ticket đến PR.",
+      "best": "Team cần ngữ cảnh trên hệ thống phần mềm lớn.",
+      "note": "Trang chính thức thông báo gia nhập Harness; cần kiểm tra gói và hướng tích hợp hiện hành.",
+      "url": "https://www.augmentcode.com/",
+      "aliases": [
+        "Augment"
+      ],
+      "status": "Sáp nhập",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "devin",
+      "name": "Devin",
+      "org": "Cognition",
+      "category": "coding",
+      "kind": "Software agent",
+      "surfaces": [
+        "Web",
+        "Desktop"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Dịch vụ",
+      "description": "Agent kỹ thuật có môi trường thực thi và browser để tiến tới đầu ra dạng PR.",
+      "best": "Giao tác vụ kỹ thuật có mục tiêu và tiêu chí nghiệm thu rõ.",
+      "note": "Nên bắt đầu với task giới hạn, có kiểm thử và review; mức tự chủ không thay thế trách nhiệm kỹ thuật.",
+      "url": "https://devin.ai/",
+      "aliases": [
+        "Cognition Devin"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "devin-desktop",
+      "name": "Devin Desktop",
+      "org": "Cognition",
+      "category": "coding",
+      "kind": "Agent workspace",
+      "surfaces": [
+        "Desktop",
+        "IDE"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Dịch vụ",
+      "description": "Không gian quản lý agent local và cloud; URL Windsurf Editor hiện trỏ tới đây.",
+      "best": "Theo dõi, review và phối hợp nhiều phiên agent từ máy tính.",
+      "note": "Ghi nhận chuyển hướng từ Windsurf; không suy ra mọi phiên bản Windsurf cũ đã tương đương Devin Desktop.",
+      "url": "https://devin.ai/desktop",
+      "aliases": [
+        "Windsurf",
+        "Cascade"
+      ],
+      "status": "Chuyển hướng",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "junie",
+      "name": "Junie",
+      "org": "JetBrains",
+      "category": "coding",
+      "kind": "Coding agent",
+      "surfaces": [
+        "IDE",
+        "CLI"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Dịch vụ",
+      "description": "Agent lập trình khai thác công cụ và hiểu biết mã của hệ sinh thái JetBrains.",
+      "best": "Người dùng IDE JetBrains hoặc muốn giao việc qua CLI và CI.",
+      "note": "Xem khả năng tương thích IDE, model và cách tính sử dụng cho luồng cụ thể.",
+      "url": "https://junie.jetbrains.com/",
+      "aliases": [
+        "JetBrains Junie"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "kiro",
+      "name": "Kiro",
+      "org": "AWS",
+      "category": "coding",
+      "kind": "Coding agent",
+      "surfaces": [
+        "IDE",
+        "CLI",
+        "Web",
+        "Desktop"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Hỗn hợp",
+      "description": "Agent lập kế hoạch, xây, review và kiểm chứng phần mềm trên máy hoặc cloud.",
+      "best": "Tác vụ kỹ thuật cần mô tả ý định cùng bước kiểm chứng rõ.",
+      "note": "Họ sản phẩm có nhiều bề mặt; xem cách chia task, kiểm thử và quản lý phiên trong luồng thực tế.",
+      "url": "https://kiro.dev/",
+      "aliases": [
+        "Kiro Crew"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "trae",
+      "name": "TRAE",
+      "org": "TRAE",
+      "category": "coding",
+      "kind": "Coding / work agent",
+      "surfaces": [
+        "Desktop",
+        "IDE",
+        "Web"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Dịch vụ",
+      "description": "Bộ sản phẩm gồm TraeCode cho lập trình và TraeWork cho công việc.",
+      "best": "Khám phá công cụ code và trợ lý công việc trong cùng hệ sinh thái.",
+      "note": "Chọn đúng TraeCode hoặc TraeWork khi so sánh; không mặc định hai sản phẩm có cùng tính năng.",
+      "url": "https://www.trae.ai/",
+      "aliases": [
+        "TraeCode",
+        "TraeWork",
+        "SOLO"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "amazon-q-developer",
+      "name": "Amazon Q Developer",
+      "org": "AWS",
+      "category": "coding",
+      "kind": "Coding assistant",
+      "surfaces": [
+        "IDE",
+        "CLI",
+        "Web"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Dịch vụ",
+      "description": "Trợ lý phát triển phần mềm có agent sửa mã, kiểm thử và hỗ trợ công việc trên AWS.",
+      "best": "Hệ thống đang dùng Q Developer hoặc cần trợ giúp gắn với AWS.",
+      "note": "AWS đã thông báo ngừng hỗ trợ plugin IDE vào 30/04/2027 và hướng người dùng xem Kiro.",
+      "url": "https://aws.amazon.com/q/developer/",
+      "aliases": [
+        "CodeWhisperer"
+      ],
+      "status": "Lộ trình ngừng IDE",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "lovable",
+      "name": "Lovable",
+      "org": "Lovable",
+      "category": "app",
+      "kind": "App builder",
+      "surfaces": [
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Tạo, chỉnh sửa và triển khai ứng dụng từ mô tả; có backend và tích hợp.",
+      "best": "Làm MVP, công cụ nội bộ và thử ý tưởng sản phẩm.",
+      "note": "Kiểm tra cấu trúc dữ liệu, phân quyền và khả năng tiếp quản mã khi ứng dụng lớn hơn.",
+      "url": "https://lovable.dev/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "bolt",
+      "name": "Bolt",
+      "org": "StackBlitz",
+      "category": "app",
+      "kind": "App builder",
+      "surfaces": [
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Dựng ứng dụng và website bằng hội thoại, có mẫu và quy trình agent.",
+      "best": "Đi nhanh từ ý tưởng đến một ứng dụng có thể dùng thử.",
+      "note": "Khả năng chạy bản demo chưa đủ chứng minh ứng dụng xử lý đúng dữ liệu và các tình huống lỗi.",
+      "url": "https://bolt.new/",
+      "aliases": [
+        "Bolt.new"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "v0",
+      "name": "v0",
+      "org": "Vercel",
+      "category": "app",
+      "kind": "App builder",
+      "surfaces": [
+        "Web",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Sinh ứng dụng web từ yêu cầu, có chỉnh sửa trực quan, đồng bộ repo và xuất bản.",
+      "best": "Dựng giao diện và phát triển web với luồng triển khai Vercel.",
+      "note": "Nên kiểm tra responsive, accessibility và các tích hợp backend sau khi sinh mã.",
+      "url": "https://v0.app/",
+      "aliases": [
+        "v0.dev"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "replit-agent",
+      "name": "Replit Agent",
+      "org": "Replit",
+      "category": "app",
+      "kind": "App builder",
+      "surfaces": [
+        "Web",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "AI trong môi trường lập trình và vận hành ứng dụng trên cloud.",
+      "best": "Thử ý tưởng, dựng app và chia sẻ nhanh một sản phẩm chạy được.",
+      "note": "Tính cả chi phí agent, runtime và dữ liệu khi chuyển từ thử nghiệm sang sử dụng thường xuyên.",
+      "url": "https://replit.com/",
+      "aliases": [
+        "Replit"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "firebase-studio",
+      "name": "Firebase Studio",
+      "org": "Google",
+      "category": "app",
+      "kind": "Cloud development",
+      "surfaces": [
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Workspace full stack có AI agent để tạo frontend, backend và ứng dụng di động.",
+      "best": "Người xây app trong môi trường cloud gắn với Firebase.",
+      "note": "Không đồng nhất Firebase Studio với dịch vụ Firebase phía sau; cấu hình và chi phí hạ tầng cần xem riêng.",
+      "url": "https://firebase.studio/",
+      "aliases": [
+        "Project IDX"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "figma-make",
+      "name": "Figma Make",
+      "org": "Figma",
+      "category": "app",
+      "kind": "Design-to-app",
+      "surfaces": [
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Tạo sản phẩm tương tác bằng prompt-to-code trong hệ sinh thái thiết kế Figma.",
+      "best": "Designer và product team muốn chuyển ý tưởng thành trải nghiệm dùng thử.",
+      "note": "Tách việc kiểm chứng tương tác khỏi khả năng sẵn sàng vận hành của backend và dữ liệu.",
+      "url": "https://www.figma.com/make/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "base44",
+      "name": "Base44",
+      "org": "Base44",
+      "category": "app",
+      "kind": "App builder",
+      "surfaces": [
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Tạo ứng dụng, website và agent bằng mô tả với backend cùng tích hợp có sẵn.",
+      "best": "Công cụ nội bộ và sản phẩm nhỏ cần nhanh chóng hoạt động.",
+      "note": "Đánh giá cách xuất dữ liệu, tùy biến và quản lý quyền trước khi phụ thuộc sâu vào nền tảng.",
+      "url": "https://base44.com/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "org": "n8n",
+      "category": "workflow",
+      "kind": "Workflow platform",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud / self-host",
+      "openness": "Source-available",
+      "description": "Nối các bước, ứng dụng và agent thành workflow có thể quan sát.",
+      "best": "Quy trình nội bộ kết hợp logic cố định với xử lý AI.",
+      "note": "Có thể self-host; giấy phép có điều kiện riêng, không nên coi như mọi giấy phép mã nguồn mở.",
+      "url": "https://n8n.io/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "make",
+      "name": "Make",
+      "org": "Make",
+      "category": "workflow",
+      "kind": "Workflow platform",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Canvas trực quan cho automation và agent làm việc với dữ liệu cùng ứng dụng.",
+      "best": "Người muốn xây và theo dõi quy trình bằng các khối trực quan.",
+      "note": "Thiết kế nhánh lỗi, giới hạn lượt chạy và điểm con người kiểm tra cho tác vụ thực tế.",
+      "url": "https://www.make.com/ai-automation",
+      "aliases": [
+        "Integromat"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "zapier-agents",
+      "name": "Zapier Agents",
+      "org": "Zapier",
+      "category": "workflow",
+      "kind": "Agent builder",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Tạo agent có tri thức công ty và khả năng thực hiện tác vụ qua các ứng dụng kết nối.",
+      "best": "Tự động hóa công việc giữa các dịch vụ SaaS đang dùng.",
+      "note": "Phạm vi connector và quyền được cấp quyết định agent làm được gì; thử với một quy trình nhỏ trước.",
+      "url": "https://zapier.com/agents",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "lindy",
+      "name": "Lindy",
+      "org": "Lindy",
+      "category": "workflow",
+      "kind": "Business agent",
+      "surfaces": [
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "AI kết nối các công cụ, học cách làm việc và thực hiện nhiệm vụ nghiệp vụ.",
+      "best": "Email, lịch và các việc vận hành có quy trình rõ.",
+      "note": "Cần mô tả kết quả mong muốn, trường hợp chuyển người và hành động cần duyệt.",
+      "url": "https://www.lindy.ai/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "gumloop",
+      "name": "Gumloop",
+      "org": "Gumloop",
+      "category": "workflow",
+      "kind": "Agent builder",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Xây, chia sẻ và quản lý agent kết nối dữ liệu cùng ứng dụng doanh nghiệp.",
+      "best": "Team vận hành muốn dùng AI cho nghiên cứu, CRM và xử lý thông tin.",
+      "note": "Theo dõi chất lượng ở từng bước và chi phí theo khối lượng thực tế của quy trình.",
+      "url": "https://www.gumloop.com/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "dify",
+      "name": "Dify",
+      "org": "Dify",
+      "category": "workflow",
+      "kind": "LLM app platform",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud / self-host",
+      "openness": "Source-available",
+      "description": "Nền tảng trực quan cho workflow agent, pipeline tri thức và ứng dụng LLM.",
+      "best": "Xây công cụ AI nội bộ có giao diện quản trị và API.",
+      "note": "Community Edition có thể tự triển khai; đọc giấy phép và chuẩn bị vận hành dữ liệu, log, model.",
+      "url": "https://dify.ai/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "copilot-studio",
+      "name": "Copilot Studio",
+      "org": "Microsoft",
+      "category": "workflow",
+      "kind": "Enterprise agent builder",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Tạo và quản lý agent, workflow cùng ứng dụng tùy chỉnh bằng công cụ no-code.",
+      "best": "Doanh nghiệp cần agent kết nối dữ liệu và hệ thống Microsoft.",
+      "note": "Phân biệt với trợ lý Copilot dùng sẵn; thiết kế quyền dữ liệu và đánh giá chất lượng trước khi mở rộng.",
+      "url": "https://www.microsoft.com/en-us/copilot/products/copilot-studio",
+      "aliases": [
+        "Power Virtual Agents"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "gemini-platform",
+      "name": "Gemini platform",
+      "org": "Google Cloud",
+      "category": "workflow",
+      "kind": "Enterprise agent platform",
+      "surfaces": [
+        "Web",
+        "API",
+        "SDK"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Nền tảng xây, triển khai, quản trị và tối ưu agent cùng ứng dụng AI doanh nghiệp.",
+      "best": "Team kỹ thuật cần model, runtime và dữ liệu trên Google Cloud.",
+      "note": "URL Agent Builder hiện chuyển tới Gemini platform; kiểm tra tên dịch vụ và tài liệu đúng thời điểm triển khai.",
+      "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+      "aliases": [
+        "Vertex AI Agent Builder",
+        "Agent Builder"
+      ],
+      "status": "Chuyển hướng",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "flowise",
+      "name": "Flowise",
+      "org": "Flowise",
+      "category": "workflow",
+      "kind": "Visual agent builder",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud / self-host",
+      "openness": "Có mã nguồn",
+      "description": "Nền tảng xây agent bằng sơ đồ trực quan, có mã nguồn công khai.",
+      "best": "Tham khảo workflow trực quan hoặc hệ thống đã có từ trước.",
+      "note": "Trang chính thức đã thông báo sunsetting; cần đọc thông báo trước khi triển khai mới.",
+      "url": "https://flowiseai.com/sunset",
+      "aliases": [],
+      "status": "Sunset",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "relay-app",
+      "name": "Relay.app",
+      "org": "Relay.app",
+      "category": "workflow",
+      "kind": "Workflow platform",
+      "surfaces": [
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Từng là nền tảng tự động hóa công việc bằng AI.",
+      "best": "Tham khảo lịch sử các công cụ automation.",
+      "note": "Đã đóng cửa tháng 09/2026 theo thông báo chính thức; không còn là lựa chọn triển khai mới.",
+      "url": "https://relay.app/",
+      "aliases": [],
+      "status": "Đã đóng",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "notion-ai",
+      "name": "Notion AI",
+      "org": "Notion",
+      "category": "office",
+      "kind": "Workspace AI",
+      "surfaces": [
+        "Web",
+        "Desktop",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Agent, tìm kiếm doanh nghiệp và ghi chú AI trong không gian làm việc Notion.",
+      "best": "Team có tài liệu, dự án và kiến thức trong Notion.",
+      "note": "Giá trị phụ thuộc cấu trúc kiến thức và quyền truy cập; nên tổ chức dữ liệu trước khi mở rộng agent.",
+      "url": "https://www.notion.com/product/ai",
+      "aliases": [
+        "Notion Agent"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "microsoft-365-copilot",
+      "name": "Microsoft 365 Copilot",
+      "org": "Microsoft",
+      "category": "office",
+      "kind": "Office AI",
+      "surfaces": [
+        "Web",
+        "Desktop",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Hỗ trợ tạo, nghiên cứu và phân tích ngay trong Word, Excel, PowerPoint và Outlook.",
+      "best": "Người làm việc hàng ngày với tài liệu và dữ liệu Microsoft 365.",
+      "note": "Tên gói và tính năng khác nhau giữa cá nhân và doanh nghiệp; kiểm tra quyền truy cập dữ liệu tổ chức.",
+      "url": "https://www.microsoft.com/en-us/copilot/solutions/individuals",
+      "aliases": [
+        "M365 Copilot"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "gemini-for-workspace",
+      "name": "Gemini for Workspace",
+      "org": "Google",
+      "category": "office",
+      "kind": "Office AI",
+      "surfaces": [
+        "Web",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "AI gắn với Gmail, Docs, Sheets, Slides, Meet và các công cụ Workspace.",
+      "best": "Team đã lưu tài liệu và làm việc trong Google Workspace.",
+      "note": "Kiểm tra tính năng của gói và chính sách quản trị; không mặc định đồng nhất với Gemini cho cá nhân.",
+      "url": "https://workspace.google.com/solutions/ai/",
+      "aliases": [
+        "Google Workspace Gemini",
+        "Duet AI"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "slack-ai-slackbot",
+      "name": "Slack AI / Slackbot",
+      "org": "Salesforce / Slack",
+      "category": "office",
+      "kind": "Workspace agent",
+      "surfaces": [
+        "Web",
+        "Desktop",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "AI tìm hiểu hội thoại, tạo brief và hỗ trợ công việc từ ngữ cảnh Slack.",
+      "best": "Team có tri thức và trao đổi công việc tập trung trong Slack.",
+      "note": "Nguồn thông tin phụ thuộc hội thoại, ứng dụng kết nối và quyền của người dùng.",
+      "url": "https://slack.com/features/ai",
+      "aliases": [
+        "Slackbot"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "grammarly",
+      "name": "Grammarly",
+      "org": "Grammarly / Superhuman",
+      "category": "office",
+      "kind": "Writing assistant",
+      "surfaces": [
+        "Web",
+        "Desktop",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Trợ lý viết và các tác nhân hỗ trợ chỉnh sửa nội dung trong luồng làm việc.",
+      "best": "Cải thiện văn phong và bản thảo, đặc biệt trong giao tiếp công việc.",
+      "note": "Đánh giá với ngôn ngữ bạn thực sự dùng; giữ lại ý nghĩa và giọng văn khi chấp nhận gợi ý.",
+      "url": "https://www.grammarly.com/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "gamma",
+      "name": "Gamma",
+      "org": "Gamma",
+      "category": "office",
+      "kind": "Presentation AI",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Tạo và biên tập bài trình bày, tài liệu cùng nội dung truyền thông bằng AI.",
+      "best": "Biến đề cương thành tài liệu hoặc slide để trao đổi nhanh.",
+      "note": "Kiểm tra dữ kiện và bố cục khi xuất file hoặc trình chiếu trên thiết bị khác.",
+      "url": "https://gamma.app/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "canva-ai",
+      "name": "Canva AI",
+      "org": "Canva",
+      "category": "office",
+      "kind": "Creative workspace",
+      "surfaces": [
+        "Web",
+        "Desktop",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Bộ công cụ AI cho thiết kế, viết, ảnh, video và nội dung trong Canva.",
+      "best": "Nội dung truyền thông, slide và thiết kế gắn với bộ nhận diện.",
+      "note": "Mức chỉnh sửa và quyền dùng tài nguyên tùy tính năng, model và gói.",
+      "url": "https://www.canva.com/canva-ai/",
+      "aliases": [
+        "Magic Studio",
+        "Magic Write"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "otter",
+      "name": "Otter",
+      "org": "Otter.ai",
+      "category": "meeting",
+      "kind": "Meeting assistant",
+      "surfaces": [
+        "Web",
+        "Desktop",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Chuyển lời nói cuộc họp thành transcript và tri thức có thể tìm kiếm.",
+      "best": "Theo dõi ghi chép và các việc cần làm từ hội thoại.",
+      "note": "Kiểm tra ngôn ngữ hỗ trợ và độ chính xác tên riêng trên bản ghi thực tế của team.",
+      "url": "https://otter.ai/",
+      "aliases": [
+        "Otter.ai"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "fireflies",
+      "name": "Fireflies",
+      "org": "Fireflies.ai",
+      "category": "meeting",
+      "kind": "Meeting assistant",
+      "surfaces": [
+        "Web",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Ghi lại, chuyển lời nói, tóm tắt và phân tích hội thoại của team.",
+      "best": "Tìm kiếm trong cuộc họp và đưa thông tin sang công cụ làm việc.",
+      "note": "Tóm tắt có thể bỏ sót bối cảnh; nên đối chiếu chủ việc và thời hạn trong bản gốc.",
+      "url": "https://fireflies.ai/",
+      "aliases": [
+        "Fireflies.ai"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "granola",
+      "name": "Granola",
+      "org": "Granola",
+      "category": "meeting",
+      "kind": "AI notepad",
+      "surfaces": [
+        "Desktop",
+        "Mobile"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Dịch vụ",
+      "description": "Kết hợp ghi chú và âm thanh máy tính để tạo notes cùng việc cần làm, không cần bot vào phòng họp.",
+      "best": "Người họp liên tục muốn bổ sung vào ghi chép cá nhân.",
+      "note": "Không có bot tham dự không đồng nghĩa toàn bộ xử lý chạy local; xem chính sách ghi âm và dữ liệu.",
+      "url": "https://www.granola.ai/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "org": "Midjourney",
+      "category": "image",
+      "kind": "Image / video AI",
+      "surfaces": [
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Công cụ sáng tạo dựa trên các model tạo hình ảnh và video.",
+      "best": "Khám phá phong cách, moodboard và ý tưởng hình ảnh.",
+      "note": "Dành thời gian thử prompt và ảnh tham chiếu; kiểm tra điều khoản hiển thị và sử dụng tác phẩm.",
+      "url": "https://www.midjourney.com/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "adobe-firefly",
+      "name": "Adobe Firefly",
+      "org": "Adobe",
+      "category": "image",
+      "kind": "Creative AI",
+      "surfaces": [
+        "Web",
+        "Desktop",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Công cụ tạo nội dung AI trong hệ sinh thái sáng tạo Adobe.",
+      "best": "Người đang dùng các ứng dụng sáng tạo và quy trình Adobe.",
+      "note": "Các model và tính năng có điều khoản khác nhau; kiểm tra nguồn model và quyền dùng cho dự án cụ thể.",
+      "url": "https://www.adobe.com/products/firefly.html",
+      "aliases": [
+        "Firefly"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "ideogram",
+      "name": "Ideogram",
+      "org": "Ideogram",
+      "category": "image",
+      "kind": "Image / vector AI",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Hỗn hợp",
+      "description": "Nền tảng model và ứng dụng tạo, sửa hình ảnh, vector và lớp chữ.",
+      "best": "Đồ họa có chữ, biến thể thiết kế và tài nguyên thị giác.",
+      "note": "Kiểm tra chính tả, hình khối và khả năng chỉnh sửa đầu ra trước khi đưa vào thiết kế cuối.",
+      "url": "https://ideogram.ai/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "leonardo-ai",
+      "name": "Leonardo.Ai",
+      "org": "Leonardo",
+      "category": "image",
+      "kind": "Visual AI",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Nền tảng tạo ảnh, chỉnh sửa và đưa hình ảnh thành chuyển động.",
+      "best": "Tạo và lặp lại nhiều phương án hình ảnh trong một workspace.",
+      "note": "Chất lượng và điều kiện sử dụng phụ thuộc model, gói cùng tài nguyên tham chiếu.",
+      "url": "https://leonardo.ai/",
+      "aliases": [
+        "Leonardo"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "recraft",
+      "name": "Recraft",
+      "org": "Recraft",
+      "category": "image",
+      "kind": "Design AI",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Studio và model AI dành cho người làm thiết kế cùng tài nguyên hình ảnh.",
+      "best": "Xây bộ hình ảnh và biến thể phục vụ nội dung thiết kế.",
+      "note": "Kiểm tra định dạng đầu ra, độ đồng nhất và quyền sử dụng theo gói.",
+      "url": "https://www.recraft.ai/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "flux",
+      "name": "FLUX",
+      "org": "Black Forest Labs",
+      "category": "image",
+      "kind": "Họ model",
+      "surfaces": [
+        "API",
+        "Web"
+      ],
+      "hosting": "Cloud / tùy model",
+      "openness": "Hỗn hợp",
+      "description": "Họ model tạo nội dung của Black Forest Labs, có ảnh và các khả năng đa phương thức.",
+      "best": "Tích hợp tạo hình ảnh hoặc dùng model qua một nền tảng hỗ trợ.",
+      "note": "FLUX là họ model; khả năng tải về, giấy phép và tính năng khác nhau theo phiên bản.",
+      "url": "https://bfl.ai/",
+      "aliases": [
+        "Black Forest Labs",
+        "BFL"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "comfyui-comfy",
+      "name": "ComfyUI / Comfy",
+      "org": "Comfy",
+      "category": "image",
+      "kind": "Visual workflow",
+      "surfaces": [
+        "Desktop",
+        "Web"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Môi trường kiểm soát quy trình visual AI qua các node và model.",
+      "best": "Người cần quy trình tạo ảnh có thể tùy biến, tái sử dụng và chạy local.",
+      "note": "Cần quản lý tài nguyên máy, model và custom node; giấy phép từng model được xem riêng.",
+      "url": "https://comfy.org/",
+      "aliases": [
+        "ComfyUI",
+        "Comfy"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "runway",
+      "name": "Runway",
+      "org": "Runway",
+      "category": "video",
+      "kind": "Video platform",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Nền tảng model và công cụ sáng tạo nội dung, gồm quy trình tạo video.",
+      "best": "Tạo và phát triển cảnh quay cho dự án truyền thông.",
+      "note": "Kiểm tra tính nhất quán nhân vật, chuyển động và chi phí qua các vòng tạo lại.",
+      "url": "https://runway.com/",
+      "aliases": [
+        "RunwayML"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "pika",
+      "name": "Pika",
+      "org": "Pika",
+      "category": "video",
+      "kind": "Video studio",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Bộ ứng dụng cho video, ảnh và âm thanh, có hiệu ứng và chỉnh sửa chuyển động.",
+      "best": "Video ngắn, thử hiệu ứng và nội dung mạng xã hội.",
+      "note": "Xem model đang được dùng và chi phí từng tính năng; kiểm tra artefact ở chuyển động nhanh.",
+      "url": "https://pika.art/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "kling-ai",
+      "name": "Kling AI",
+      "org": "Kuaishou",
+      "category": "video",
+      "kind": "Video / image AI",
+      "surfaces": [
+        "Web",
+        "Mobile",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Studio tạo ảnh, video và storyboard với agent cùng canvas chỉnh sửa.",
+      "best": "Dựng ý tưởng cảnh quay và chuỗi nội dung thị giác.",
+      "note": "Kết quả có thể cần nhiều lần sinh; đối chiếu thời lượng, độ phân giải và quyền dùng theo gói.",
+      "url": "https://kling.ai/",
+      "aliases": [
+        "Kling",
+        "KlingAI"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "luma-dream-machine",
+      "name": "Luma Dream Machine",
+      "org": "Luma",
+      "category": "video",
+      "kind": "Video generator",
+      "surfaces": [
+        "Web",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Công cụ tạo và biến đổi video bằng model Ray, hỗ trợ các quy trình Dream Machine.",
+      "best": "Phác thảo cảnh chuyển động hoặc biến đổi footage hiện có.",
+      "note": "Khả năng tham chiếu và chỉnh sửa khác nhau theo model; xem hướng dẫn đúng phiên bản.",
+      "url": "https://lumalabs.ai/news/ray3_14",
+      "aliases": [
+        "Luma",
+        "Dream Machine"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "synthesia",
+      "name": "Synthesia",
+      "org": "Synthesia",
+      "category": "video",
+      "kind": "Avatar video",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Tạo video từ kịch bản hoặc tài liệu với avatar, dịch và lồng tiếng.",
+      "best": "Đào tạo nội bộ, hướng dẫn và truyền thông doanh nghiệp.",
+      "note": "Kiểm tra phát âm, tên riêng và sự đồng ý khi sử dụng danh tính, giọng nói.",
+      "url": "https://www.synthesia.io/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "heygen",
+      "name": "HeyGen",
+      "org": "HeyGen",
+      "category": "video",
+      "kind": "Avatar video",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Tạo video với avatar cá nhân và các công cụ giọng nói, bản địa hóa.",
+      "best": "Video người dẫn, khóa học và nội dung có nhiều ngôn ngữ.",
+      "note": "Cần quyền dùng hình ảnh và giọng; kiểm tra độ khớp môi và thuật ngữ bản dịch.",
+      "url": "https://www.heygen.com/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "veo",
+      "name": "Veo",
+      "org": "Google DeepMind",
+      "category": "video",
+      "kind": "Họ model video",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Họ model tạo video điện ảnh với âm thanh của Google DeepMind.",
+      "best": "Tạo cảnh quay qua các sản phẩm hoặc API có hỗ trợ Veo.",
+      "note": "Veo là model, còn Flow và Gemini là bề mặt sử dụng; quyền truy cập tùy sản phẩm.",
+      "url": "https://deepmind.google/models/veo/",
+      "aliases": [
+        "Google Veo"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "sora-2-api",
+      "name": "Sora 2 API",
+      "org": "OpenAI",
+      "category": "video",
+      "kind": "Video API cũ",
+      "surfaces": [
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Model video và Videos API từng được cung cấp bởi OpenAI.",
+      "best": "Nhận diện hệ thống cũ và đối chiếu kế hoạch chuyển đổi.",
+      "note": "OpenAI công bố loại khỏi API ngày 24/09/2026; ghi chú này chỉ nói về API, không suy rộng sang mọi sản phẩm Sora.",
+      "url": "https://developers.openai.com/api/docs/deprecations",
+      "aliases": [
+        "Sora",
+        "Sora 2"
+      ],
+      "status": "API đã ngừng",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "org": "ElevenLabs",
+      "category": "audio",
+      "kind": "Voice / audio AI",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Nền tảng tạo giọng nói, công cụ âm thanh và voice agent.",
+      "best": "Lồng tiếng, trải nghiệm hội thoại và sản xuất nội dung audio.",
+      "note": "Thử tiếng Việt, cách phát âm và độ trễ thực tế; cần quyền dùng giọng tham chiếu.",
+      "url": "https://elevenlabs.io/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "suno",
+      "name": "Suno",
+      "org": "Suno",
+      "category": "audio",
+      "kind": "Music generator",
+      "surfaces": [
+        "Web",
+        "Mobile"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Tạo bài hát từ mô tả và chỉnh sửa bằng các công cụ làm nhạc.",
+      "best": "Demo bài hát, ý tưởng giai điệu và thử nghiệm sáng tác.",
+      "note": "Quyền khai thác đầu ra phụ thuộc điều khoản và gói; xem trước khi phát hành thương mại.",
+      "url": "https://suno.com/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "udio",
+      "name": "Udio",
+      "org": "Udio",
+      "category": "audio",
+      "kind": "Music generator",
+      "surfaces": [
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Tạo bài hát từ mô tả về phong cách, tâm trạng hoặc chủ đề.",
+      "best": "Khám phá cấu trúc và biến thể âm nhạc.",
+      "note": "Kiểm tra điều kiện tải xuống, giấy phép và tình trạng tính năng trực tiếp trên dịch vụ.",
+      "url": "https://help.udio.com/en/articles/10715838-create-your-first-song",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "descript",
+      "name": "Descript",
+      "org": "Descript",
+      "category": "audio",
+      "kind": "Audio / video editor",
+      "surfaces": [
+        "Desktop",
+        "Web"
+      ],
+      "hosting": "Cloud / desktop",
+      "openness": "Dịch vụ",
+      "description": "Biên tập audio và video bằng văn bản, có công cụ AI để làm nội dung.",
+      "best": "Podcast, video nói và hậu kỳ dựa trên transcript.",
+      "note": "Tốt nhất khi kết hợp kiểm tra transcript với nghe lại âm thanh ở các điểm cắt.",
+      "url": "https://www.descript.com/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "langchain",
+      "name": "LangChain",
+      "org": "LangChain",
+      "category": "framework",
+      "kind": "Agent framework",
+      "surfaces": [
+        "SDK"
+      ],
+      "hosting": "Self-host",
+      "openness": "Có mã nguồn",
+      "description": "Các thành phần và harness để kết hợp model, công cụ, prompt và middleware thành agent.",
+      "best": "Xây agent tùy biến và dùng nhiều tích hợp provider.",
+      "note": "Phân biệt thư viện LangChain, runtime LangGraph và dịch vụ LangSmith khi thiết kế hệ thống.",
+      "url": "https://docs.langchain.com/oss/python/langchain/overview",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "langgraph",
+      "name": "LangGraph",
+      "org": "LangChain",
+      "category": "framework",
+      "kind": "Agent orchestration",
+      "surfaces": [
+        "SDK"
+      ],
+      "hosting": "Self-host",
+      "openness": "Có mã nguồn",
+      "description": "Runtime điều phối agent bằng đồ thị trạng thái, có persistence và interrupt.",
+      "best": "Quy trình nhiều bước cần kiểm soát trạng thái và can thiệp của người dùng.",
+      "note": "Cần thiết kế state và luồng lỗi rõ; thêm framework không tự làm agent đáng tin cậy hơn.",
+      "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "llamaindex",
+      "name": "LlamaIndex",
+      "org": "LlamaIndex",
+      "category": "framework",
+      "kind": "Data / agent framework",
+      "surfaces": [
+        "SDK",
+        "API"
+      ],
+      "hosting": "Self-host / cloud",
+      "openness": "Hỗn hợp",
+      "description": "Hệ sinh thái xử lý tài liệu, lập chỉ mục và đưa dữ liệu vào quy trình AI.",
+      "best": "Ứng dụng hỏi đáp trên tài liệu và workflow cần truy xuất tri thức.",
+      "note": "Tách thư viện với dịch vụ tài liệu; chất lượng parse và truy xuất thường quyết định chất lượng trả lời.",
+      "url": "https://www.llamaindex.ai/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "crewai",
+      "name": "CrewAI",
+      "org": "CrewAI",
+      "category": "framework",
+      "kind": "Multi-agent framework",
+      "surfaces": [
+        "SDK",
+        "Web"
+      ],
+      "hosting": "Self-host / cloud",
+      "openness": "Hỗn hợp",
+      "description": "Framework và nền tảng để xây agent theo vai trò, công việc cùng quy trình nghiệp vụ.",
+      "best": "Mô hình hóa một đội agent có trách nhiệm và đầu ra riêng.",
+      "note": "Chỉ thêm nhiều agent khi có lợi ích đo được; cần quan sát chi phí và lỗi bàn giao.",
+      "url": "https://crewai.com/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "autogen",
+      "name": "AutoGen",
+      "org": "Microsoft",
+      "category": "framework",
+      "kind": "Multi-agent framework",
+      "surfaces": [
+        "SDK",
+        "Web"
+      ],
+      "hosting": "Self-host",
+      "openness": "Có mã nguồn",
+      "description": "Bộ công cụ AgentChat, Core và Studio cho ứng dụng một hoặc nhiều agent.",
+      "best": "Nghiên cứu và thử các mẫu hội thoại, phối hợp agent.",
+      "note": "Chọn đúng thế hệ API và kiểm tra lộ trình cùng Microsoft Agent Framework trước khi bắt đầu.",
+      "url": "https://microsoft.github.io/autogen/stable/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "microsoft-agent-framework",
+      "name": "Microsoft Agent Framework",
+      "org": "Microsoft",
+      "category": "framework",
+      "kind": "Agent framework",
+      "surfaces": [
+        "SDK"
+      ],
+      "hosting": "Self-host / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Framework cho agent, harness, công cụ và workflow với nhiều model provider.",
+      "best": "Xây ứng dụng agent trong hệ sinh thái kỹ thuật Microsoft.",
+      "note": "Đánh giá tích hợp runtime, lưu trạng thái và telemetry theo môi trường triển khai.",
+      "url": "https://learn.microsoft.com/en-us/agent-framework/overview/",
+      "aliases": [
+        "Agent Framework"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "openai-agents-sdk",
+      "name": "OpenAI Agents SDK",
+      "org": "OpenAI",
+      "category": "framework",
+      "kind": "Agent SDK",
+      "surfaces": [
+        "SDK"
+      ],
+      "hosting": "Self-host",
+      "openness": "Có mã nguồn",
+      "description": "SDK cung cấp vòng lặp agent, công cụ, handoff và tích hợp runtime trong ứng dụng của bạn.",
+      "best": "Muốn tự quản việc thực thi và điều phối agent bằng code.",
+      "note": "Khác Agents API do OpenAI vận hành harness; bạn chịu trách nhiệm runtime, lưu trữ và quyền gọi công cụ.",
+      "url": "https://developers.openai.com/api/docs/guides/agents/sdk",
+      "aliases": [
+        "Agents SDK"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "google-adk",
+      "name": "Google ADK",
+      "org": "Google",
+      "category": "framework",
+      "kind": "Agent SDK",
+      "surfaces": [
+        "SDK",
+        "CLI"
+      ],
+      "hosting": "Self-host / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Agent Development Kit để lập trình agent, công cụ và workflow nhiều agent.",
+      "best": "Xây và chạy agent theo cấu trúc trong hệ sinh thái Google.",
+      "note": "Xem mức hỗ trợ tính năng của ngôn ngữ và môi trường chạy bạn lựa chọn.",
+      "url": "https://adk.dev/",
+      "aliases": [
+        "Agent Development Kit",
+        "ADK"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "pydantic-ai",
+      "name": "Pydantic AI",
+      "org": "Pydantic",
+      "category": "framework",
+      "kind": "Typed agent framework",
+      "surfaces": [
+        "SDK"
+      ],
+      "hosting": "Self-host",
+      "openness": "Có mã nguồn",
+      "description": "Framework agent chú trọng kiểu dữ liệu, output và tích hợp model provider.",
+      "best": "Ứng dụng Python cần dữ liệu đầu ra có cấu trúc.",
+      "note": "Schema giúp kiểm tra hình dạng dữ liệu; tính đúng của nội dung vẫn cần đánh giá riêng.",
+      "url": "https://pydantic.dev/docs/ai/overview/",
+      "aliases": [
+        "PydanticAI"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "dspy",
+      "name": "DSPy",
+      "org": "Stanford / community",
+      "category": "framework",
+      "kind": "LM programming",
+      "surfaces": [
+        "SDK"
+      ],
+      "hosting": "Self-host",
+      "openness": "Có mã nguồn",
+      "description": "Lập trình chương trình ngôn ngữ bằng signature, module, metric và bộ tối ưu.",
+      "best": "Tối ưu pipeline AI dựa trên ví dụ và tiêu chí đo được.",
+      "note": "Cần bộ dữ liệu đánh giá đại diện; metric kém có thể tối ưu sai hành vi mong muốn.",
+      "url": "https://dspy.ai/current/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama",
+      "org": "Ollama",
+      "category": "runtime",
+      "kind": "Model runtime",
+      "surfaces": [
+        "CLI",
+        "Desktop",
+        "API"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Tải và chạy các open model trên máy hoặc qua dịch vụ cloud.",
+      "best": "Thử model local và cung cấp endpoint cho ứng dụng cá nhân.",
+      "note": "Kiểm tra model thực sự chạy local hay cloud; RAM, VRAM và quantization ảnh hưởng trải nghiệm.",
+      "url": "https://ollama.com/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "lm-studio-bionic",
+      "name": "LM Studio / Bionic",
+      "org": "LM Studio",
+      "category": "runtime",
+      "kind": "Local AI workspace",
+      "surfaces": [
+        "Desktop",
+        "API"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Hỗn hợp",
+      "description": "Workspace cho open model và agent Bionic, dựa trên runtime LM Studio.",
+      "best": "Dùng model local qua giao diện và thử các tác vụ công việc trên máy.",
+      "note": "Agent, model và tính năng cloud có thể khác yêu cầu máy; kiểm tra phạm vi xử lý local.",
+      "url": "https://lmstudio.ai/",
+      "aliases": [
+        "LM Studio",
+        "Bionic"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "vllm",
+      "name": "vLLM",
+      "org": "vLLM community",
+      "category": "runtime",
+      "kind": "Inference engine",
+      "surfaces": [
+        "API",
+        "SDK"
+      ],
+      "hosting": "Self-host",
+      "openness": "Có mã nguồn",
+      "description": "Engine phục vụ model với batching và tối ưu sử dụng bộ nhớ GPU.",
+      "best": "Team kỹ thuật muốn tự vận hành inference ở quy mô lớn.",
+      "note": "Tính cả GPU, tải thực tế, latency và vận hành; đây là hạ tầng chứ không phải chatbot sẵn dùng.",
+      "url": "https://vllm.ai/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "hugging-face",
+      "name": "Hugging Face",
+      "org": "Hugging Face",
+      "category": "runtime",
+      "kind": "Model hub / inference",
+      "surfaces": [
+        "Web",
+        "API",
+        "SDK"
+      ],
+      "hosting": "Cloud / local",
+      "openness": "Hỗn hợp",
+      "description": "Nền tảng model, dataset, Spaces và dịch vụ inference.",
+      "best": "Tìm model, thử demo, chia sẻ hoặc triển khai mô hình.",
+      "note": "Mỗi model và dataset có giấy phép riêng; có trên Hub không có nghĩa được tự do dùng thương mại.",
+      "url": "https://huggingface.co/",
+      "aliases": [
+        "HF"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "org": "OpenRouter",
+      "category": "runtime",
+      "kind": "Model gateway",
+      "surfaces": [
+        "Web",
+        "API"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Một giao diện chung để chọn và gọi model từ nhiều provider.",
+      "best": "Thử nhiều model và điều phối provider qua một API.",
+      "note": "Xem định tuyến, chính sách dữ liệu và giá của provider được chọn cho từng model.",
+      "url": "https://openrouter.ai/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "litellm",
+      "name": "LiteLLM",
+      "org": "BerriAI",
+      "category": "runtime",
+      "kind": "AI gateway",
+      "surfaces": [
+        "API",
+        "SDK"
+      ],
+      "hosting": "Self-host / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Gateway thống nhất lời gọi model, công cụ và agent, có khóa cùng ngân sách.",
+      "best": "Team muốn quản lý provider, chi phí và quyền truy cập tập trung.",
+      "note": "Cần bảo vệ gateway và khóa upstream; kiểm thử tính tương thích của từng endpoint.",
+      "url": "https://docs.litellm.ai/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "together-ai",
+      "name": "Together AI",
+      "org": "Together AI",
+      "category": "runtime",
+      "kind": "Inference cloud",
+      "surfaces": [
+        "API",
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Cloud AI cho inference, compute và điều chỉnh model.",
+      "best": "Triển khai open model mà không tự quản toàn bộ hạ tầng GPU.",
+      "note": "Tính riêng inference, tài nguyên dành riêng và huấn luyện; đọc SLA và phạm vi model.",
+      "url": "https://www.together.ai/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "replicate",
+      "name": "Replicate",
+      "org": "Replicate",
+      "category": "runtime",
+      "kind": "Model API platform",
+      "surfaces": [
+        "API",
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Chạy model, fine-tune và triển khai model tùy chỉnh qua API.",
+      "best": "Thử và tích hợp nhanh model tạo nội dung hoặc model chuyên biệt.",
+      "note": "Giao diện, độ trễ và giấy phép khác nhau theo model; kiểm tra cold start và đầu vào thực tế.",
+      "url": "https://replicate.com/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "bedrock-agentcore",
+      "name": "Bedrock AgentCore",
+      "org": "AWS",
+      "category": "runtime",
+      "kind": "Agent runtime platform",
+      "surfaces": [
+        "API",
+        "SDK",
+        "CLI"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Nền tảng triển khai, kết nối và quan sát agent với nhiều framework cùng model.",
+      "best": "Team muốn đưa agent vào vận hành trên hạ tầng AWS.",
+      "note": "AgentCore là lớp vận hành; vẫn cần chọn framework, model, cấu hình quyền và tiêu chí đánh giá.",
+      "url": "https://aws.amazon.com/bedrock/agentcore/",
+      "aliases": [
+        "Amazon Bedrock AgentCore"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "you-com",
+      "name": "You.com",
+      "org": "You.com",
+      "category": "runtime",
+      "kind": "Search / inference API",
+      "surfaces": [
+        "API",
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Hạ tầng tìm kiếm web, nội dung, nghiên cứu và định tuyến inference cho ứng dụng AI.",
+      "best": "Cấp nguồn web và khả năng tìm kiếm cho agent tự xây.",
+      "note": "Trang hiện tập trung vào API; đánh giá độ mới nguồn, latency và chất lượng truy xuất cho tác vụ thực tế.",
+      "url": "https://you.com/",
+      "aliases": [
+        "You.com Search API"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "langfuse",
+      "name": "Langfuse",
+      "org": "Langfuse / ClickHouse",
+      "category": "ops",
+      "kind": "Observability / evals",
+      "surfaces": [
+        "Web",
+        "SDK"
+      ],
+      "hosting": "Self-host / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Theo dõi trace, quản lý prompt và đánh giá hành vi agent.",
+      "best": "Tìm điểm lỗi, đo chi phí và so sánh phiên bản ứng dụng AI.",
+      "note": "Log có thể chứa dữ liệu đầu vào; thiết kế redaction, lưu trữ và phân quyền phù hợp.",
+      "url": "https://langfuse.com/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "langsmith",
+      "name": "LangSmith",
+      "org": "LangChain",
+      "category": "ops",
+      "kind": "Observability",
+      "surfaces": [
+        "Web",
+        "SDK"
+      ],
+      "hosting": "Cloud / riêng",
+      "openness": "Dịch vụ",
+      "description": "Nền tảng quan sát hành vi agent và trace tích hợp với nhiều framework.",
+      "best": "Theo dõi luồng agent và đánh giá các thay đổi khi phát triển.",
+      "note": "LangSmith là sản phẩm vận hành riêng; không mặc định nằm trong giấy phép của thư viện LangChain.",
+      "url": "https://www.langchain.com/langsmith/observability",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "arize-phoenix",
+      "name": "Arize Phoenix",
+      "org": "Arize",
+      "category": "ops",
+      "kind": "Observability / evals",
+      "surfaces": [
+        "Web",
+        "SDK"
+      ],
+      "hosting": "Self-host / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Công cụ mã nguồn mở để quan sát LLM, trace và đánh giá agent.",
+      "best": "Debug truy xuất, lời gọi model và chất lượng câu trả lời.",
+      "note": "Cần dữ liệu đánh giá và instrumentation tốt; có trace chưa đủ để kết luận hệ thống đáng tin cậy.",
+      "url": "https://arize.com/phoenix/",
+      "aliases": [
+        "Phoenix"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "braintrust",
+      "name": "Braintrust",
+      "org": "Braintrust",
+      "category": "ops",
+      "kind": "Observability / evals",
+      "surfaces": [
+        "Web",
+        "SDK"
+      ],
+      "hosting": "Cloud / riêng",
+      "openness": "Dịch vụ",
+      "description": "Nền tảng theo dõi agent, tìm hành vi và chuyển quan sát thành bài đánh giá.",
+      "best": "Team muốn gắn kiểm thử chất lượng với dữ liệu vận hành.",
+      "note": "Chọn metric bám sát nhu cầu người dùng và kiểm tra sai lệch khi dùng LLM làm giám khảo.",
+      "url": "https://www.braintrust.dev/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "qdrant",
+      "name": "Qdrant",
+      "org": "Qdrant",
+      "category": "ops",
+      "kind": "Vector search",
+      "surfaces": [
+        "API",
+        "SDK"
+      ],
+      "hosting": "Self-host / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Engine tìm kiếm vector cho truy xuất, RAG và ứng dụng agent.",
+      "best": "Tìm tài liệu hoặc bản ghi gần nghĩa trong dữ liệu riêng.",
+      "note": "Embedding, lọc metadata và phân quyền cùng ảnh hưởng chất lượng; database không tự sửa được nguồn sai.",
+      "url": "https://qdrant.tech/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "pinecone",
+      "name": "Pinecone",
+      "org": "Pinecone",
+      "category": "ops",
+      "kind": "Knowledge / vector platform",
+      "surfaces": [
+        "API",
+        "SDK"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Nền tảng truy xuất tri thức với search, index và reranking cho agent.",
+      "best": "Team cần dịch vụ quản lý hạ tầng tìm kiếm cho AI.",
+      "note": "Đánh giá recall, latency và chi phí với tập dữ liệu cùng tải truy vấn thực.",
+      "url": "https://www.pinecone.io/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "weaviate",
+      "name": "Weaviate",
+      "org": "Weaviate",
+      "category": "ops",
+      "kind": "AI database",
+      "surfaces": [
+        "API",
+        "SDK"
+      ],
+      "hosting": "Self-host / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Nền tảng mã nguồn mở cho vector search, RAG và ứng dụng AI.",
+      "best": "Xây lớp dữ liệu có tìm kiếm ngữ nghĩa kết hợp thuộc tính.",
+      "note": "Thiết kế schema và phương án embedding trước; đo chất lượng truy xuất độc lập với model trả lời.",
+      "url": "https://weaviate.io/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "chroma",
+      "name": "Chroma",
+      "org": "Chroma / Replit",
+      "category": "ops",
+      "kind": "Search database",
+      "surfaces": [
+        "API",
+        "SDK"
+      ],
+      "hosting": "Local / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Hạ tầng tìm kiếm mã nguồn mở cho vector, full-text và metadata.",
+      "best": "Bắt đầu truy xuất dữ liệu cho ứng dụng AI hoặc chạy local.",
+      "note": "Trang chính thức thông báo gia nhập Replit; kiểm tra lộ trình và khác biệt giữa local với cloud.",
+      "url": "https://www.trychroma.com/",
+      "aliases": [],
+      "status": "Sáp nhập",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "mcp",
+      "name": "MCP",
+      "org": "MCP community",
+      "category": "connect",
+      "kind": "Giao thức",
+      "surfaces": [
+        "Protocol",
+        "SDK"
+      ],
+      "hosting": "Tùy triển khai",
+      "openness": "Chuẩn mở",
+      "description": "Model Context Protocol chuẩn hóa kết nối ứng dụng AI với công cụ và dữ liệu.",
+      "best": "Kết nối agent với hệ thống bên ngoài qua server tương thích.",
+      "note": "MCP là giao thức; độ tin cậy và quyền truy cập do ứng dụng, server và cấu hình quyết định.",
+      "url": "https://modelcontextprotocol.io/docs/getting-started/intro",
+      "aliases": [
+        "Model Context Protocol"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "a2a",
+      "name": "A2A",
+      "org": "A2A project",
+      "category": "connect",
+      "kind": "Giao thức",
+      "surfaces": [
+        "Protocol",
+        "SDK"
+      ],
+      "hosting": "Tùy triển khai",
+      "openness": "Chuẩn mở",
+      "description": "Agent2Agent là giao thức phục vụ giao tiếp và phối hợp giữa các agent.",
+      "best": "Hệ thống cần các agent độc lập trao đổi và giao việc.",
+      "note": "Khác MCP về trọng tâm kết nối; không mặc định hai agent hiểu cùng ý nghĩa nghiệp vụ.",
+      "url": "https://a2a-protocol.org/latest/",
+      "aliases": [
+        "Agent2Agent",
+        "Agent to Agent"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "browser-use",
+      "name": "Browser Use",
+      "org": "Browser Use",
+      "category": "connect",
+      "kind": "Browser agent toolkit",
+      "surfaces": [
+        "SDK",
+        "API"
+      ],
+      "hosting": "Self-host / cloud",
+      "openness": "Có mã nguồn",
+      "description": "Công cụ và hạ tầng để AI thao tác trình duyệt, có bản mã nguồn và dịch vụ cloud.",
+      "best": "Tự động hóa tác vụ web chưa có API phù hợp.",
+      "note": "Web thay đổi có thể làm hỏng luồng; nên có kiểm tra kết quả và cơ chế dừng, tiếp quản.",
+      "url": "https://browser-use.com/",
+      "aliases": [
+        "browser-use"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "browserbase",
+      "name": "Browserbase",
+      "org": "Browserbase",
+      "category": "connect",
+      "kind": "Browser infrastructure",
+      "surfaces": [
+        "API",
+        "SDK"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Hạ tầng trình duyệt giúp agent truy cập và thao tác trên web theo chương trình.",
+      "best": "Chạy các phiên browser cho quy trình agent trên cloud.",
+      "note": "Đây là hạ tầng browser; cần ghép logic agent, xác thực và kiểm tra kết quả cho tác vụ hoàn chỉnh.",
+      "url": "https://www.browserbase.com/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    },
+    {
+      "id": "stagehand",
+      "name": "Stagehand",
+      "org": "Browserbase",
+      "category": "connect",
+      "kind": "Browser agent SDK",
+      "surfaces": [
+        "SDK"
+      ],
+      "hosting": "Self-host / cloud",
+      "openness": "Có mã nguồn",
+      "description": "SDK để xây browser agent và thao tác web từ code.",
+      "best": "Kết hợp tự động hóa trình duyệt với xử lý bằng model.",
+      "note": "Tách phần thao tác xác định với phần suy luận để dễ debug và giảm lỗi khi giao diện đổi.",
+      "url": "https://www.stagehand.dev/",
+      "aliases": [],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08"
+    }
+  ],
+  "categories": [
+    {
+      "id": "assistant",
+      "name": "Trợ lý đa năng",
+      "en": "General assistants",
+      "icon": "✳",
+      "color": "#2e8071",
+      "layer": "use",
+      "desc": "Hỏi đáp, viết, phân tích và làm việc cùng AI."
+    },
+    {
+      "id": "personal",
+      "name": "Agent thực thi",
+      "en": "Personal & work agents",
+      "icon": "↗",
+      "color": "#287b6c",
+      "layer": "use",
+      "desc": "Giao mục tiêu; agent dùng công cụ để hoàn thành nhiều bước."
+    },
+    {
+      "id": "research",
+      "name": "Tìm kiếm & nghiên cứu",
+      "en": "Search & research",
+      "icon": "⌕",
+      "color": "#3b7c90",
+      "layer": "use",
+      "desc": "Tìm thông tin, đọc tài liệu và tổng hợp bằng chứng."
+    },
+    {
+      "id": "coding",
+      "name": "Lập trình & kỹ thuật",
+      "en": "Coding agents",
+      "icon": "⌘",
+      "color": "#6c62a3",
+      "layer": "build",
+      "desc": "Làm việc với codebase, sửa mã, chạy lệnh và kiểm thử."
+    },
+    {
+      "id": "app",
+      "name": "Tạo ứng dụng & website",
+      "en": "App builders",
+      "icon": "▧",
+      "color": "#8c63a0",
+      "layer": "build",
+      "desc": "Biến mô tả thành giao diện, nguyên mẫu hoặc ứng dụng."
+    },
+    {
+      "id": "workflow",
+      "name": "Tự động hóa quy trình",
+      "en": "Workflow automation",
+      "icon": "⑂",
+      "color": "#ad6552",
+      "layer": "build",
+      "desc": "Kết nối ứng dụng, dữ liệu và các bước AI thành quy trình."
+    },
+    {
+      "id": "office",
+      "name": "Công việc & tài liệu",
+      "en": "Productivity & knowledge",
+      "icon": "▤",
+      "color": "#427a97",
+      "layer": "use",
+      "desc": "AI ngay trong nơi làm việc, ghi chép, slide và thiết kế."
+    },
+    {
+      "id": "meeting",
+      "name": "Họp & ghi chú",
+      "en": "Meeting intelligence",
+      "icon": "◉",
+      "color": "#588477",
+      "layer": "use",
+      "desc": "Chuyển hội thoại thành ghi chép, hành động và tri thức."
+    },
+    {
+      "id": "image",
+      "name": "Hình ảnh & thiết kế",
+      "en": "Image & design",
+      "icon": "◈",
+      "color": "#bd7850",
+      "layer": "create",
+      "desc": "Tạo, chỉnh sửa ảnh và kiểm soát quy trình hình ảnh."
+    },
+    {
+      "id": "video",
+      "name": "Video & avatar",
+      "en": "Video generation",
+      "icon": "▷",
+      "color": "#b86b76",
+      "layer": "create",
+      "desc": "Sinh cảnh quay, biến đổi video hoặc tạo người dẫn ảo."
+    },
+    {
+      "id": "audio",
+      "name": "Âm thanh & âm nhạc",
+      "en": "Voice & music",
+      "icon": "≋",
+      "color": "#9c708e",
+      "layer": "create",
+      "desc": "Giọng nói, bài hát và hậu kỳ nội dung bằng AI."
+    },
+    {
+      "id": "framework",
+      "name": "Framework & SDK",
+      "en": "Agent development",
+      "icon": "⌬",
+      "color": "#648146",
+      "layer": "infra",
+      "desc": "Thư viện để lập trình hành vi, công cụ và vòng lặp agent."
+    },
+    {
+      "id": "runtime",
+      "name": "Model runtime & API",
+      "en": "Inference & gateways",
+      "icon": "⊞",
+      "color": "#56714e",
+      "layer": "infra",
+      "desc": "Chạy model, chọn nhà cung cấp và điều phối lời gọi AI."
+    },
+    {
+      "id": "ops",
+      "name": "Dữ liệu & đánh giá",
+      "en": "Data, evals & observability",
+      "icon": "▥",
+      "color": "#7d8047",
+      "layer": "infra",
+      "desc": "Truy xuất tri thức, theo dõi hành vi và đo chất lượng AI."
+    },
+    {
+      "id": "connect",
+      "name": "Kết nối & browser",
+      "en": "Protocols & browser agents",
+      "icon": "⤳",
+      "color": "#708275",
+      "layer": "infra",
+      "desc": "Chuẩn giao tiếp và công cụ giúp agent thao tác trên web."
+    }
+  ],
+  "layers": [
+    {
+      "id": "use",
+      "name": "01",
+      "title": "Sử dụng AI",
+      "desc": "Tư duy, nghiên cứu & công việc",
+      "color": "#2e8071"
+    },
+    {
+      "id": "build",
+      "name": "02",
+      "title": "Xây sản phẩm",
+      "desc": "Code, ứng dụng & quy trình",
+      "color": "#7660a2"
+    },
+    {
+      "id": "create",
+      "name": "03",
+      "title": "Sáng tạo nội dung",
+      "desc": "Hình ảnh, video & âm thanh",
+      "color": "#ba7055"
+    },
+    {
+      "id": "infra",
+      "name": "04",
+      "title": "Xây hệ thống AI",
+      "desc": "Framework, dữ liệu & hạ tầng",
+      "color": "#708047"
+    }
+  ]
+}

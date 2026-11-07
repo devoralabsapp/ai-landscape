@@ -1,0 +1,13 @@
+{
+  "name": "ai-landscape-vn",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Vietnamese AI ecosystem atlas with a sourced, curated directory.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "engines": { "node": ">=22" },
+  "license": "MIT"
+}
