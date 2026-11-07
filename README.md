@@ -1,5 +1,7 @@
 # AI Atlas · AI Landscape tiếng Việt
 
+**Website:** [ai-landscape-mocha.vercel.app](https://ai-landscape-mocha.vercel.app) · **Repo public:** [devoralabsapp/ai-landscape](https://github.com/devoralabsapp/ai-landscape)
+
 Bản đồ tương tác lấy cảm hứng từ [CNCF Landscape](https://landscape.cncf.io/): **120 công cụ, nền tảng, họ model và giao thức**, chia thành **15 nhóm** trong 4 lớp sử dụng.
 
 **Đối chiếu nguồn: 08/11/2026.** Đây là danh mục tuyển chọn mở rộng dần, không phải toàn bộ công cụ AI đang tồn tại hay bảng xếp hạng. Không liên kết với CNCF hoặc các hãng được liệt kê.
