@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import './check-preferences.mjs';
+import './check-motion.mjs';
 import {readFileSync,existsSync} from 'node:fs';
 import {Script} from 'node:vm';
 import {loadCatalog} from './catalog.mjs';
@@ -36,9 +37,9 @@ for(const t of tools){
 for(const required of ['ChatGPT','Claude','Gemini','Muse','Antigravity','OpenCode','OpenClaw','Qoder']){
   assert.ok(tools.some(t=>t.name===required),`Missing requested tool: ${required}`);
 }
-for(const f of ['app.js','data.js','product-data.js','preferences.js','i18n.js','translations.en.js'])new Script(readFileSync(new URL('../dist/'+f,import.meta.url),'utf8'),{filename:f});
+for(const f of ['app.js','data.js','product-data.js','preferences.js','i18n.js','translations.en.js','motion.js'])new Script(readFileSync(new URL('../dist/'+f,import.meta.url),'utf8'),{filename:f});
 const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
-for(const file of ['styles.css','themes.css','app.js','data.js','product-data.js','preferences.js','i18n.js','translations.en.js']){
+for(const file of ['styles.css','themes.css','motion.css','app.js','data.js','product-data.js','preferences.js','i18n.js','translations.en.js','motion.js']){
   assert.ok(html.includes(file),`Missing asset reference: ${file}`);
   assert.ok(existsSync(new URL('../dist/'+file,import.meta.url)),`Missing asset: ${file}`);
 }

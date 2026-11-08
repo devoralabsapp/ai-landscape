@@ -52,6 +52,17 @@ Sáu theme đầu theo thứ tự gallery của [Creative Theme System](https://
 
 Bản dịch được biên tập trong `dist/translations.en.json`. Build sinh `translations.en.js`, `catalog.en.csv` và `catalog.en.json`. `i18n.js` dùng cùng catalog dịch cho nội dung, nhãn, thông báo và accessibility; dữ liệu ID, filter value và URL giữ nguyên. Chuyển ngôn ngữ tải lại URL hiện tại, giữ bộ lọc và mục đang mở. Để thêm nội dung tiếng Việt, thêm bản dịch tương ứng và chạy build; check sẽ báo mục dữ liệu chưa dịch.
 
+## Motion
+
+Áp dụng [Web Motion System Skill](https://github.com/devoralabsapp/web-motion-system-skill/tree/main/skills/web-motion-system-skill): line reveal (033), vector drawing (077), scroll reveal (081), FLIP (091), tab transitions (099), press feedback (111) và stagger (238). `dist/motion.js` sở hữu animation, observer, một requestAnimationFrame chờ và các hàm `stop`, `refresh`, `destroy`. Chuyển động không sửa dữ liệu, không cuộn tự động và không chạy vòng lặp vô hạn.
+
+- Tiêu đề và SVG quỹ đạo xuất hiện theo nhịp; nút ↻ phát lại riêng phần mở đầu.
+- Các nhóm hiện một lần khi cuộn tới; filter không phát lại toàn trang. FLIP giữ node thẻ theo ID, đo wrapper tĩnh và chuyển động lớp nội dung.
+- Hover/press, phản hồi lưu/so sánh, thanh so sánh, toast, nội dung dialog và thanh chỉ tab có chuyển động riêng.
+- Nút Motion bật/tắt giảm chuyển động, lưu vào trình duyệt; luôn kết hợp với `prefers-reduced-motion` của hệ thống. Hệ thống yêu cầu giảm thì nút không thể bật lại full motion. Thông báo có thể đóng trong phiên tab.
+- Nội dung mặc định nhìn thấy kể cả khi animation bị hủy; Escape, resize và trang ẩn dừng animation đang sở hữu.
+- Khoảng trống trong lưới nền trắng phẳng ở theme sáng, cùng nền bề mặt ở theme tối; không màu nhấn, shadow hoặc motion của riêng ô trống.
+
 ## Chạy local
 
 Yêu cầu Node.js 22 trở lên. Ứng dụng không có dependency runtime hoặc API key.

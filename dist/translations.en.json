@@ -1010,5 +1010,10 @@
   "Theo token": "Token-based",
   "Theo credits": "Credit-based",
   "6.000 credits.": "6,000 credits.",
-  "20.000 credits.": "20,000 credits."
+  "20.000 credits.": "20,000 credits.",
+  "Phát lại hiệu ứng": "Replay animation",
+  "Giảm chuyển động": "Reduce motion",
+  "Hệ thống đang bật giảm chuyển động": "Your system requests reduced motion",
+  "Đang giảm chuyển động theo lựa chọn của bạn hoặc cài đặt hệ thống. Nội dung và chức năng vẫn đầy đủ.": "Motion is reduced by your preference or system settings. All content and features remain available.",
+  "Đóng thông báo chuyển động": "Dismiss motion notice"
 }
