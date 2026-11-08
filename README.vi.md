@@ -4,17 +4,18 @@
 
 Website chính thức [ai.devoralabs.tech](https://ai.devoralabs.tech/)
 
-Bản đồ tương tác lấy cảm hứng từ [CNCF Landscape](https://landscape.cncf.io/): **120 công cụ, nền tảng, họ model và giao thức**, chia thành **15 nhóm** trong 4 lớp sử dụng.
+Bản đồ tương tác lấy cảm hứng từ [CNCF Landscape](https://landscape.cncf.io/): **123 công cụ, nền tảng, họ model và giao thức**, chia thành **16 nhóm** trong 4 lớp sử dụng.
 
 **Đối chiếu nguồn: 08/11/2026.** Đây là danh mục tuyển chọn mở rộng dần, không phải toàn bộ công cụ AI đang tồn tại hay bảng xếp hạng. Không liên kết với CNCF hoặc các hãng được liệt kê.
 
 ## Chức năng
 
 - Bản đồ theo nhóm và chế độ danh mục có mô tả.
-- Tiếng Việt / English cho giao diện, 120 mục, model, gói và CSV/JSON.
+- Tiếng Việt / English cho giao diện, 123 mục, model, gói và CSV/JSON.
 - Giao diện AI Atlas gốc cùng 6 theme chọn tay, lưu lựa chọn trong trình duyệt; hỗ trợ `?theme=...&lang=en`.
 - Tìm kiếm tiếng Việt có/không dấu, tên cũ, tên hãng, model, gói và công việc.
 - Lọc giao diện, mô hình cung cấp, local/self-host và vòng đời sản phẩm.
+- Bộ lọc **Lĩnh vực công việc** có An ninh mạng, Pentest, AppSec, SOC và OSINT. Tab Tổng quan ghi công cụ chuyên dụng hoặc vai trò hỗ trợ. [Mở bộ lọc Pentest](https://ai.devoralabs.tech/?lang=vi&field=pentest#explore)
 - Chi tiết từng mục có ba tab: Model, Gói sử dụng và Tổng quan.
 - Model theo họ/provider, phân tầng từ cao xuống thấp; tìm nhanh phiên bản ngay trong khung chi tiết.
 - Gói thuê bao, API và self-host được ghi riêng, có link giá chính thức và mốc đối chiếu.
@@ -25,7 +26,7 @@ Bản đồ tương tác lấy cảm hứng từ [CNCF Landscape](https://landsc
 ## Nội dung
 
 1. **Sử dụng AI:** trợ lý đa năng, agent thực thi, nghiên cứu, công việc & tài liệu, họp & ghi chú.
-2. **Xây sản phẩm:** coding agent, app builder, automation.
+2. **Xây sản phẩm:** coding agent, app builder, automation và công cụ an ninh mạng.
 3. **Sáng tạo:** hình ảnh, video & avatar, âm thanh & âm nhạc.
 4. **Hệ thống AI:** framework, inference & API, dữ liệu & đánh giá, giao thức & browser.
 
@@ -90,7 +91,7 @@ name|organization|kind|surfaces|hosting|openness|description|best|note|official 
 
 `surfaces` và `aliases` ngăn bằng dấu phẩy. Để trống `status` cho mục đang hoạt động. Cập nhật mốc `checked` và snapshot khi rà soát phiên bản mới. Chạy `npm run build` để sinh CSV, JSON và Markdown trước khi commit. Nếu thay số lượng mục, cập nhật README và mô tả HTML.
 
-120 mục có logo/icon từ website, bộ nhận diện hoặc repo chính thức. Ảnh lưu tại `dist/assets/logos/`; `dist/logo-sources.json` ghi URL nguồn, tệp gốc, phạm vi nhận diện, ngày đối chiếu và SHA-256. Build sinh `logos.js` và đưa provenance vào JSON xuất. Phần Tổng quan của mỗi mục phân biệt logo sản phẩm, họ sản phẩm và nhà phát hành. Không dùng dịch vụ proxy logo, đổi màu hoặc cắt ảnh; chữ viết tắt chỉ dự phòng khi tệp ảnh không tải được. Tên, logo và nhãn hiệu thuộc chủ sở hữu tương ứng, không được cấp phép lại theo MIT của repo. Font Be Vietnam Pro được tải từ Google Fonts, với system font dự phòng. Danh sách lưu và so sánh nằm trên trình duyệt, không có tài khoản hoặc backend.
+123 mục có logo/icon từ website, bộ nhận diện hoặc repo chính thức. Ảnh lưu tại `dist/assets/logos/`; `dist/logo-sources.json` ghi URL nguồn, tệp gốc, phạm vi nhận diện, ngày đối chiếu và SHA-256. Build sinh `logos.js` và đưa provenance vào JSON xuất. Phần Tổng quan của mỗi mục phân biệt logo sản phẩm, họ sản phẩm và nhà phát hành. Không dùng dịch vụ proxy logo, đổi màu hoặc cắt ảnh; chữ viết tắt chỉ dự phòng khi tệp ảnh không tải được. Tên, logo và nhãn hiệu thuộc chủ sở hữu tương ứng, không được cấp phép lại theo MIT của repo. Font Be Vietnam Pro được tải từ Google Fonts, với system font dự phòng. Danh sách lưu và so sánh nằm trên trình duyệt, không có tài khoản hoặc backend.
 
 ## Deploy Vercel
 

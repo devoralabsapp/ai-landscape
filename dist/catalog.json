@@ -128,6 +128,13 @@
         "pricingUrl": "https://learn.chatgpt.com/docs/pricing",
         "billingNote": "Giá niêm yết USD trên web, chưa thuế. Gói đăng ký và hóa đơn API là hai phạm vi riêng."
       },
+      "security": {
+        "fields": [
+          "pentest"
+        ],
+        "role": "Hỗ trợ quy trình",
+        "note": "Soạn checklist kiểm thử và bản nháp báo cáo từ các phát hiện đã xác minh."
+      },
       "logo": {
         "file": "assets/logos/chatgpt.svg",
         "assetUrl": "https://chatgpt.com/cdn/assets/favicon.6a33781f61.svg",
@@ -252,6 +259,13 @@
         ],
         "pricingUrl": "https://claude.com/pricing",
         "billingNote": "USD, giá web trước thuế; gói trả năm được ghi riêng. Model mạnh hơn có thể tiêu thụ hạn mức nhanh hơn."
+      },
+      "security": {
+        "fields": [
+          "pentest"
+        ],
+        "role": "Hỗ trợ quy trình",
+        "note": "Tổng hợp bằng chứng đã chọn, viết mô tả tác động và đề xuất hướng khắc phục cho báo cáo."
       },
       "logo": {
         "file": "assets/logos/claude.svg",
@@ -1611,6 +1625,13 @@
         ],
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
       },
+      "security": {
+        "fields": [
+          "osint"
+        ],
+        "role": "Hỗ trợ quy trình",
+        "note": "Tìm advisory và thông tin CVE công khai, sau đó đối chiếu từng trích dẫn với nguồn gốc."
+      },
       "logo": {
         "file": "assets/logos/perplexity.svg",
         "assetUrl": "https://www.perplexity.ai/favicon.svg",
@@ -1685,6 +1706,13 @@
         "pricingUrl": "https://gemini.google/subscriptions/",
         "modelUrl": "https://notebook.google/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "security": {
+        "fields": [
+          "osint"
+        ],
+        "role": "Hỗ trợ quy trình",
+        "note": "Tổng hợp advisory và tài liệu kỹ thuật đã chọn, có thể lần lại nguồn trích dẫn."
       },
       "logo": {
         "file": "assets/logos/gemini-notebook.svg",
@@ -2003,6 +2031,14 @@
         "pricingUrl": "https://learn.chatgpt.com/docs/pricing",
         "billingNote": "Giá niêm yết USD trên web, chưa thuế. Gói đăng ký và hóa đơn API là hai phạm vi riêng."
       },
+      "security": {
+        "fields": [
+          "pentest",
+          "appsec"
+        ],
+        "role": "Hỗ trợ quy trình",
+        "note": "Phân tích nguyên nhân trong mã nguồn và tạo kiểm thử tái hiện trong môi trường lab."
+      },
       "logo": {
         "file": "assets/logos/codex.png",
         "assetUrl": "https://developers.openai.com/favicon.png",
@@ -2120,6 +2156,14 @@
         ],
         "pricingUrl": "https://claude.com/pricing",
         "billingNote": "Quyền Claude Code tùy gói Claude đủ điều kiện hoặc tài khoản API riêng. Không bao gồm gói Free của ứng dụng chat."
+      },
+      "security": {
+        "fields": [
+          "pentest",
+          "appsec"
+        ],
+        "role": "Hỗ trợ quy trình",
+        "note": "Đọc luồng xác thực và phân quyền trong repo, sau đó viết kiểm thử hồi quy cho bản sửa."
       },
       "logo": {
         "file": "assets/logos/claude-code.png",
@@ -2495,6 +2539,13 @@
         ],
         "pricingUrl": "https://cursor.com/pricing",
         "billingNote": "Gói hiện hành: Free, Plus, Premium, Super, Ultra, Teams và Enterprise. Pro/Pro+/Start cùng các gói cũ là legacy, không trộn vào danh sách gói mới."
+      },
+      "security": {
+        "fields": [
+          "appsec"
+        ],
+        "role": "Hỗ trợ quy trình",
+        "note": "Lần theo dữ liệu đầu vào trong codebase, rà soát bản sửa và thêm kiểm thử bảo mật."
       },
       "logo": {
         "file": "assets/logos/cursor.svg",
@@ -3070,6 +3121,14 @@
         "pricingUrl": "https://opencode.ai/docs/console/go/",
         "billingNote": "Không cần mua Go để dùng OpenCode. Model có trong catalog không đồng nghĩa đã bật ở project của bạn."
       },
+      "security": {
+        "fields": [
+          "pentest",
+          "appsec"
+        ],
+        "role": "Hỗ trợ quy trình",
+        "note": "Đọc mã và chuẩn bị script kiểm thử hồi quy trong môi trường được cấp phép."
+      },
       "logo": {
         "file": "assets/logos/opencode.svg",
         "assetUrl": "https://opencode.ai/brand/files/opencode-logo-light.svg",
@@ -3429,6 +3488,14 @@
         ],
         "pricingUrl": "https://github.com/features/copilot/plans",
         "billingNote": "Tách tiền thuê bao khỏi số AI credits; mức sử dụng phụ thuộc model và tác vụ."
+      },
+      "security": {
+        "fields": [
+          "appsec"
+        ],
+        "role": "Hỗ trợ quy trình",
+        "note": "Giải thích cảnh báo code scanning và đề xuất bản sửa với Copilot Autofix khi được bật trong repo.",
+        "source": "https://docs.github.com/en/code-security/concepts/code-scanning/autofix-for-code-scanning"
       },
       "logo": {
         "file": "assets/logos/github-copilot.svg",
@@ -4767,6 +4834,13 @@
           "ollama"
         ]
       },
+      "security": {
+        "fields": [
+          "soc"
+        ],
+        "role": "Hỗ trợ quy trình",
+        "note": "Luân chuyển cảnh báo và tạo ticket triage qua các tích hợp do đội SOC cấu hình."
+      },
       "logo": {
         "file": "assets/logos/n8n.ico",
         "assetUrl": "https://n8n.io/favicon.ico",
@@ -5290,6 +5364,213 @@
         "checked": "2026-11-08",
         "sha256": "c48a0d6c455a61a1d961e15926751869b99deaaac3c33ad4a34dfb603b4ca43e",
         "bytes": 6425
+      }
+    },
+    {
+      "id": "burp-suite",
+      "name": "Burp Suite",
+      "org": "PortSwigger",
+      "category": "security",
+      "kind": "Bộ công cụ pentest web",
+      "surfaces": [
+        "Desktop"
+      ],
+      "hosting": "Desktop / cloud AI",
+      "openness": "Dịch vụ",
+      "description": "Bộ công cụ kiểm thử web và API. Burp AT hỗ trợ kiểm thử bằng agent, còn Burp AI hỗ trợ phân tích ngay trong các công cụ Burp.",
+      "best": "Kiểm thử ứng dụng web trong phạm vi được cấp phép và xác minh phát hiện từ scanner.",
+      "note": "Burp AT có trong bản Professional. Kiểm tra AI credits và dữ liệu gửi đi trước khi dùng tính năng AI.",
+      "url": "https://portswigger.net/burp/documentation/ai-features",
+      "aliases": [
+        "Burp AI",
+        "Burp AT",
+        "Burp Suite Professional",
+        "PortSwigger"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08",
+      "product": {
+        "checked": "2026-11-08",
+        "mode": "managed",
+        "groups": [],
+        "modelNote": "Model bên trong do nhà cung cấp quản lý. Danh mục lựa chọn model cụ thể chưa được xác nhận từ nguồn đã đối chiếu; không gán thêm tên model theo suy đoán.",
+        "plans": [
+          {
+            "name": "Professional",
+            "price": "Xem tại nguồn",
+            "note": "Giấy phép Burp Suite Professional.",
+            "type": "subscription"
+          },
+          {
+            "name": "Burp AI credits",
+            "price": "Theo sử dụng",
+            "note": "Xem gói AI và số credit tại PortSwigger.",
+            "type": "subscription"
+          }
+        ],
+        "pricingUrl": "https://portswigger.net/burp/ai/subscriptions",
+        "modelUrl": "https://portswigger.net/burp/documentation/ai-features",
+        "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "security": {
+        "fields": [
+          "pentest",
+          "appsec"
+        ],
+        "role": "Công cụ chuyên dụng",
+        "note": "Phân tích lưu lượng HTTP, kiểm thử web và API trong phạm vi cho phép, rồi xác minh phát hiện trong Burp."
+      },
+      "logo": {
+        "file": "assets/logos/burp-suite.png",
+        "assetUrl": "https://portswigger.net/content/images/logos/apple-touch-icon.png",
+        "sourcePage": "https://portswigger.net/burp/documentation/ai-features",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "PortSwigger",
+        "checked": "2026-11-08",
+        "sha256": "81af39352944b189ec21972b56196b1ceaa90a0c846903398b441387c638abc4",
+        "bytes": 4074
+      }
+    },
+    {
+      "id": "semgrep",
+      "name": "Semgrep",
+      "org": "Semgrep",
+      "category": "security",
+      "kind": "Nền tảng AppSec",
+      "surfaces": [
+        "CLI",
+        "Web"
+      ],
+      "hosting": "Local scanning / cloud AI",
+      "openness": "Hỗn hợp",
+      "description": "Nền tảng bảo mật mã nguồn, phụ thuộc và secrets. Tính năng AI hỗ trợ phân loại phát hiện và đề xuất bản sửa.",
+      "best": "Đưa kiểm tra bảo mật mã vào pull request và CI.",
+      "note": "Khả năng phân tích, tính năng AI và dữ liệu được gửi phụ thuộc sản phẩm, gói và cấu hình.",
+      "url": "https://semgrep.dev/pricing/",
+      "aliases": [
+        "Semgrep Assistant",
+        "Semgrep Autofix",
+        "Semgrep Code"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08",
+      "product": {
+        "checked": "2026-11-08",
+        "mode": "managed",
+        "groups": [],
+        "modelNote": "Model bên trong do nhà cung cấp quản lý. Danh mục lựa chọn model cụ thể chưa được xác nhận từ nguồn đã đối chiếu; không gán thêm tên model theo suy đoán.",
+        "plans": [
+          {
+            "name": "Free Edition",
+            "price": "Xem tại nguồn",
+            "note": "Quyền AI và hạn mức tùy gói.",
+            "type": "subscription"
+          },
+          {
+            "name": "Teams",
+            "price": "Xem tại nguồn",
+            "note": "Quyền AI và hạn mức tùy gói.",
+            "type": "subscription"
+          },
+          {
+            "name": "Enterprise",
+            "price": "Xem tại nguồn",
+            "note": "Quyền AI và hạn mức tùy gói.",
+            "type": "subscription"
+          }
+        ],
+        "pricingUrl": "https://semgrep.dev/pricing/",
+        "modelUrl": "https://semgrep.dev/pricing/",
+        "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "security": {
+        "fields": [
+          "appsec"
+        ],
+        "role": "Công cụ chuyên dụng",
+        "note": "Rà soát mã, phụ thuộc và secrets trong CI, rồi dùng AI để hỗ trợ phân loại phát hiện và xem bản sửa."
+      },
+      "logo": {
+        "file": "assets/logos/semgrep.png",
+        "assetUrl": "https://semgrep.dev/build/assets/favicon-32x32-CLzO_3Uq.png",
+        "sourcePage": "https://semgrep.dev/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Semgrep",
+        "checked": "2026-11-08",
+        "sha256": "61b4ccfc5844dcf9d4a8c1639268e684fd819aae5178b9453b8ee8226b5de69d",
+        "bytes": 768
+      }
+    },
+    {
+      "id": "microsoft-security-copilot",
+      "name": "Microsoft Security Copilot",
+      "org": "Microsoft",
+      "category": "security",
+      "kind": "Trợ lý vận hành an ninh",
+      "surfaces": [
+        "Web"
+      ],
+      "hosting": "Cloud",
+      "openness": "Dịch vụ",
+      "description": "Trợ lý bảo mật hỗ trợ phân loại cảnh báo, điều tra sự cố và phân tích thông tin mối đe dọa từ các nguồn tích hợp.",
+      "best": "Đội SOC dùng Microsoft Defender hoặc Sentinel cần tổng hợp ngữ cảnh điều tra.",
+      "note": "Công cụ cần quyền truy cập vào các nguồn tích hợp. Mức sử dụng được tính theo Security Compute Unit (SCU).",
+      "url": "https://learn.microsoft.com/en-us/copilot/security/microsoft-security-copilot",
+      "aliases": [
+        "Security Copilot",
+        "Copilot for Security",
+        "Microsoft Defender Copilot"
+      ],
+      "status": "Đang hoạt động",
+      "checked": "2026-11-08",
+      "product": {
+        "checked": "2026-11-08",
+        "mode": "managed",
+        "groups": [],
+        "modelNote": "Model bên trong do nhà cung cấp quản lý. Danh mục lựa chọn model cụ thể chưa được xác nhận từ nguồn đã đối chiếu; không gán thêm tên model theo suy đoán.",
+        "plans": [
+          {
+            "name": "Provisioned SCU",
+            "price": "Theo dung lượng",
+            "note": "Quyền AI và hạn mức tùy gói.",
+            "type": "subscription"
+          },
+          {
+            "name": "Overage SCU",
+            "price": "Theo sử dụng",
+            "note": "Quyền AI và hạn mức tùy gói.",
+            "type": "subscription"
+          },
+          {
+            "name": "Microsoft 365 E5 / E7 inclusion",
+            "price": "Theo điều kiện gói",
+            "note": "Quyền AI và hạn mức tùy gói.",
+            "type": "subscription"
+          }
+        ],
+        "pricingUrl": "https://learn.microsoft.com/en-us/copilot/security/security-compute-units-capacity",
+        "modelUrl": "https://learn.microsoft.com/en-us/copilot/security/microsoft-security-copilot",
+        "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "security": {
+        "fields": [
+          "soc"
+        ],
+        "role": "Công cụ chuyên dụng",
+        "note": "Tóm tắt cảnh báo, đối chiếu tín hiệu từ Defender hoặc Sentinel và hỗ trợ điều tra sự cố."
+      },
+      "logo": {
+        "file": "assets/logos/microsoft-security-copilot.ico",
+        "assetUrl": "https://www.microsoft.com/favicon.ico?v2",
+        "sourcePage": "https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-security-copilot",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "Microsoft",
+        "checked": "2026-11-08",
+        "sha256": "90cdaf487716184e4034000935c605d1633926d348116d198f355a98b8c6cd21",
+        "bytes": 17174
       }
     },
     {
@@ -8307,6 +8588,14 @@
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://ollama.com/library"
       },
+      "security": {
+        "fields": [
+          "pentest",
+          "soc"
+        ],
+        "role": "Hỗ trợ quy trình",
+        "note": "Chạy model local để tóm tắt log hoặc ghi chú đã chọn khi toàn bộ cấu hình suy luận nằm trên máy."
+      },
       "logo": {
         "file": "assets/logos/ollama.png",
         "assetUrl": "https://ollama.com/public/apple-touch-icon.png",
@@ -9749,6 +10038,15 @@
       "desc": "Kết nối ứng dụng, dữ liệu và các bước AI thành quy trình."
     },
     {
+      "id": "security",
+      "name": "Công cụ an ninh mạng",
+      "en": "Cybersecurity tools",
+      "icon": "◇",
+      "color": "#8a5c42",
+      "layer": "build",
+      "desc": "Công cụ chuyên dụng cho pentest, bảo mật ứng dụng và vận hành an ninh."
+    },
+    {
       "id": "office",
       "name": "Công việc & tài liệu",
       "en": "Productivity & knowledge",
@@ -9859,5 +10157,27 @@
       "desc": "Framework, dữ liệu & hạ tầng",
       "color": "#708047"
     }
-  ]
+  ],
+  "workFields": {
+    "cybersecurity": {
+      "label": "An ninh mạng · tất cả",
+      "keywords": "cybersecurity cyber security an ninh mạng bảo mật security infosec"
+    },
+    "pentest": {
+      "label": "Pentest · Web & API",
+      "keywords": "pentest pentesting pen test penetration testing web security kiểm thử xâm nhập kiểm thử bảo mật web api"
+    },
+    "appsec": {
+      "label": "AppSec · Bảo mật ứng dụng",
+      "keywords": "appsec application security secure code review sast devsecops bảo mật ứng dụng rà soát mã"
+    },
+    "soc": {
+      "label": "SOC · Phòng thủ & ứng phó",
+      "keywords": "soc blue team detection incident response dfir triage phòng thủ ứng phó sự cố"
+    },
+    "osint": {
+      "label": "OSINT · Nghiên cứu bảo mật",
+      "keywords": "osint open source intelligence threat research cve advisory nghiên cứu bảo mật thông tin công khai"
+    }
+  }
 }

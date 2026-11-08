@@ -4,9 +4,9 @@
  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
  <meta name="theme-color" content="#f6f7f5">
  <title>AI Atlas — Bản đồ hệ sinh thái AI</title>
- <meta name="description" content="Khám phá 120 công cụ, agent và nền tảng AI trong 15 nhóm. Tra cứu model, gói sử dụng, logo và nguồn chính thức bằng tiếng Việt hoặc tiếng Anh.">
+ <meta name="description" content="Khám phá 123 công cụ, agent và nền tảng AI trong 16 nhóm. Tra cứu model, gói sử dụng, logo và nguồn chính thức bằng tiếng Việt hoặc tiếng Anh.">
  <meta property="og:title" content="AI Atlas — Bản đồ hệ sinh thái AI">
- <meta property="og:description" content="Bản đồ AI song ngữ với 120 mục trong 15 nhóm. Tìm kiếm, lọc và so sánh công cụ theo nhu cầu.">
+ <meta property="og:description" content="Bản đồ AI song ngữ với 123 mục trong 16 nhóm. Tìm kiếm, lọc và so sánh công cụ theo nhu cầu.">
  <meta property="og:type" content="website">
  <meta property="og:locale" content="vi_VN">
  <meta property="og:locale:alternate" content="en_US">
@@ -15,7 +15,7 @@
  <link rel="icon" type="image/svg+xml" href="favicon.svg">
  <script src="preferences.js"></script>
  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="themes.css"><link rel="stylesheet" href="motion.css"><link rel="stylesheet" href="ai-illustration.css"><link rel="stylesheet" href="logos.css">
- <script src="data.js" defer></script><script src="product-data.js" defer></script><script src="logos.js" defer></script><script src="translations.en.js" defer></script><script src="i18n.js" defer></script><script src="motion.js" defer></script><script src="app.js" defer></script>
+ <script src="data.js" defer></script><script src="product-data.js" defer></script><script src="security-data.js" defer></script><script src="logos.js" defer></script><script src="translations.en.js" defer></script><script src="i18n.js" defer></script><script src="motion.js" defer></script><script src="app.js" defer></script>
 </head>
 <body>
  <a class="skip" href="#explore">Đến bản đồ</a>
@@ -28,7 +28,7 @@
  </header>
  <aside class="sidebar" id="sidebar" aria-label="Danh mục công cụ">
   <div class="side-eyebrow">KHÁM PHÁ HỆ SINH THÁI</div>
-  <button class="side-all active" data-category="all"><span class="nav-symbol">⊞</span> Toàn bộ bản đồ <span class="count" id="all-count">120</span></button>
+  <button class="side-all active" data-category="all"><span class="nav-symbol">⊞</span> Toàn bộ bản đồ <span class="count" id="all-count">123</span></button>
   <nav id="category-nav"></nav>
   <div class="sidebar-note"><span class="note-cross">✳</span><p>Một bản đồ để định hướng.<br>Một điểm bắt đầu để khám phá.</p><button data-action="method">Về bản đồ này <span>↗</span></button></div>
   <div class="edition">VIETNAMESE EDITION <span>V1.0</span></div>
@@ -68,13 +68,14 @@
      <g class="ai-star ai-star-two" transform="translate(67 244)"><path d="M-3 0h6M0-3v6"/></g>
     </svg>
    </div>
-   <div class="hero-stats"><div><strong id="stat-tools">120</strong><span>Công cụ & nền tảng</span></div><div><strong>15</strong><span>Nhóm chức năng</span></div><div class="stat-date"><span class="date-dot"></span><span>Đối chiếu nguồn<br><b>08.11.2026</b></span></div></div>
+   <div class="hero-stats"><div><strong id="stat-tools">123</strong><span>Công cụ & nền tảng</span></div><div><strong>16</strong><span>Nhóm chức năng</span></div><div class="stat-date"><span class="date-dot"></span><span>Đối chiếu nguồn<br><b>08.11.2026</b></span></div></div>
   </section>
   <section class="explore" id="explore" aria-label="Tra cứu hệ sinh thái AI">
    <div class="explore-head"><div><span class="eyebrow">THE LANDSCAPE</span><h2 id="section-title">Một hệ sinh thái. Nhiều khả năng.</h2></div><div class="explore-controls"><button class="motion-toggle" id="motion-toggle" aria-label="Giảm chuyển động" aria-pressed="false" title="Giảm chuyển động"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h8M3 10h14M3 14h10"/><circle cx="14" cy="6" r="2"/><circle cx="10" cy="14" r="2"/></svg><span>Motion</span></button><div class="view-switch" role="group" aria-label="Kiểu hiển thị"><button id="view-map" data-view="map" aria-pressed="true"><span aria-hidden="true">⊞</span> Bản đồ</button><button id="view-list" data-view="list" aria-pressed="false"><span aria-hidden="true">☷</span> Danh mục</button></div></div></div>
    <div class="motion-notice" id="motion-notice" hidden><p>Đang giảm chuyển động theo lựa chọn của bạn hoặc cài đặt hệ thống. Nội dung và chức năng vẫn đầy đủ.</p><button id="motion-notice-close" aria-label="Đóng thông báo chuyển động">×</button></div>
    <div class="search-row"><label class="search"><span class="sr-only">Tìm kiếm công cụ</span><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Tìm công cụ, model, gói hoặc công việc…" autocomplete="off"><kbd>/</kbd></label><label class="select-wrap"><span class="sr-only">Bề mặt sử dụng</span><select id="surface-filter"><option value="all">Mọi giao diện</option><option>Web</option><option>Desktop</option><option>Mobile</option><option>CLI</option><option>IDE</option><option>API</option><option>SDK</option><option>Messaging</option><option>Protocol</option></select></label><label class="select-wrap"><span class="sr-only">Mô hình cung cấp</span><select id="source-filter"><option value="all">Mọi mô hình cung cấp</option><option value="code">Có mã nguồn</option><option value="local">Có local / self-host</option><option value="service">Dịch vụ</option><option value="protocol">Chuẩn mở</option></select></label><button class="export-btn" data-action="export" title="Tải kết quả hiện tại dưới dạng CSV" aria-label="Tải danh mục CSV">↓<span> CSV</span></button></div>
-   <div class="filter-line"><div class="layer-filters" id="layer-filters"><button data-layer="all" class="active">Tất cả</button><button data-layer="use">Sử dụng AI</button><button data-layer="build">Xây sản phẩm</button><button data-layer="create">Sáng tạo</button><button data-layer="infra">Hạ tầng AI</button></div><label class="lifecycle-select"><span class="sr-only">Vòng đời sản phẩm</span><select id="status-filter"><option value="all">Mọi trạng thái</option><option value="current">Đang cung cấp / chuyển đổi</option><option value="changed">Có thay đổi cần chú ý</option><option value="ended">Sunset / đã ngừng</option></select></label></div>
+   <div class="filter-line"><div class="layer-filters" id="layer-filters"><button data-layer="all" class="active">Tất cả</button><button data-layer="use">Sử dụng AI</button><button data-layer="build">Xây sản phẩm</button><button data-layer="create">Sáng tạo</button><button data-layer="infra">Hạ tầng AI</button></div><div class="workflow-filters"><label class="select-wrap field-select"><span class="sr-only">Lĩnh vực công việc</span><select id="field-filter" aria-describedby="field-help"><option value="all">Mọi lĩnh vực</option></select></label><label class="lifecycle-select"><span class="sr-only">Vòng đời sản phẩm</span><select id="status-filter"><option value="all">Mọi trạng thái</option><option value="current">Đang cung cấp / chuyển đổi</option><option value="changed">Có thay đổi cần chú ý</option><option value="ended">Sunset / đã ngừng</option></select></label></div></div>
+   <span id="field-help" class="sr-only">Lọc công cụ theo công việc hoặc tìm bằng từ khóa như pentest, AppSec, SOC và OSINT.</span>
    <div class="result-line"><span id="results-label" role="status" aria-live="polite"></span><div class="legend"><span><i class="legend-dot open"></i>Có mã nguồn</span><span><i class="legend-dot change"></i>Vòng đời thay đổi</span><button id="reset-filters" data-action="reset" hidden>Xóa bộ lọc ×</button></div></div>
    <div id="results"></div>
   </section>

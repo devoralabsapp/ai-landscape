@@ -2,7 +2,7 @@
 
 **English** · [Tiếng Việt](README.vi.md)
 
-Explore 120 AI tools, agents, platforms, model families and protocols in 15 categories. AI Atlas is an interactive directory with practical notes, official logos and links to publisher sources. Inspired by the [CNCF Landscape](https://landscape.cncf.io/).
+Explore 123 AI tools, agents, platforms, model families and protocols in 16 categories. AI Atlas is an interactive directory with practical notes, official logos and links to publisher sources. Inspired by the [CNCF Landscape](https://landscape.cncf.io/).
 
 [Open AI Atlas at ai.devoralabs.tech](https://ai.devoralabs.tech/)
 
@@ -18,9 +18,11 @@ The catalog has four layers:
 | Layer | What you'll find |
 | --- | --- |
 | Use AI | General assistants, task agents, search, research, productivity and meeting notes |
-| Build products | Coding agents, app builders and workflow automation |
+| Build products | Coding agents, app builders, workflow automation and cybersecurity tools |
 | Create content | Images, video, avatars, audio and music |
 | Build AI systems | Frameworks, model runtimes, APIs, data, evaluation, protocols and browsers |
+
+Use **Work field** to browse cybersecurity, pentest, AppSec, SOC or OSINT. Search also accepts those terms. Each tagged entry explains its role in the Overview tab. [Pentest view](https://ai.devoralabs.tech/?lang=en&field=pentest#explore)
 
 Export the current results as CSV from the atlas, or download the full snapshot below.
 
@@ -55,6 +57,7 @@ Open [localhost:4173](http://127.0.0.1:4173). Run `npm run check` to validate ca
 | [dist/data.js](dist/data.js) | Entries, categories, descriptions and editorial notes |
 | [dist/product-data.js](dist/product-data.js) | Model groups, plans, provider relationships and sources |
 | [dist/translations.en.json](dist/translations.en.json) | English translations |
+| [dist/security-data.js](dist/security-data.js) | Cybersecurity work fields, search keywords and use cases |
 | [dist/logo-sources.json](dist/logo-sources.json) | Logo provenance and integrity metadata |
 
 When adding an entry, include its product profile, English translations and an image from an official source. Run `npm run build` to validate the changes and regenerate the downloads before committing. Open a GitHub issue or pull request to suggest a correction or addition.

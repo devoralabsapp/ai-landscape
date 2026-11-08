@@ -13,7 +13,8 @@ const saved=new Set(Array.isArray(savedRaw)?savedRaw.filter(id=>byId.has(id)):[]
 const compareRaw=readStore('ai-atlas-compare',[]);
 let comparison=Array.isArray(compareRaw)?[...new Set(compareRaw)].filter(id=>byId.has(id)).slice(0,3):[];
 let detailId=null,toastTimer;
-let state={q:'',category:'all',layer:'all',surface:'all',source:'all',status:'all',view:'map',savedOnly:false};
+const defaultFilters={q:'',category:'all',layer:'all',surface:'all',source:'all',field:'all',status:'all',savedOnly:false};
+let state={...defaultFilters,view:'map'};
 const initials=t=>t.name.split(/[\s.\/-]+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('');
 function avatar(t,extra=''){
  const logo=LOGOS[t.id];
@@ -33,6 +34,7 @@ function readURL(){
  state.layer=LAYERS.some(l=>l.id===p.get('layer'))?p.get('layer'):'all';
  state.surface=['Web','Desktop','Mobile','CLI','IDE','API','SDK','Messaging','Protocol'].includes(p.get('surface'))?p.get('surface'):'all';
  state.source=['code','local','service','protocol'].includes(p.get('source'))?p.get('source'):'all';
+ state.field=Object.hasOwn(WORK_FIELDS,p.get('field'))?p.get('field'):'all';
  state.status=['current','changed','ended'].includes(p.get('status'))?p.get('status'):'all';
  state.view=p.get('view')==='list'?'list':'map';state.savedOnly=p.get('saved')==='1';
  return p.get('tool');
@@ -40,20 +42,30 @@ function readURL(){
 function updateURL(){
  const p=new URLSearchParams();
  p.set('lang',LANGUAGE);p.set('theme',document.documentElement.dataset.theme);
- for(const key of ['q','category','layer','surface','source','status','view']){
+ for(const key of ['q','category','layer','surface','source','field','status','view']){
   if(state[key]&&state[key]!=='all'&&!(key==='view'&&state[key]==='map'))p.set(key,state[key]);
  }
  if(state.savedOnly)p.set('saved','1');
  if(detailId)p.set('tool',detailId);
  const query=p.toString();history.replaceState(null,'',location.pathname+(query?'?'+query:'')+location.hash);
 }
-const searchable=new Map(TOOLS.map(t=>[t.id,norm([t.name,t.org,t.kind,t.description,t.best,t.note,t.hosting,...t.aliases,...[t.description,t.best,t.note,t.kind,catById.get(t.category).name].map(englishText),...modelNames(getProductProfile(t)),...getProductProfile(t).plans.map(p=>p.name),catById.get(t.category).name].join(' '))]));
+function securitySearch(tool){
+ const profile=SECURITY_PROFILES[tool.id];
+ if(!profile)return [];
+ return [profile.note,englishText(profile.note),...['cybersecurity',...profile.fields].map(field=>WORK_FIELDS[field].keywords)];
+}
+const searchable=new Map(TOOLS.map(t=>[t.id,norm([t.name,t.org,t.kind,t.description,t.best,t.note,t.hosting,...t.aliases,...[t.description,t.best,t.note,t.kind,catById.get(t.category).name].map(englishText),...modelNames(getProductProfile(t)),...getProductProfile(t).plans.map(p=>p.name),catById.get(t.category).name,...securitySearch(t)].join(' '))]));
+const exactSecurityTerms=new Map([['soc',/\bsoc\b/],['osint',/\bosint\b/],['appsec',/\bappsec\b/]]);
 function filtered(){
  const words=norm(state.q).trim().split(/\s+/).filter(Boolean);
  return TOOLS.filter(t=>{
   if(state.savedOnly&&!saved.has(t.id))return false;
   if(state.category!=='all'&&t.category!==state.category)return false;
   if(state.layer!=='all'&&catById.get(t.category).layer!==state.layer)return false;
+  if(state.field!=='all'){
+   const profile=SECURITY_PROFILES[t.id];
+   if(!profile||(state.field!=='cybersecurity'&&!profile.fields.includes(state.field)))return false;
+  }
   if(state.surface!=='all'&&!t.surfaces.includes(state.surface))return false;
   if(state.source==='code'&&!hasCode(t))return false;
   if(state.source==='local'&&!/local|self-host/i.test(t.hosting))return false;
@@ -62,7 +74,8 @@ function filtered(){
   if(state.status==='current'&&ended(t))return false;
   if(state.status==='changed'&&t.status==='Đang hoạt động')return false;
   if(state.status==='ended'&&!ended(t))return false;
-  return words.every(w=>searchable.get(t.id).includes(w));
+  const text=searchable.get(t.id);
+  return words.every(word=>exactSecurityTerms.get(word)?.test(text)??text.includes(word));
  });
 }
 function renderNav(){
@@ -84,19 +97,21 @@ function renderMap(items){
 }
 function renderList(items){return `<div class="list-view"><div class="list-header" aria-hidden="true"><span>Công cụ / nền tảng</span><span>Làm được gì?</span><span>Nhóm chức năng</span><span>±</span></div>${items.map(t=>`<article class="list-row" data-entry="${t.id}" style="--group:${catById.get(t.category).color}"><button class="list-title" data-tool="${t.id}"><span class="list-face">${avatar(t)}<span><b>${esc(t.name)}</b><small>${esc(t.org)}</small>${statusChip(t)}</span></span></button><div class="list-description">${esc(t.description)}</div><div class="list-category">${esc(catById.get(t.category).name)}<br><span style="color:#929d86">${esc(t.surfaces.join(' · '))}</span></div>${compareButton(t,'tile-check list-check')}</article>`).join('')}</div>`;}
 function render(){
- const signature=JSON.stringify([state.q,state.category,state.layer,state.surface,state.source,state.status,state.view,state.savedOnly]);
+ const signature=JSON.stringify(state);
  atlasMotion.beforeResults(signature);
  const items=filtered();
  $('#stat-tools').textContent=TOOLS.length;
  $('#saved-count').textContent=saved.size;
  $('#saved-nav').setAttribute('aria-pressed',String(state.savedOnly));
  $('#search').value=state.q;$('#surface-filter').value=state.surface;$('#source-filter').value=state.source;$('#status-filter').value=state.status;
+ $('#field-filter').value=state.field;
  $('#section-title').textContent=state.savedOnly?'Bộ sưu tập của bạn.':state.category!=='all'?catById.get(state.category).name:'Một hệ sinh thái. Nhiều khả năng.';
  for(const b of document.querySelectorAll('[data-view]'))b.setAttribute('aria-pressed',String(b.dataset.view===state.view));
  for(const b of document.querySelectorAll('[data-layer]'))b.classList.toggle('active',b.dataset.layer===state.layer);
- const hasFilters=state.q||state.category!=='all'||state.layer!=='all'||state.surface!=='all'||state.source!=='all'||state.status!=='all'||state.savedOnly;
+ const hasFilters=Object.entries(defaultFilters).some(([key,value])=>state[key]!==value);
  $('#reset-filters').hidden=!hasFilters;
- $('#results-label').innerHTML=`<strong>${items.length}</strong> / ${TOOLS.length} mục${state.savedOnly?' · Đã lưu':''}${state.category!=='all'?' · '+esc(catById.get(state.category).name):''}`;
+ const fieldLabel=state.field==='all'?'':` <span class="result-field">· ${esc(tr(WORK_FIELDS[state.field].label))}</span>`;
+ $('#results-label').innerHTML=`<strong>${items.length}</strong> / ${TOOLS.length} mục${state.savedOnly?' · Đã lưu':''}${state.category!=='all'?' · '+esc(catById.get(state.category).name):''}${fieldLabel}`;
  $('#results').innerHTML=items.length?(state.view==='map'?renderMap(items):renderList(items)):`<div class="empty-state"><span aria-hidden="true">⌕</span><h3>${state.savedOnly&&!saved.size?'Bộ sưu tập đang để trống.':'Chưa tìm thấy công cụ phù hợp.'}</h3><p>${state.savedOnly&&!saved.size?'Mở một công cụ và chọn “Lưu công cụ” để tạo danh sách của bạn.':'Thử một từ khóa ngắn hơn hoặc bỏ bớt bộ lọc.'}</p><button data-action="reset">Khám phá toàn bộ bản đồ →</button></div>`;
  atlasMotion.reconcileResults();
  renderNav();renderCompareBar();updateURL();localizeDOM();atlasMotion.refresh();
@@ -130,6 +145,12 @@ function refreshDetailButtons(){
 }
 function closeDialogs(except){for(const d of document.querySelectorAll('dialog'))if(d!==except&&d.open){atlasMotion.settleWithin(d);d.close();}}
 const productLink=(url,label)=>`<a class="product-source" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`;
+function securitySection(tool){
+ const profile=SECURITY_PROFILES[tool.id];
+ if(!profile)return '';
+ const labels=profile.fields.map(field=>tr(WORK_FIELDS[field].label)).join(' / ');
+ return `<section class="detail-section detail-note"><h3>Ứng dụng trong an ninh mạng</h3><p><b>${esc(tr(profile.role))}</b> · ${esc(labels)}</p><p>${esc(profile.note)}</p>${profile.source?productLink(profile.source,tr('Tài liệu tính năng')):''}</section>`;
+}
 const tierLabel=m=>m.status==='special'?'Chuyên biệt':({4:'Cao cấp nhất',3:'Chuyên sâu',2:'Cân bằng',1:'Nhanh / nhẹ',0:'Tự động'}[m.tier]);
 function modelSection(p){
  const count=modelNames(p).length;
@@ -167,7 +188,7 @@ function openDetail(id){
  const t=byId.get(id);if(!t)return;
  const dialog=$('#detail-dialog');closeDialogs(dialog);detailId=id;
  const c=catById.get(t.category),p=getProductProfile(t),same=TOOLS.filter(x=>x.category===t.category&&x.id!==id&&!ended(x)).slice(0,4);
- dialog.innerHTML=`<div class="dialog-top"><span style="color:${c.color}">${c.icon} &nbsp;${esc(c.name)}</span><button class="close-btn" data-close="detail-dialog" aria-label="Đóng chi tiết">×</button></div><div class="detail-content"><div class="detail-identity">${avatar(t)}<div><h2 id="detail-title">${esc(t.name)}</h2><p>${esc(t.org)} · Đối chiếu ${esc(p.checked)}</p>${statusChip(t)}</div></div><p class="detail-description">${esc(t.description)}</p><div class="detail-tabs" role="tablist" aria-label="Chi tiết ${esc(t.name)}">${[['models','Model',modelNames(p).length],['plans','Gói sử dụng',p.plans.length],['overview','Tổng quan',null]].map(([key,label,n])=>`<button role="tab" id="detail-tab-${key}" data-detail-tab="${key}" aria-controls="detail-panel-${key}" aria-selected="${key==='models'}" tabindex="${key==='models'?0:-1}">${label}${n!==null?` <span>${n||'—'}</span>`:''}</button>`).join('')}</div><section id="detail-panel-models" role="tabpanel" aria-labelledby="detail-tab-models" tabindex="0" data-detail-panel="models">${modelSection(p)}</section><section id="detail-panel-plans" role="tabpanel" aria-labelledby="detail-tab-plans" tabindex="0" data-detail-panel="plans" hidden>${plansSection(p)}</section><section id="detail-panel-overview" role="tabpanel" aria-labelledby="detail-tab-overview" tabindex="0" data-detail-panel="overview" hidden><dl class="detail-meta"><div><dt>VAI TRÒ</dt><dd>${esc(t.kind)}</dd></div><div><dt>GIAO DIỆN</dt><dd>${esc(t.surfaces.join(' · '))}</dd></div><div><dt>TRIỂN KHAI</dt><dd>${esc(t.hosting)}</dd></div><div><dt>MÔ HÌNH CUNG CẤP</dt><dd>${esc(t.openness)}</dd></div></dl><section class="detail-section"><h3>Phù hợp khi</h3><p>${esc(t.best)}</p></section><section class="detail-section detail-note"><h3>Ghi chú biên tập</h3><p>${esc(t.note)}</p></section>${t.aliases.length?`<p class="alias-note">Tên liên quan / tên trước đây: ${esc(t.aliases.join(' · '))}</p>`:''}<div class="source-box"><span class="source-label">NGUỒN & MỐC ĐỐI CHIẾU</span>${productLink(t.url,new URL(t.url).hostname)}<p>Đối chiếu ngày 08/11/2026. Gợi ý và phân tầng model là nhận định biên tập từ định vị nhà cung cấp, không phải benchmark độc lập. Danh mục không tự cập nhật.</p>${logoSource(t)}</div>${same.length?`<div class="related-section"><h3>Khám phá cùng nhóm</h3><div class="related-links">${same.map(x=>`<button data-tool="${x.id}">${esc(x.name)} ↗</button>`).join('')}</div></div>`:''}</section><div class="detail-actions"><a class="primary" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">Trang chính thức ↗</a><button class="secondary" id="detail-save" data-save="${t.id}"></button><button class="secondary" id="detail-compare" data-compare="${t.id}"></button></div><div class="detail-bottom"><button data-action="share-tool">Sao chép link mục này ↗</button><button data-action="method">Cách phân loại & nguồn</button></div></div>`;
+ dialog.innerHTML=`<div class="dialog-top"><span style="color:${c.color}">${c.icon} &nbsp;${esc(c.name)}</span><button class="close-btn" data-close="detail-dialog" aria-label="Đóng chi tiết">×</button></div><div class="detail-content"><div class="detail-identity">${avatar(t)}<div><h2 id="detail-title">${esc(t.name)}</h2><p>${esc(t.org)} · Đối chiếu ${esc(p.checked)}</p>${statusChip(t)}</div></div><p class="detail-description">${esc(t.description)}</p><div class="detail-tabs" role="tablist" aria-label="Chi tiết ${esc(t.name)}">${[['models','Model',modelNames(p).length],['plans','Gói sử dụng',p.plans.length],['overview','Tổng quan',null]].map(([key,label,n])=>`<button role="tab" id="detail-tab-${key}" data-detail-tab="${key}" aria-controls="detail-panel-${key}" aria-selected="${key==='models'}" tabindex="${key==='models'?0:-1}">${label}${n!==null?` <span>${n||'—'}</span>`:''}</button>`).join('')}</div><section id="detail-panel-models" role="tabpanel" aria-labelledby="detail-tab-models" tabindex="0" data-detail-panel="models">${modelSection(p)}</section><section id="detail-panel-plans" role="tabpanel" aria-labelledby="detail-tab-plans" tabindex="0" data-detail-panel="plans" hidden>${plansSection(p)}</section><section id="detail-panel-overview" role="tabpanel" aria-labelledby="detail-tab-overview" tabindex="0" data-detail-panel="overview" hidden><dl class="detail-meta"><div><dt>VAI TRÒ</dt><dd>${esc(t.kind)}</dd></div><div><dt>GIAO DIỆN</dt><dd>${esc(t.surfaces.join(' · '))}</dd></div><div><dt>TRIỂN KHAI</dt><dd>${esc(t.hosting)}</dd></div><div><dt>MÔ HÌNH CUNG CẤP</dt><dd>${esc(t.openness)}</dd></div></dl>${securitySection(t)}<section class="detail-section"><h3>Phù hợp khi</h3><p>${esc(t.best)}</p></section><section class="detail-section detail-note"><h3>Ghi chú biên tập</h3><p>${esc(t.note)}</p></section>${t.aliases.length?`<p class="alias-note">Tên liên quan / tên trước đây: ${esc(t.aliases.join(' · '))}</p>`:''}<div class="source-box"><span class="source-label">NGUỒN & MỐC ĐỐI CHIẾU</span>${productLink(t.url,new URL(t.url).hostname)}<p>Đối chiếu ngày 08/11/2026. Gợi ý và phân tầng model là nhận định biên tập từ định vị nhà cung cấp, không phải benchmark độc lập. Danh mục không tự cập nhật.</p>${logoSource(t)}</div>${same.length?`<div class="related-section"><h3>Khám phá cùng nhóm</h3><div class="related-links">${same.map(x=>`<button data-tool="${x.id}">${esc(x.name)} ↗</button>`).join('')}</div></div>`:''}</section><div class="detail-actions"><a class="primary" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">Trang chính thức ↗</a><button class="secondary" id="detail-save" data-save="${t.id}"></button><button class="secondary" id="detail-compare" data-compare="${t.id}"></button></div><div class="detail-bottom"><button data-action="share-tool">Sao chép link mục này ↗</button><button data-action="method">Cách phân loại & nguồn</button></div></div>`;
  refreshDetailButtons();updateURL();localizeDOM(dialog);if(!dialog.open)dialog.showModal();dialog.scrollTop=0;atlasMotion.dialogOpen(dialog);
 }
 function fillComparison(){
@@ -188,7 +209,7 @@ function openInfo(type){
  d.innerHTML=`<div class="dialog-top"><span>AI ATLAS / ${type==='guide'?'HƯỚNG DẪN':'PHƯƠNG PHÁP'}</span><button class="close-btn" data-close="info-dialog" aria-label="Đóng thông tin">×</button></div><div class="info-content">${content}</div><div class="info-footer"><span>AI ATLAS · VIETNAMESE EDITION · 08.11.2026</span><a href="https://landscape.cncf.io/" target="_blank" rel="noopener noreferrer">Cảm hứng từ CNCF Landscape ↗</a></div>`;
  localizeDOM(d);d.showModal();atlasMotion.dialogOpen(d);
 }
-function reset(){state={...state,q:'',category:'all',layer:'all',surface:'all',source:'all',status:'all',savedOnly:false};render();}
+function reset(){Object.assign(state,defaultFilters);render();}
 function setCategory(id){if(id!=='all'&&!catById.has(id))return;state.category=id;state.layer='all';state.savedOnly=false;render();hideMenu();$('#explore').scrollIntoView({behavior:'smooth'});}
 function setLayer(id){if(id!=='all'&&!LAYERS.some(l=>l.id===id))return;state.layer=id;state.category='all';state.savedOnly=false;render();}
 function hideMenu(){$('#sidebar').classList.remove('visible');$('.mobile-menu').setAttribute('aria-expanded','false');}
@@ -216,7 +237,7 @@ document.addEventListener('click',e=>{
  switch(b.dataset.action){
   case 'guide':openInfo('guide');break;
   case 'method':openInfo('method');break;
-  case 'saved':state.savedOnly=!state.savedOnly;state.category='all';state.layer='all';state.q='';state.surface='all';state.source='all';state.status='all';render();$('#explore').scrollIntoView({behavior:'smooth'});break;
+  case 'saved':Object.assign(state,defaultFilters,{savedOnly:!state.savedOnly});render();$('#explore').scrollIntoView({behavior:'smooth'});break;
   case 'reset':reset();break;
   case 'menu':{const visible=$('#sidebar').classList.toggle('visible');b.setAttribute('aria-expanded',String(visible));break;}
   case 'export':downloadCSV();break;
@@ -232,7 +253,7 @@ $('#detail-dialog').addEventListener('keydown',e=>{
  selectDetailTab(keys[e.key==='Home'?0:e.key==='End'?2:(index+(e.key==='ArrowRight'?1:2))%3],true);
 });
 $('#search').addEventListener('input',e=>{state.q=e.target.value;render();});
-for(const [id,key] of [['surface-filter','surface'],['source-filter','source'],['status-filter','status']])$('#'+id).addEventListener('change',e=>{state[key]=e.target.value;render();});
+for(const [id,key] of [['surface-filter','surface'],['source-filter','source'],['field-filter','field'],['status-filter','status']])$('#'+id).addEventListener('change',e=>{state[key]=e.target.value;render();});
 for(const d of document.querySelectorAll('dialog')){
  d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});
 }
@@ -248,6 +269,7 @@ $('#theme-select').value=document.documentElement.dataset.theme;$('#language-sel
 $('#theme-select').addEventListener('change',e=>{atlasMotion.stop();applyTheme(e.target.value);atlasMotion.refresh();});
 $('#language-select').addEventListener('change',e=>{const lang=e.target.value;if(!['vi','en'].includes(lang))return;preferenceWrite('ai-atlas-language',lang);const url=new URL(location.href);url.searchParams.set('lang',lang);location.assign(url.href);});
 applyTheme(document.documentElement.dataset.theme,{persist:false});
+$('#field-filter').insertAdjacentHTML('beforeend',Object.entries(WORK_FIELDS).map(([id,field])=>`<option value="${id}">${esc(field.label)}</option>`).join(''));
 const initialTool=readURL();render();if(initialTool&&byId.has(initialTool))openDetail(initialTool);
 
 atlasMotion.start();

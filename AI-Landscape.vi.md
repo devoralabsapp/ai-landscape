@@ -1,6 +1,6 @@
 # AI Atlas — Bản đồ hệ sinh thái AI
 
-Snapshot: **08/11/2026** · **120 mục** · **15 nhóm**.
+Snapshot: **08/11/2026** · **123 mục** · **16 nhóm**.
 
 Danh mục tuyển chọn, không phải toàn bộ công cụ AI đang tồn tại hoặc bảng xếp hạng. Mô tả dựa trên nguồn chính thức; “Phù hợp khi” và “Ghi chú” là nhận định biên tập, không phải benchmark độc lập. Giá, quota và quyền truy cập cần kiểm tra trực tiếp.
 
@@ -1570,6 +1570,76 @@ Từng là nền tảng tự động hóa công việc bằng AI.
 **Gói sử dụng:** Không có gói đang cung cấp.
 
 Đã đóng cửa tháng 09/2026 theo thông báo chính thức; không còn là lựa chọn triển khai mới. [Nguồn gói & giá](https://relay.app/).
+
+### Công cụ an ninh mạng
+
+Công cụ chuyên dụng cho pentest, bảo mật ứng dụng và vận hành an ninh.
+
+#### Burp Suite
+
+Bộ công cụ kiểm thử web và API. Burp AT hỗ trợ kiểm thử bằng agent, còn Burp AI hỗ trợ phân tích ngay trong các công cụ Burp.
+
+- **Đơn vị / vai trò:** PortSwigger · Bộ công cụ pentest web
+- **Giao diện / triển khai:** Desktop · Desktop / cloud AI
+- **Mô hình cung cấp:** Dịch vụ
+- **Phù hợp khi:** Kiểm thử ứng dụng web trong phạm vi được cấp phép và xác minh phát hiện từ scanner.
+- **Ghi chú:** Burp AT có trong bản Professional. Kiểm tra AI credits và dữ liệu gửi đi trước khi dùng tính năng AI.
+- **Trạng thái:** Đang hoạt động
+- **Nguồn:** [portswigger.net](https://portswigger.net/burp/documentation/ai-features) · đối chiếu 2026-11-08
+- **Tên liên quan:** Burp AI, Burp AT, Burp Suite Professional, PortSwigger
+
+**Model & phiên bản:** Model bên trong do nhà cung cấp quản lý. Danh mục lựa chọn model cụ thể chưa được xác nhận từ nguồn đã đối chiếu; không gán thêm tên model theo suy đoán.
+
+
+[Catalog model](https://portswigger.net/burp/documentation/ai-features) · snapshot 2026-11-08. Thứ tự theo phân khúc trong cùng họ, không phải benchmark.
+
+**Gói sử dụng:** Professional (Xem tại nguồn) · Burp AI credits (Theo sử dụng).
+
+Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó. [Nguồn gói & giá](https://portswigger.net/burp/ai/subscriptions).
+
+#### Semgrep
+
+Nền tảng bảo mật mã nguồn, phụ thuộc và secrets. Tính năng AI hỗ trợ phân loại phát hiện và đề xuất bản sửa.
+
+- **Đơn vị / vai trò:** Semgrep · Nền tảng AppSec
+- **Giao diện / triển khai:** CLI, Web · Local scanning / cloud AI
+- **Mô hình cung cấp:** Hỗn hợp
+- **Phù hợp khi:** Đưa kiểm tra bảo mật mã vào pull request và CI.
+- **Ghi chú:** Khả năng phân tích, tính năng AI và dữ liệu được gửi phụ thuộc sản phẩm, gói và cấu hình.
+- **Trạng thái:** Đang hoạt động
+- **Nguồn:** [semgrep.dev](https://semgrep.dev/pricing/) · đối chiếu 2026-11-08
+- **Tên liên quan:** Semgrep Assistant, Semgrep Autofix, Semgrep Code
+
+**Model & phiên bản:** Model bên trong do nhà cung cấp quản lý. Danh mục lựa chọn model cụ thể chưa được xác nhận từ nguồn đã đối chiếu; không gán thêm tên model theo suy đoán.
+
+
+[Catalog model](https://semgrep.dev/pricing/) · snapshot 2026-11-08. Thứ tự theo phân khúc trong cùng họ, không phải benchmark.
+
+**Gói sử dụng:** Free Edition (Xem tại nguồn) · Teams (Xem tại nguồn) · Enterprise (Xem tại nguồn).
+
+Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó. [Nguồn gói & giá](https://semgrep.dev/pricing/).
+
+#### Microsoft Security Copilot
+
+Trợ lý bảo mật hỗ trợ phân loại cảnh báo, điều tra sự cố và phân tích thông tin mối đe dọa từ các nguồn tích hợp.
+
+- **Đơn vị / vai trò:** Microsoft · Trợ lý vận hành an ninh
+- **Giao diện / triển khai:** Web · Cloud
+- **Mô hình cung cấp:** Dịch vụ
+- **Phù hợp khi:** Đội SOC dùng Microsoft Defender hoặc Sentinel cần tổng hợp ngữ cảnh điều tra.
+- **Ghi chú:** Công cụ cần quyền truy cập vào các nguồn tích hợp. Mức sử dụng được tính theo Security Compute Unit (SCU).
+- **Trạng thái:** Đang hoạt động
+- **Nguồn:** [learn.microsoft.com](https://learn.microsoft.com/en-us/copilot/security/microsoft-security-copilot) · đối chiếu 2026-11-08
+- **Tên liên quan:** Security Copilot, Copilot for Security, Microsoft Defender Copilot
+
+**Model & phiên bản:** Model bên trong do nhà cung cấp quản lý. Danh mục lựa chọn model cụ thể chưa được xác nhận từ nguồn đã đối chiếu; không gán thêm tên model theo suy đoán.
+
+
+[Catalog model](https://learn.microsoft.com/en-us/copilot/security/microsoft-security-copilot) · snapshot 2026-11-08. Thứ tự theo phân khúc trong cùng họ, không phải benchmark.
+
+**Gói sử dụng:** Provisioned SCU (Theo dung lượng) · Overage SCU (Theo sử dụng) · Microsoft 365 E5 / E7 inclusion (Theo điều kiện gói).
+
+Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó. [Nguồn gói & giá](https://learn.microsoft.com/en-us/copilot/security/security-compute-units-capacity).
 
 ## 03. Sáng tạo nội dung
 

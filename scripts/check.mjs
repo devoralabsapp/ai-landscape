@@ -7,7 +7,7 @@ import {Script} from 'node:vm';
 import {loadCatalog} from './catalog.mjs';
 import {englishDictionary,englishCatalog} from './locales.mjs';
 
-const {tools,categories,layers}=loadCatalog();
+const {tools,categories,layers,workFields}=loadCatalog();
 assert.ok(tools.length>0,'Catalog is empty');
 assert.equal(new Set(tools.map(t=>t.id)).size,tools.length,'Duplicate tool IDs');
 assert.equal(new Set(categories.map(c=>c.id)).size,categories.length,'Duplicate category IDs');
@@ -34,13 +34,19 @@ for(const t of tools){
   if(p.mode==='ended')assert.equal(p.plans.length,0,`Retired product has active plans: ${t.id}`);
   else assert.ok(p.plans.length,`No pricing context for ${t.id}`);
   assert.match(t.checked,/^\d{4}-\d{2}-\d{2}$/);
+  if(t.security){
+    const {fields,role,note,source}=t.security;
+    assert.ok(fields.length&&fields.every(id=>id!=='cybersecurity'&&Object.hasOwn(workFields,id)),`Invalid work field for ${t.id}`);
+    assert.ok(role&&note,`Incomplete cybersecurity use case for ${t.id}`);
+    if(source)assert.equal(new URL(source).protocol,'https:',`Invalid security source for ${t.id}`);
+  }
 }
 for(const required of ['ChatGPT','Claude','Gemini','Muse','Antigravity','OpenCode','OpenClaw','Qoder']){
   assert.ok(tools.some(t=>t.name===required),`Missing requested tool: ${required}`);
 }
-for(const f of ['app.js','data.js','product-data.js','logos.js','preferences.js','i18n.js','translations.en.js','motion.js'])new Script(readFileSync(new URL('../dist/'+f,import.meta.url),'utf8'),{filename:f});
+for(const f of ['app.js','data.js','product-data.js','security-data.js','logos.js','preferences.js','i18n.js','translations.en.js','motion.js'])new Script(readFileSync(new URL('../dist/'+f,import.meta.url),'utf8'),{filename:f});
 const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
-for(const file of ['styles.css','themes.css','motion.css','ai-illustration.css','logos.css','app.js','data.js','product-data.js','logos.js','preferences.js','i18n.js','translations.en.js','motion.js']){
+for(const file of ['styles.css','themes.css','motion.css','ai-illustration.css','logos.css','app.js','data.js','product-data.js','security-data.js','logos.js','preferences.js','i18n.js','translations.en.js','motion.js']){
   assert.ok(html.includes(file),`Missing asset reference: ${file}`);
   assert.ok(existsSync(new URL('../dist/'+file,import.meta.url)),`Missing asset: ${file}`);
 }
@@ -54,5 +60,6 @@ function checkEnglish(value){
  else if(value&&typeof value==='object')Object.values(value).forEach(checkEnglish);
 }
 checkEnglish({tools,categories,layers});
+checkEnglish(Object.values(workFields).map(field=>field.label));
 assert.ok(Object.keys(englishDictionary).length>700,'English catalog is incomplete');
 console.log(`Verified ${tools.length} unique records, ${categories.length} categories, ${layers.length} layers, requested tools, sources and JavaScript syntax.`);

@@ -1322,6 +1322,39 @@
       "checked": "2026-11-08",
       "sha256": "7d53033c68a38bd42a8a95e555938c7baf1a9e64132623c67ce58c411bdcb3c7",
       "bytes": 2721
+    },
+    "burp-suite": {
+      "file": "assets/logos/burp-suite.png",
+      "assetUrl": "https://portswigger.net/content/images/logos/apple-touch-icon.png",
+      "sourcePage": "https://portswigger.net/burp/documentation/ai-features",
+      "kind": "publisher-icon",
+      "scope": "publisher",
+      "publisher": "PortSwigger",
+      "checked": "2026-11-08",
+      "sha256": "81af39352944b189ec21972b56196b1ceaa90a0c846903398b441387c638abc4",
+      "bytes": 4074
+    },
+    "semgrep": {
+      "file": "assets/logos/semgrep.png",
+      "assetUrl": "https://semgrep.dev/build/assets/favicon-32x32-CLzO_3Uq.png",
+      "sourcePage": "https://semgrep.dev/",
+      "kind": "site-icon",
+      "scope": "product",
+      "publisher": "Semgrep",
+      "checked": "2026-11-08",
+      "sha256": "61b4ccfc5844dcf9d4a8c1639268e684fd819aae5178b9453b8ee8226b5de69d",
+      "bytes": 768
+    },
+    "microsoft-security-copilot": {
+      "file": "assets/logos/microsoft-security-copilot.ico",
+      "assetUrl": "https://www.microsoft.com/favicon.ico?v2",
+      "sourcePage": "https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-security-copilot",
+      "kind": "publisher-icon",
+      "scope": "publisher",
+      "publisher": "Microsoft",
+      "checked": "2026-11-08",
+      "sha256": "90cdaf487716184e4034000935c605d1633926d348116d198f355a98b8c6cd21",
+      "bytes": 17174
     }
   }
 }
