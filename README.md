@@ -9,9 +9,11 @@ Bản đồ tương tác lấy cảm hứng từ [CNCF Landscape](https://landsc
 ## Chức năng
 
 - Bản đồ theo nhóm và chế độ danh mục có mô tả.
-- Tìm kiếm tiếng Việt có/không dấu, tên cũ, tên hãng và công việc.
+- Tìm kiếm tiếng Việt có/không dấu, tên cũ, tên hãng, model, gói và công việc.
 - Lọc giao diện, mô hình cung cấp, local/self-host và vòng đời sản phẩm.
-- Chi tiết từng mục: công dụng, tình huống sử dụng, ghi chú, nguồn chính thức.
+- Chi tiết từng mục có ba tab: Model, Gói sử dụng và Tổng quan.
+- Model theo họ/provider, phân tầng từ cao xuống thấp; tìm nhanh phiên bản ngay trong khung chi tiết.
+- Gói thuê bao, API và self-host được ghi riêng, có link giá chính thức và mốc đối chiếu.
 - So sánh tối đa 3 công cụ; lưu danh sách bằng localStorage.
 - Deep link cho từng mục và bộ lọc; xuất kết quả lọc thành CSV.
 - Responsive, điều khiển bàn phím, dialog có focus management từ trình duyệt.
@@ -38,7 +40,7 @@ Mỗi mục trỏ đến nguồn chính thức: trang sản phẩm, tài liệu 
 - `openness`: mô hình cung cấp ở mức khái quát. “Có mã nguồn”, “Hỗn hợp” và “Source-available” không có nghĩa mọi thành phần đều có giấy phép OSI hay quyền dùng thương mại không điều kiện. Xem LICENSE của từng phiên bản.
 - `hosting`: có thành phần chạy local/self-host không bảo đảm mọi lời gọi model hoặc connector đều local.
 
-Giá, quota, model version và quốc gia hỗ trợ không được đóng cứng trong bảng so sánh. Hãy kiểm tra nguồn trực tiếp khi lựa chọn. Một số mục lịch sử được giữ lại với nhãn rõ ràng, như Relay.app đã đóng và Sora 2 **API** đã ngừng; trạng thái API không được suy rộng sang mọi sản phẩm Sora.
+Danh sách model và gói là snapshot có nguồn trong `dist/product-data.js`. Phân tầng model theo định vị của hãng trong cùng họ; không phải bảng điểm benchmark và không so ngang model ảnh, video, giọng nói với model hội thoại. Tên model API/Work/Codex không mặc định có trong mọi bộ chọn Chat. Công cụ BYOK, gateway và framework dùng catalog động của provider; mục chưa có danh mục đầy đủ được ghi rõ và dẫn catalog nguồn. Giá USD (khi nguồn xác nhận), thuế, kỳ thanh toán, quota và quốc gia hỗ trợ cần kiểm tra trực tiếp khi lựa chọn. Một số mục lịch sử được giữ lại với nhãn rõ ràng, như Relay.app đã đóng và Sora 2 **API** đã ngừng; trạng thái API không được suy rộng sang mọi sản phẩm Sora.
 
 Chưa bao quát mọi ngành dọc, plugin, checkpoint model hoặc nhà cung cấp địa phương. Dữ liệu không tự cập nhật. Gửi issue/PR để bổ sung hoặc sửa nguồn.
 
@@ -55,7 +57,9 @@ Mở `http://127.0.0.1:4173`. `npm run check` kiểm tra tính toàn vẹn dữ 
 
 ## Sửa nội dung
 
-Sửa `dist/data.js`. Mỗi dòng trong `RAW` có 12 trường ngăn bằng `|`:
+Sửa `dist/data.js` cho danh mục và `dist/product-data.js` cho model/gói, nguồn, quan hệ tích hợp và mốc đối chiếu. Mỗi profile có `mode`, `groups`, `plans`, `modelUrl`, `pricingUrl`, `modelNote`; `tier` là tầng biên tập 0–4 trong cùng họ và `status` tách current/other/preview/special. Không tự suy ra model được hỗ trợ từ toàn bộ catalog của hãng.
+
+Trong `dist/data.js`, Mỗi dòng trong `RAW` có 12 trường ngăn bằng `|`:
 
 ```text
 name|organization|kind|surfaces|hosting|openness|description|best|note|official URL|aliases|status

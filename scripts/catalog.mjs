@@ -2,6 +2,6 @@ import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
 
 export function loadCatalog(){
-  const source=readFileSync(new URL('../dist/data.js',import.meta.url),'utf8');
-  return vm.runInNewContext(source+';({tools:TOOLS,categories:CATEGORIES,layers:LAYERS})',{}, {timeout:1000});
+  const source=['data.js','product-data.js'].map(f=>readFileSync(new URL('../dist/'+f,import.meta.url),'utf8')).join('\n');
+  return vm.runInNewContext(source+';({tools:TOOLS.map(t=>({...t,product:getProductProfile(t)})),categories:CATEGORIES,layers:LAYERS})',{}, {timeout:1000});
 }
