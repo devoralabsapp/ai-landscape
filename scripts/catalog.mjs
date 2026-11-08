@@ -3,5 +3,8 @@ import vm from 'node:vm';
 
 export function loadCatalog(){
   const source=['data.js','product-data.js'].map(f=>readFileSync(new URL('../dist/'+f,import.meta.url),'utf8')).join('\n');
-  return vm.runInNewContext(source+';({tools:TOOLS.map(t=>({...t,product:getProductProfile(t)})),categories:CATEGORIES,layers:LAYERS})',{}, {timeout:1000});
+  const catalog=vm.runInNewContext(source+';({tools:TOOLS.map(t=>({...t,product:getProductProfile(t)})),categories:CATEGORIES,layers:LAYERS})',{}, {timeout:1000});
+  const {logos}=JSON.parse(readFileSync(new URL('../dist/logo-sources.json',import.meta.url),'utf8'));
+  catalog.tools=catalog.tools.map(t=>({...t,logo:logos[t.id]}));
+  return catalog;
 }

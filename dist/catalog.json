@@ -127,6 +127,17 @@
         ],
         "pricingUrl": "https://learn.chatgpt.com/docs/pricing",
         "billingNote": "Giá niêm yết USD trên web, chưa thuế. Gói đăng ký và hóa đơn API là hai phạm vi riêng."
+      },
+      "logo": {
+        "file": "assets/logos/chatgpt.svg",
+        "assetUrl": "https://chatgpt.com/cdn/assets/favicon.6a33781f61.svg",
+        "sourcePage": "https://chatgpt.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "OpenAI",
+        "checked": "2026-11-08",
+        "sha256": "2021463df9935dda89cef407aa564bced9d83b4f9b6ae8945d649e56676624f0",
+        "bytes": 4381
       }
     },
     {
@@ -241,6 +252,17 @@
         ],
         "pricingUrl": "https://claude.com/pricing",
         "billingNote": "USD, giá web trước thuế; gói trả năm được ghi riêng. Model mạnh hơn có thể tiêu thụ hạn mức nhanh hơn."
+      },
+      "logo": {
+        "file": "assets/logos/claude.svg",
+        "assetUrl": "https://claude.com/icon.svg",
+        "sourcePage": "https://claude.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Anthropic",
+        "checked": "2026-11-08",
+        "sha256": "b150888bc7257af83e3b85d3c2be4294f88986026f8168f6c12fc1fde6697350",
+        "bytes": 2558
       }
     },
     {
@@ -369,6 +391,17 @@
         ],
         "pricingUrl": "https://gemini.google/subscriptions/",
         "billingNote": "Tên gói, giá và quyền truy cập thay đổi theo quốc gia; xem trang gói tại khu vực của bạn."
+      },
+      "logo": {
+        "file": "assets/logos/gemini.png",
+        "assetUrl": "https://gemini.google/images/spark_4c.png",
+        "sourcePage": "https://gemini.google/about/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Google",
+        "checked": "2026-11-08",
+        "sha256": "f39c8b1c0dbdf1411a52b203cd7d2815ef1dc5f899f457499e7d5aa57f25b6c8",
+        "bytes": 9531
       }
     },
     {
@@ -427,6 +460,17 @@
         "pricingUrl": "https://www.microsoft.com/en-us/copilot/solutions/individuals",
         "modelUrl": "https://www.microsoft.com/en-us/copilot/solutions/individuals",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/microsoft-copilot.ico",
+        "assetUrl": "https://res.cdn.office.net/officehub/images/content/images/unauth-copilotcom/favicon-copilot-brand-refresh-23392c1f66.ico",
+        "sourcePage": "https://copilot.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Microsoft",
+        "checked": "2026-11-08",
+        "sha256": "69e8ead6e5a1a07659606b5a4a5a2c73a41d8a00505594671aef83cad7e8408f",
+        "bytes": 7400
       }
     },
     {
@@ -540,6 +584,17 @@
         ],
         "pricingUrl": "https://cursor.com/pricing",
         "billingNote": "Grok và Cursor đang dùng The X Subscription theo trang giá. Giá USD trước thuế; API có phạm vi tính phí riêng."
+      },
+      "logo": {
+        "file": "assets/logos/grok.png",
+        "assetUrl": "https://docs.x.ai/_next/static/media/icon.2jebtfdg6783w.png?dpl=41828ac17d9e1fccac81fe3c41220f77db5d230b",
+        "sourcePage": "https://docs.x.ai/grok/overview",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "xAI",
+        "checked": "2026-11-08",
+        "sha256": "e54b4baf2aaca29eb182cb51d22be3dbad5ab09c86ccee4183fefd8326e6ee28",
+        "bytes": 5026
       }
     },
     {
@@ -580,6 +635,17 @@
         "pricingUrl": "https://www.meta.ai/",
         "modelUrl": "https://ai.meta.com/meta-ai/assistant/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/meta-ai.png",
+        "assetUrl": "https://about.fb.com/wp-content/uploads/2021/10/meta-favicon.png",
+        "sourcePage": "https://about.fb.com/news/2024/04/meta-ai-assistant-built-with-llama-3/",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "Meta",
+        "checked": "2026-11-08",
+        "sha256": "56a5102d95e80b3dbcb23f9c696640904a5cc04e26ad98713209b25e437f17f3",
+        "bytes": 564
       }
     },
     {
@@ -645,6 +711,17 @@
         ],
         "pricingUrl": "https://api-docs.deepseek.com/quick_start/pricing",
         "billingNote": "Giá API và giá của các dịch vụ tích hợp DeepSeek không phải một."
+      },
+      "logo": {
+        "file": "assets/logos/deepseek.ico",
+        "assetUrl": "https://www.deepseek.com/favicon.ico",
+        "sourcePage": "https://www.deepseek.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "DeepSeek",
+        "checked": "2026-11-08",
+        "sha256": "30a4420e6e4dcb17fd7de560c5004346c2bc8cd971d2d5f5ee15326603e51321",
+        "bytes": 209762
       }
     },
     {
@@ -718,6 +795,17 @@
         ],
         "pricingUrl": "https://qwen.ai/apiplatform",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/qwen.png",
+        "assetUrl": "https://img.alicdn.com/imgextra/i4/O1CN01OXv3EM1FN8t9W4P79_!!6000000000474-2-tps-80-80.png",
+        "sourcePage": "https://qwen.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Alibaba / Qwen",
+        "checked": "2026-11-08",
+        "sha256": "cd9390bc4209c319121d111f3a1f535b3c7dd909b8f860d41acc9744138d58df",
+        "bytes": 1658
       }
     },
     {
@@ -796,6 +884,17 @@
         ],
         "pricingUrl": "https://www.kimi.com/membership/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/kimi.png",
+        "assetUrl": "https://www.kimi.com/pwa-192.png",
+        "sourcePage": "https://www.kimi.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Moonshot AI",
+        "checked": "2026-11-08",
+        "sha256": "6c14f9c3062e953b3ed57ae3e19db931c1c1bba38d4d8d55550544f31d55e469",
+        "bytes": 21645
       }
     },
     {
@@ -917,6 +1016,17 @@
         ],
         "pricingUrl": "https://docs.z.ai/guides/overview/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/z-ai.svg",
+        "assetUrl": "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+        "sourcePage": "https://chat.z.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Z.ai",
+        "checked": "2026-11-08",
+        "sha256": "07a45e8e35b0b631ed2c68cd1cb041f9721b1ceeb0bd0e34f1459b0304a741c7",
+        "bytes": 11037
       }
     },
     {
@@ -968,6 +1078,17 @@
           "gemini",
           "grok"
         ]
+      },
+      "logo": {
+        "file": "assets/logos/poe.ico",
+        "assetUrl": "https://poe.com/favicon.ico",
+        "sourcePage": "https://poe.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Quora",
+        "checked": "2026-11-08",
+        "sha256": "b9f1bb2d73658928d75955dd7dd2ce891ad04eeb50b301bb996f21d56cd98193",
+        "bytes": 4763
       }
     },
     {
@@ -1063,6 +1184,17 @@
         "pricingUrl": "https://mistral.ai/pricing/",
         "modelUrl": "https://docs.mistral.ai/models",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/mistral-vibe.ico",
+        "assetUrl": "https://mistral.ai/favicon.ico",
+        "sourcePage": "https://mistral.ai/products/vibe/",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "Mistral AI",
+        "checked": "2026-11-08",
+        "sha256": "320ccbbf53158067d4c84637dbfe52de7616d3c181c91198fae75eb1bc5f0c71",
+        "bytes": 2107
       }
     },
     {
@@ -1110,6 +1242,17 @@
         ],
         "pricingUrl": "https://ai.meta.com/muse/",
         "billingNote": "Không gán tên Plus/Pro hoặc giá chưa được nguồn công khai xác nhận."
+      },
+      "logo": {
+        "file": "assets/logos/muse.png",
+        "assetUrl": "https://about.fb.com/wp-content/uploads/2021/10/meta-favicon.png",
+        "sourcePage": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "Meta",
+        "checked": "2026-11-08",
+        "sha256": "56a5102d95e80b3dbcb23f9c696640904a5cc04e26ad98713209b25e437f17f3",
+        "bytes": 564
       }
     },
     {
@@ -1162,6 +1305,17 @@
         "pricingUrl": "https://help.manus.im/en/articles/11711111-what-is-the-current-membership-pricing-for-manus",
         "modelUrl": "https://manus.im/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/manus.svg",
+        "assetUrl": "https://manus.im/icon.svg?icon.2kbcs13ndm9it.svg",
+        "sourcePage": "https://manus.im/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Manus AI",
+        "checked": "2026-11-08",
+        "sha256": "ee7825396fb63d32477c6f4728cbdc4e6e31963effc961542e9be326955c77bf",
+        "bytes": 5627
       }
     },
     {
@@ -1224,6 +1378,17 @@
         "pricingUrl": "https://www.genspark.ai/helpcenter/membership-plans",
         "modelUrl": "https://www.genspark.ai/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/genspark.png",
+        "assetUrl": "https://www.genspark.ai/favicon.ico",
+        "sourcePage": "https://www.genspark.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Genspark",
+        "checked": "2026-11-08",
+        "sha256": "9e61c41d648f93deb7d3be2347fd627a4f80bc0c663af2b4ec412897f2737ace",
+        "bytes": 3671
       }
     },
     {
@@ -1290,6 +1455,17 @@
         ],
         "pricingUrl": "https://openclaw.ai/",
         "billingNote": "Không gán gói Plus/Pro của bên host vào dự án OpenClaw."
+      },
+      "logo": {
+        "file": "assets/logos/openclaw.svg",
+        "assetUrl": "https://openclaw.ai/favicon.svg",
+        "sourcePage": "https://openclaw.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "OpenClaw community",
+        "checked": "2026-11-08",
+        "sha256": "87d87ee7bb4e6fb868bf5ac1a873fb3669dc5c14cdf71ec8ded97f1869a12ce3",
+        "bytes": 1381
       }
     },
     {
@@ -1355,6 +1531,17 @@
         ],
         "pricingUrl": "https://claude.com/resources/articles/claude-duet",
         "billingNote": "Research preview, danh sách chờ tại Mỹ; dùng chung hạn mức gói Claude."
+      },
+      "logo": {
+        "file": "assets/logos/claude-duet.svg",
+        "assetUrl": "https://claude.com/icon.svg",
+        "sourcePage": "https://claude.com/resources/articles/claude-duet",
+        "kind": "site-icon",
+        "scope": "family",
+        "publisher": "Anthropic",
+        "checked": "2026-11-08",
+        "sha256": "b150888bc7257af83e3b85d3c2be4294f88986026f8168f6c12fc1fde6697350",
+        "bytes": 2558
       }
     },
     {
@@ -1423,6 +1610,17 @@
           "gemini"
         ],
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/perplexity.svg",
+        "assetUrl": "https://www.perplexity.ai/favicon.svg",
+        "sourcePage": "https://www.perplexity.ai/hub",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Perplexity",
+        "checked": "2026-11-08",
+        "sha256": "00180a688c194d684a69b247769cdf24a7720712256dbe0f334f97e8a15821e4",
+        "bytes": 2438
       }
     },
     {
@@ -1487,6 +1685,17 @@
         "pricingUrl": "https://gemini.google/subscriptions/",
         "modelUrl": "https://notebook.google/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/gemini-notebook.svg",
+        "assetUrl": "https://notebook.google/_/static/branding/v6/light_mode/favicon/favicon.svg",
+        "sourcePage": "https://notebook.google/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Google",
+        "checked": "2026-11-08",
+        "sha256": "0e369abeda7894c1d9762e9ae709c07d9007574ecc439fff95c675f9a7adf563",
+        "bytes": 2470
       }
     },
     {
@@ -1547,6 +1756,17 @@
         "pricingUrl": "https://elicit.com/pricing",
         "modelUrl": "https://elicit.com/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/elicit.png",
+        "assetUrl": "https://framerusercontent.com/images/GWXKVhGBLC34aTLlmLIMsRVb4.png",
+        "sourcePage": "https://elicit.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Elicit",
+        "checked": "2026-11-08",
+        "sha256": "18789ffe6f238d1768fc369b096f36d2df967603847814e8b9a015ea42d943e2",
+        "bytes": 2727
       }
     },
     {
@@ -1589,6 +1809,17 @@
         "pricingUrl": "https://consensus.app/pricing/",
         "modelUrl": "https://help.consensus.app/en/articles/9922673-how-consensus-works",
         "billingNote": "Trang pricing tải động; tên và giá chi tiết cần xác nhận tại thời điểm đăng ký."
+      },
+      "logo": {
+        "file": "assets/logos/consensus.svg",
+        "assetUrl": "https://consensus.app/favicon.svg",
+        "sourcePage": "https://consensus.app/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Consensus",
+        "checked": "2026-11-08",
+        "sha256": "196fdd2f621818686bac9555bc8fad6f5ea2f745758283b3024e45c20632a8a8",
+        "bytes": 1348
       }
     },
     {
@@ -1633,6 +1864,17 @@
         "pricingUrl": "https://scispace.com/pricing",
         "modelUrl": "https://scispace.com/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/scispace.svg",
+        "assetUrl": "https://scispace.com/favicon.ico",
+        "sourcePage": "https://scispace.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "SciSpace",
+        "checked": "2026-11-08",
+        "sha256": "fee02038267cb67732982e47550c42bf0aaebfde568c1254c0224ca21e4c3578",
+        "bytes": 922
       }
     },
     {
@@ -1760,6 +2002,17 @@
         ],
         "pricingUrl": "https://learn.chatgpt.com/docs/pricing",
         "billingNote": "Giá niêm yết USD trên web, chưa thuế. Gói đăng ký và hóa đơn API là hai phạm vi riêng."
+      },
+      "logo": {
+        "file": "assets/logos/codex.png",
+        "assetUrl": "https://developers.openai.com/favicon.png",
+        "sourcePage": "https://developers.openai.com/",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "OpenAI",
+        "checked": "2026-11-08",
+        "sha256": "8d5575ee667ff715cd3e3074d5296edc68d5aadd89720d203e13131b68b22a04",
+        "bytes": 1841
       }
     },
     {
@@ -1867,6 +2120,17 @@
         ],
         "pricingUrl": "https://claude.com/pricing",
         "billingNote": "Quyền Claude Code tùy gói Claude đủ điều kiện hoặc tài khoản API riêng. Không bao gồm gói Free của ứng dụng chat."
+      },
+      "logo": {
+        "file": "assets/logos/claude-code.png",
+        "assetUrl": "https://code.claude.com/docs/mintlify-assets/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/apple-touch-icon.png",
+        "sourcePage": "https://code.claude.com/docs/en/overview",
+        "kind": "site-icon",
+        "scope": "family",
+        "publisher": "Anthropic",
+        "checked": "2026-11-08",
+        "sha256": "9b1fa78fa1d19195076f30cd386a76c51688fee7b36eb1af51a87c68548d20cf",
+        "bytes": 16682
       }
     },
     {
@@ -2020,6 +2284,17 @@
         ],
         "pricingUrl": "https://antigravity.google/pricing",
         "billingNote": "Model bên thứ ba và Gemini có các hạn mức riêng; xem ma trận quyền dùng tại nguồn."
+      },
+      "logo": {
+        "file": "assets/logos/antigravity.svg",
+        "assetUrl": "https://antigravity.google/assets/image/brand/antigravity-icon__full-color.svg",
+        "sourcePage": "https://antigravity.google/press",
+        "kind": "brand-mark",
+        "scope": "product",
+        "publisher": "Google",
+        "checked": "2026-11-08",
+        "sha256": "d775965ea1f8060538c15f758a3e22487317211fcb6051333b5e023f35aa726f",
+        "bytes": 5301
       }
     },
     {
@@ -2220,6 +2495,17 @@
         ],
         "pricingUrl": "https://cursor.com/pricing",
         "billingNote": "Gói hiện hành: Free, Plus, Premium, Super, Ultra, Teams và Enterprise. Pro/Pro+/Start cùng các gói cũ là legacy, không trộn vào danh sách gói mới."
+      },
+      "logo": {
+        "file": "assets/logos/cursor.svg",
+        "assetUrl": "https://cursor.com/marketing-static/favicon-light.svg",
+        "sourcePage": "https://cursor.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Cursor",
+        "checked": "2026-11-08",
+        "sha256": "78f169abca311d70e18ada789ccf1a55b4ca0306822f21a9ab0c2658ed88dbe0",
+        "bytes": 4388
       }
     },
     {
@@ -2418,6 +2704,17 @@
         ],
         "pricingUrl": "https://docs.qoder.com/account/pricing",
         "billingNote": "Giá USD/tháng; credits hết hạn theo kỳ. Số credit không tương đương số tác vụ cố định."
+      },
+      "logo": {
+        "file": "assets/logos/qoder.svg",
+        "assetUrl": "https://qoder.com/favIcon.svg",
+        "sourcePage": "https://qoder.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Qoder",
+        "checked": "2026-11-08",
+        "sha256": "5e1843cb50c4613855024453e76d5c06d2ca5562efebc12b4fcd80cf9ece1dd0",
+        "bytes": 73379
       }
     },
     {
@@ -2772,6 +3069,17 @@
         ],
         "pricingUrl": "https://opencode.ai/docs/console/go/",
         "billingNote": "Không cần mua Go để dùng OpenCode. Model có trong catalog không đồng nghĩa đã bật ở project của bạn."
+      },
+      "logo": {
+        "file": "assets/logos/opencode.svg",
+        "assetUrl": "https://opencode.ai/brand/files/opencode-logo-light.svg",
+        "sourcePage": "https://opencode.ai/brand",
+        "kind": "brand-mark",
+        "scope": "product",
+        "publisher": "Anomaly",
+        "checked": "2026-11-08",
+        "sha256": "0192e1384d474d2d2d4fef81c02bf6aa0d75d2d47b28a529e86c01a1664c842a",
+        "bytes": 593
       }
     },
     {
@@ -2829,6 +3137,17 @@
         "providerTools": [
           "gemini"
         ]
+      },
+      "logo": {
+        "file": "assets/logos/gemini-cli.png",
+        "assetUrl": "https://gemini.google/images/spark_4c.png",
+        "sourcePage": "https://gemini.google/about/",
+        "kind": "publisher-icon",
+        "scope": "family",
+        "publisher": "Google",
+        "checked": "2026-11-08",
+        "sha256": "f39c8b1c0dbdf1411a52b203cd7d2815ef1dc5f899f457499e7d5aa57f25b6c8",
+        "bytes": 9531
       }
     },
     {
@@ -3110,6 +3429,18 @@
         ],
         "pricingUrl": "https://github.com/features/copilot/plans",
         "billingNote": "Tách tiền thuê bao khỏi số AI credits; mức sử dụng phụ thuộc model và tác vụ."
+      },
+      "logo": {
+        "file": "assets/logos/github-copilot.svg",
+        "assetUrl": "https://github.com/features/copilot",
+        "sourcePage": "https://github.com/features/copilot",
+        "kind": "inline-mark",
+        "scope": "product",
+        "publisher": "GitHub",
+        "checked": "2026-11-08",
+        "sha256": "af4f4aa6e098312a183bbdeadcd93a0d150fcbbcee52432946d4c6cbe4c19b05",
+        "bytes": 1749,
+        "extraction": "svg.octicon-copilot; xmlns added for standalone use, original paths and styling retained"
       }
     },
     {
@@ -3172,6 +3503,17 @@
           "gemini",
           "openrouter"
         ]
+      },
+      "logo": {
+        "file": "assets/logos/cline.png",
+        "assetUrl": "https://cline.bot/assets/branding/favicons/apple-touch-icon.png",
+        "sourcePage": "https://cline.bot/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Cline",
+        "checked": "2026-11-08",
+        "sha256": "be425bfbb8df74e23618ea25a691a53036826ee36e0418fda78989144787924c",
+        "bytes": 2598
       }
     },
     {
@@ -3224,6 +3566,17 @@
           "gemini",
           "chatgpt"
         ]
+      },
+      "logo": {
+        "file": "assets/logos/roo-code-roomote.png",
+        "assetUrl": "https://roomote.dev/apple-touch-icon.png",
+        "sourcePage": "https://roomote.dev/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Roo Code team",
+        "checked": "2026-11-08",
+        "sha256": "f58b80b1a92d174152f6bfc694870d7b2c26a2460fdb6caaf5f5ff304af8e918",
+        "bytes": 11266
       }
     },
     {
@@ -3266,6 +3619,17 @@
           "deepseek",
           "ollama"
         ]
+      },
+      "logo": {
+        "file": "assets/logos/aider.png",
+        "assetUrl": "https://aider.chat/assets/icons/apple-touch-icon.png",
+        "sourcePage": "https://aider.chat/docs/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Aider community",
+        "checked": "2026-11-08",
+        "sha256": "6efbd1fc700f455630b59d233aa37bfc764cffb0bcb255a42e73837f12497a2b",
+        "bytes": 26544
       }
     },
     {
@@ -3310,6 +3674,17 @@
           "claude",
           "chatgpt"
         ]
+      },
+      "logo": {
+        "file": "assets/logos/continue.png",
+        "assetUrl": "https://continue.dev/favicon.png",
+        "sourcePage": "https://continue.dev/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Continue",
+        "checked": "2026-11-08",
+        "sha256": "0476a2b1781547d4937a39036a67098cb0d7837d7750ae28443b79f8d38a17c5",
+        "bytes": 30835
       }
     },
     {
@@ -3362,6 +3737,17 @@
         "pricingUrl": "https://www.augmentcode.com/pricing",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://docs.augmentcode.com/"
+      },
+      "logo": {
+        "file": "assets/logos/augment-code.svg",
+        "assetUrl": "https://www.augmentcode.com/favicon.svg",
+        "sourcePage": "https://www.augmentcode.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Augment / Harness",
+        "checked": "2026-11-08",
+        "sha256": "5151bb83fc6ee1f848f183923f25ea92fc2125ec0e7495e2a55b47dc4fd10e81",
+        "bytes": 3448
       }
     },
     {
@@ -3445,6 +3831,17 @@
           "grok"
         ],
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/devin.svg",
+        "assetUrl": "https://devin.ai/favicon.svg",
+        "sourcePage": "https://devin.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Cognition",
+        "checked": "2026-11-08",
+        "sha256": "fe0753d2e3823bc1eb8a37943234fac63733b8c9e8abff0ca0402a6c7ddcd682",
+        "bytes": 1405
       }
     },
     {
@@ -3529,6 +3926,17 @@
           "grok"
         ],
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/devin-desktop.svg",
+        "assetUrl": "https://devin.ai/favicon.svg",
+        "sourcePage": "https://devin.ai/desktop",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Cognition",
+        "checked": "2026-11-08",
+        "sha256": "fe0753d2e3823bc1eb8a37943234fac63733b8c9e8abff0ca0402a6c7ddcd682",
+        "bytes": 1405
       }
     },
     {
@@ -3586,6 +3994,17 @@
           "gemini",
           "grok"
         ]
+      },
+      "logo": {
+        "file": "assets/logos/junie.svg",
+        "assetUrl": "https://junie.jetbrains.com/favicons/favicon.svg",
+        "sourcePage": "https://junie.jetbrains.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "JetBrains",
+        "checked": "2026-11-08",
+        "sha256": "76c9d1756bd054e7ff818194b48c248f845fe5c00b7b16a5008af86b3ed74826",
+        "bytes": 613
       }
     },
     {
@@ -3671,6 +4090,17 @@
         "pricingUrl": "https://kiro.dev/pricing/",
         "modelUrl": "https://kiro.dev/pricing/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/kiro.svg",
+        "assetUrl": "https://kiro.dev/icon.svg?fe599162bb293ea0",
+        "sourcePage": "https://kiro.dev/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "AWS",
+        "checked": "2026-11-08",
+        "sha256": "774cbc1c7ecec8c935a6091595583d7a92fc8289d6f1db3f071c0f50c61c369f",
+        "bytes": 1527
       }
     },
     {
@@ -3719,6 +4149,17 @@
         "pricingUrl": "https://www.trae.ai/pricing",
         "modelUrl": "https://www.trae.ai/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/trae.png",
+        "assetUrl": "https://lf16-web-neutral.traecdn.ai/obj/trae-ai-static/trae_website/favicon.png",
+        "sourcePage": "https://www.trae.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "TRAE",
+        "checked": "2026-11-08",
+        "sha256": "49d523938a22af5a70dd79923725df38674823026e2f917e76337319969f4af4",
+        "bytes": 488
       }
     },
     {
@@ -3765,6 +4206,17 @@
         "pricingUrl": "https://aws.amazon.com/q/developer/pricing/",
         "modelUrl": "https://aws.amazon.com/q/developer/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/amazon-q-developer.png",
+        "assetUrl": "https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png",
+        "sourcePage": "https://aws.amazon.com/q/developer/",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "AWS",
+        "checked": "2026-11-08",
+        "sha256": "f80d3ec6c5b2adee55267ecfcf2fc4131aa8551a546b7a1971b5e465c05c2403",
+        "bytes": 3061
       }
     },
     {
@@ -3819,6 +4271,17 @@
         "pricingUrl": "https://lovable.dev/pricing",
         "modelUrl": "https://lovable.dev/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/lovable.png",
+        "assetUrl": "https://lovable.dev/favicon.ico",
+        "sourcePage": "https://lovable.dev/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Lovable",
+        "checked": "2026-11-08",
+        "sha256": "29a40d56580a5366083461297773dbf146ec043d1156f432f5472cb3487f506b",
+        "bytes": 7645
       }
     },
     {
@@ -3895,6 +4358,17 @@
         "pricingUrl": "https://bolt.new/pricing",
         "modelUrl": "https://bolt.new/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/bolt.svg",
+        "assetUrl": "https://bolt.new/static/favicon.svg",
+        "sourcePage": "https://bolt.new/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "StackBlitz",
+        "checked": "2026-11-08",
+        "sha256": "ffb613a563d769368b996d03b91e8683b645d251a9a27f4cd8a7414715468523",
+        "bytes": 1445
       }
     },
     {
@@ -3952,6 +4426,17 @@
         "pricingUrl": "https://v0.app/pricing",
         "modelUrl": "https://v0.app/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/v0.svg",
+        "assetUrl": "https://v0.app/assets/icon.svg",
+        "sourcePage": "https://v0.app/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Vercel",
+        "checked": "2026-11-08",
+        "sha256": "263f117c0c69a44d3206a5702105c178ebaa164bca325f3c3973a13bd948f1bf",
+        "bytes": 1304
       }
     },
     {
@@ -3997,6 +4482,17 @@
         "pricingUrl": "https://replit.com/pricing",
         "modelUrl": "https://replit.com/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/replit-agent.png",
+        "assetUrl": "https://replit.com/public/icons/favicon-prompt-192-rebrand.png",
+        "sourcePage": "https://replit.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Replit",
+        "checked": "2026-11-08",
+        "sha256": "cbd9fa5be81f1b59919c3ac2a43a6c0b98dc7c873b325a526df214e9ef7afea4",
+        "bytes": 612
       }
     },
     {
@@ -4050,6 +4546,17 @@
           "gemini"
         ],
         "billingNote": "Workspace, model và hạ tầng Firebase phía sau có hạn mức và hóa đơn riêng."
+      },
+      "logo": {
+        "file": "assets/logos/firebase-studio.svg",
+        "assetUrl": "https://firebase.studio/favicon-fb-studio.svg",
+        "sourcePage": "https://firebase.studio/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Google",
+        "checked": "2026-11-08",
+        "sha256": "fbef3b46566a6ec2643f896ed3e9d0e0172470100d676be23c3fb921339da78a",
+        "bytes": 4672
       }
     },
     {
@@ -4104,6 +4611,17 @@
         "pricingUrl": "https://www.figma.com/pricing/",
         "modelUrl": "https://www.figma.com/make/",
         "billingNote": "Quyền Make và AI credits còn phụ thuộc loại seat và gói Figma."
+      },
+      "logo": {
+        "file": "assets/logos/figma-make.svg",
+        "assetUrl": "https://static.figma.com/app/icon/2/favicon.svg",
+        "sourcePage": "https://www.figma.com/make/",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "Figma",
+        "checked": "2026-11-08",
+        "sha256": "e6227b7dbc49c86da6f4ccfa02ba439428106b0ca627a0a33ea6ad1e09f335b3",
+        "bytes": 864
       }
     },
     {
@@ -4170,6 +4688,17 @@
         "pricingUrl": "https://base44.com/pricing",
         "modelUrl": "https://base44.com/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/base44.png",
+        "assetUrl": "https://media.base44.com/images/public/marketing-site-assets/branded/favicon-branded-v2.png",
+        "sourcePage": "https://base44.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Base44",
+        "checked": "2026-11-08",
+        "sha256": "c8c6c241060912a73a953e69c8154ae3f94df68b27bd6304643a9630c3342002",
+        "bytes": 2705
       }
     },
     {
@@ -4237,6 +4766,17 @@
           "gemini",
           "ollama"
         ]
+      },
+      "logo": {
+        "file": "assets/logos/n8n.ico",
+        "assetUrl": "https://n8n.io/favicon.ico",
+        "sourcePage": "https://n8n.io/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "n8n",
+        "checked": "2026-11-08",
+        "sha256": "7a4f420377cb45eede306dc18d2ff525fea1a8d0d10e9179a2c8d873815846d2",
+        "bytes": 15086
       }
     },
     {
@@ -4288,6 +4828,17 @@
         "pricingUrl": "https://www.make.com/pricing",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://www.make.com/ai-automation"
+      },
+      "logo": {
+        "file": "assets/logos/make.png",
+        "assetUrl": "https://cdn.prod.website-files.com/6a294495bc84130c6dd0c4fd/6a7b9441756d01907cfc9bc0_favicon-32x32.png",
+        "sourcePage": "https://www.make.com/ai-automation",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Make",
+        "checked": "2026-11-08",
+        "sha256": "65e6c1f87c96d9684efea91fe5d57c0e3201ebebb5a7397f26493ad0c7131afd",
+        "bytes": 29619
       }
     },
     {
@@ -4331,6 +4882,17 @@
         "pricingUrl": "https://zapier.com/agents",
         "modelUrl": "https://zapier.com/agents",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/zapier-agents.png",
+        "assetUrl": "https://framerusercontent.com/images/F0p1OYJhm4LaPzZZoDW2IdGjdt0.png",
+        "sourcePage": "https://zapier.com/agents",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Zapier",
+        "checked": "2026-11-08",
+        "sha256": "3d883bba447e240e14d3feb7a63b2aab1cd03debbc1a91b82289e952c7d1346a",
+        "bytes": 111
       }
     },
     {
@@ -4385,6 +4947,17 @@
         "pricingUrl": "https://www.lindy.ai/pricing",
         "modelUrl": "https://www.lindy.ai/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/lindy.png",
+        "assetUrl": "https://www.lindy.ai/_sherpa/assets/static/lindy/69f7b166e16ce668638e689d_lindy-avatar-favicon.png",
+        "sourcePage": "https://www.lindy.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Lindy",
+        "checked": "2026-11-08",
+        "sha256": "6b039baf08257a5fdc20a9aec2f360fc6bfbebfb838e36c94a5d3b19d4c332ab",
+        "bytes": 22392
       }
     },
     {
@@ -4428,6 +5001,17 @@
         "pricingUrl": "https://www.gumloop.com/pricing",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://www.gumloop.com/pricing"
+      },
+      "logo": {
+        "file": "assets/logos/gumloop.ico",
+        "assetUrl": "https://www.gumloop.com/favicon.ico",
+        "sourcePage": "https://www.gumloop.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Gumloop",
+        "checked": "2026-11-08",
+        "sha256": "5eb56b5a29acd6cd8b8d0b8a434a60efc61a9399e0496c30e0681c9660323faa",
+        "bytes": 9461
       }
     },
     {
@@ -4496,6 +5080,17 @@
           "grok",
           "qwen"
         ]
+      },
+      "logo": {
+        "file": "assets/logos/dify.svg",
+        "assetUrl": "https://dify.ai/favicon.svg",
+        "sourcePage": "https://dify.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Dify",
+        "checked": "2026-11-08",
+        "sha256": "72348ce12b2fe799a1787df6cf837d4c202389640bab83eadd5cbcc0ac253799",
+        "bytes": 685
       }
     },
     {
@@ -4541,6 +5136,17 @@
         "pricingUrl": "https://www.microsoft.com/en-us/copilot/products/copilot-studio",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://www.microsoft.com/en-us/copilot/products/copilot-studio"
+      },
+      "logo": {
+        "file": "assets/logos/copilot-studio.ico",
+        "assetUrl": "https://copilotstudio.microsoft.com/favicon.ico?v=2",
+        "sourcePage": "https://copilotstudio.microsoft.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Microsoft",
+        "checked": "2026-11-08",
+        "sha256": "18baaaaa35dd08735c3ee11fa84e5a5143cebbda609adafb3dce812b7867b691",
+        "bytes": 108294
       }
     },
     {
@@ -4592,6 +5198,17 @@
           "gemini",
           "claude"
         ]
+      },
+      "logo": {
+        "file": "assets/logos/gemini-platform.png",
+        "assetUrl": "https://www.gstatic.com/cgc/super_cloud_gradient.png",
+        "sourcePage": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "Google Cloud",
+        "checked": "2026-11-08",
+        "sha256": "a332b54b620a2fa04413561c01c925cd40f936581c7bed52df424ecccc9c08b4",
+        "bytes": 9447
       }
     },
     {
@@ -4622,6 +5239,17 @@
         "plans": [],
         "pricingUrl": "https://flowiseai.com/sunset",
         "billingNote": "Trang chính thức đã thông báo sunsetting; cần đọc thông báo trước khi triển khai mới."
+      },
+      "logo": {
+        "file": "assets/logos/flowise.ico",
+        "assetUrl": "https://flowiseai.com/favicon.ico",
+        "sourcePage": "https://flowiseai.com/sunset",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Flowise",
+        "checked": "2026-11-08",
+        "sha256": "e10a0d80459be8e664f2c183bcedd765b1984f7feef288576d46fa39be4d0ab0",
+        "bytes": 15406
       }
     },
     {
@@ -4651,6 +5279,17 @@
         "plans": [],
         "pricingUrl": "https://relay.app/",
         "billingNote": "Đã đóng cửa tháng 09/2026 theo thông báo chính thức; không còn là lựa chọn triển khai mới."
+      },
+      "logo": {
+        "file": "assets/logos/relay-app.png",
+        "assetUrl": "https://relay.app/apple-touch-icon.png",
+        "sourcePage": "https://relay.app/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Relay.app",
+        "checked": "2026-11-08",
+        "sha256": "c48a0d6c455a61a1d961e15926751869b99deaaac3c33ad4a34dfb603b4ca43e",
+        "bytes": 6425
       }
     },
     {
@@ -4709,6 +5348,17 @@
         "pricingUrl": "https://www.notion.com/pricing",
         "modelUrl": "https://www.notion.com/product/ai",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/notion-ai.png",
+        "assetUrl": "https://www.notion.com/front-static/logo-ios.png",
+        "sourcePage": "https://www.notion.com/product/ai",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Notion",
+        "checked": "2026-11-08",
+        "sha256": "483846a85e43e22879445047b83b22033e70fcc25ab34809ebadb7f856507ee0",
+        "bytes": 8078
       }
     },
     {
@@ -4767,6 +5417,17 @@
         "pricingUrl": "https://www.microsoft.com/en-us/copilot/solutions/individuals",
         "modelUrl": "https://www.microsoft.com/en-us/copilot/solutions/individuals",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/microsoft-365-copilot.ico",
+        "assetUrl": "https://res.cdn.office.net/officehub/images/content/images/unauth-copilotcom/favicon-copilot-brand-refresh-23392c1f66.ico",
+        "sourcePage": "https://m365.cloud.microsoft/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Microsoft",
+        "checked": "2026-11-08",
+        "sha256": "69e8ead6e5a1a07659606b5a4a5a2c73a41d8a00505594671aef83cad7e8408f",
+        "bytes": 7400
       }
     },
     {
@@ -4828,6 +5489,17 @@
           "gemini"
         ],
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/gemini-for-workspace.png",
+        "assetUrl": "https://www.gstatic.com/images/branding/googleg_gradient/1x/googleg_gradient_standard_20dp.png",
+        "sourcePage": "https://workspace.google.com/solutions/ai/",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "Google",
+        "checked": "2026-11-08",
+        "sha256": "8657bd13763477ea9d924f71b889634fd0d7abb51417d0628be34202ccd17b69",
+        "bytes": 827
       }
     },
     {
@@ -4886,6 +5558,17 @@
         "pricingUrl": "https://slack.com/pricing",
         "modelUrl": "https://slack.com/features/ai",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/slack-ai-slackbot.png",
+        "assetUrl": "https://a.slack-edge.com/9cc0056/img/icons/favicon-32.png",
+        "sourcePage": "https://slack.com/features/ai",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Salesforce / Slack",
+        "checked": "2026-11-08",
+        "sha256": "ca3872d0fb85ff9858bcbdc529d6e1db32c029c681c6e723e4f2ecb1c7defea6",
+        "bytes": 702
       }
     },
     {
@@ -4936,6 +5619,17 @@
         "pricingUrl": "https://www.grammarly.com/plans",
         "modelUrl": "https://www.grammarly.com/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/grammarly.png",
+        "assetUrl": "https://static-web.grammarly.com/cms/master/public/favicon-32x32.png",
+        "sourcePage": "https://www.grammarly.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Grammarly / Superhuman",
+        "checked": "2026-11-08",
+        "sha256": "89df91925aef73d98ed5b38541213fa88a4235cd1b8c8344a54cede59b9a5bbe",
+        "bytes": 1762
       }
     },
     {
@@ -4991,6 +5685,17 @@
         "pricingUrl": "https://gamma.app/pricing",
         "modelUrl": "https://gamma.app/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/gamma.ico",
+        "assetUrl": "https://gamma.app/favicon.ico",
+        "sourcePage": "https://gamma.app/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Gamma",
+        "checked": "2026-11-08",
+        "sha256": "2a2e70108a936fd02270f2087d056fc95bfc02aeaed931fb871be6fb5dce4657",
+        "bytes": 4286
       }
     },
     {
@@ -5062,6 +5767,17 @@
         "pricingUrl": "https://www.canva.com/pricing/",
         "modelUrl": "https://www.canva.com/canva-ai/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/canva-ai.ico",
+        "assetUrl": "https://www.canva.com/favicon.ico",
+        "sourcePage": "https://www.canva.com/canva-ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Canva",
+        "checked": "2026-11-08",
+        "sha256": "ec2fbad47e598fe06c7a2b825224b3b1b8d8221f3002e6370e627d459ff0634a",
+        "bytes": 4414
       }
     },
     {
@@ -5120,6 +5836,17 @@
         "pricingUrl": "https://otter.ai/pricing",
         "modelUrl": "https://otter.ai/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/otter.png",
+        "assetUrl": "https://cdn.prod.website-files.com/618e9316785b3582a5178502/618e943a80919a98b5e9bf69_apple-icon.png",
+        "sourcePage": "https://otter.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Otter.ai",
+        "checked": "2026-11-08",
+        "sha256": "c3c1e1bd914136b91d541da523a65b0ae02bfe4602530356b5187f1139adacae",
+        "bytes": 3331
       }
     },
     {
@@ -5177,6 +5904,17 @@
         "pricingUrl": "https://fireflies.ai/pricing",
         "modelUrl": "https://fireflies.ai/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/fireflies.png",
+        "assetUrl": "https://fireflies.ai/apple-icon.png?apple-icon.0zim7nfg3coaw.png",
+        "sourcePage": "https://fireflies.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Fireflies.ai",
+        "checked": "2026-11-08",
+        "sha256": "6bec3ebd0ef7bca5053c76ca55cdb59efd17604ce63f9ae47c80c3298f563b7b",
+        "bytes": 12441
       }
     },
     {
@@ -5226,6 +5964,17 @@
         "pricingUrl": "https://www.granola.ai/pricing",
         "modelUrl": "https://www.granola.ai/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/granola.svg",
+        "assetUrl": "https://www.granola.ai/favicon/favicon.svg",
+        "sourcePage": "https://www.granola.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Granola",
+        "checked": "2026-11-08",
+        "sha256": "c42653671d2257bd9605d1794456734012bcfc1632a344fed638116839c8e7a9",
+        "bytes": 41099
       }
     },
     {
@@ -5312,6 +6061,18 @@
         "pricingUrl": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
         "modelUrl": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/midjourney.png",
+        "assetUrl": "https://www.midjourney.com/home",
+        "sourcePage": "https://www.midjourney.com/home",
+        "kind": "inline-icon",
+        "scope": "product",
+        "publisher": "Midjourney",
+        "checked": "2026-11-08",
+        "sha256": "5ad749733b059d3465b164d1b0def77353f8af6b27e9bc005def909dbcaa00d1",
+        "bytes": 990,
+        "extraction": "Exact PNG bytes from the official page link[rel=icon] data URL"
       }
     },
     {
@@ -5376,6 +6137,17 @@
         "pricingUrl": "https://www.adobe.com/products/firefly/plans.html",
         "modelUrl": "https://www.adobe.com/products/firefly.html",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/adobe-firefly.png",
+        "assetUrl": "https://firefly.adobe.com/releases/6ac3bff29a3249ef34d1d14442db6eb2b452d25b/assets/fi_touch_icon_180-BmBtoxt-.png",
+        "sourcePage": "https://firefly.adobe.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Adobe",
+        "checked": "2026-11-08",
+        "sha256": "ec4f556c0bfcdcf8bb6fba90d889173fdf3a3a0eca8ec6e542e4615e76a109db",
+        "bytes": 4553
       }
     },
     {
@@ -5481,6 +6253,17 @@
         "pricingUrl": "https://ideogram.ai/pricing/",
         "modelUrl": "https://ideogram.ai/pricing/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/ideogram.svg",
+        "assetUrl": "https://ideogram.ai/favicon.svg?v=new-brand-20261020",
+        "sourcePage": "https://ideogram.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Ideogram",
+        "checked": "2026-11-08",
+        "sha256": "7a50d17b8d3d21b31f7bb40c7ca1a36da9c1e9fb0689bd084aaddf31d6c3fa28",
+        "bytes": 5168
       }
     },
     {
@@ -5550,6 +6333,17 @@
         "pricingUrl": "https://leonardo.ai/pricing",
         "modelUrl": "https://leonardo.ai/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/leonardo-ai.png",
+        "assetUrl": "https://docs.leonardo.ai/apple-touch-icon.png?v=cb7842410124",
+        "sourcePage": "https://docs.leonardo.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Leonardo",
+        "checked": "2026-11-08",
+        "sha256": "5995e34154f23c32577260e387d1d9a36ca2eb01ee59762ba052552245cb7440",
+        "bytes": 15428
       }
     },
     {
@@ -5619,6 +6413,17 @@
         "pricingUrl": "https://www.recraft.ai/pricing",
         "modelUrl": "https://www.recraft.ai/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/recraft.png",
+        "assetUrl": "https://framerusercontent.com/images/abL15N3UiE3oDA6S807KUBarXrQ.png",
+        "sourcePage": "https://www.recraft.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Recraft",
+        "checked": "2026-11-08",
+        "sha256": "ab7b0086a4a03e10582c3c5aa5cec2218da291bf0ac53a21a762e18b84bc8267",
+        "bytes": 858
       }
     },
     {
@@ -5697,6 +6502,17 @@
         "pricingUrl": "https://bfl.ai/pricing",
         "modelUrl": "https://bfl.ai/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/flux.svg",
+        "assetUrl": "https://bfl.ai/icon0.svg?7e050ff634b43f18",
+        "sourcePage": "https://bfl.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Black Forest Labs",
+        "checked": "2026-11-08",
+        "sha256": "59b1a6bce60aabbe5d2d6ee8db1828d312c13c623671b4ddd3539032116f5991",
+        "bytes": 1001
       }
     },
     {
@@ -5773,6 +6589,17 @@
         "pricingUrl": "https://comfy.org/pricing",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://comfy.org/"
+      },
+      "logo": {
+        "file": "assets/logos/comfyui-comfy.svg",
+        "assetUrl": "https://comfy.org/favicon.svg",
+        "sourcePage": "https://comfy.org/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Comfy",
+        "checked": "2026-11-08",
+        "sha256": "cb6ecf47c411345e68af2f2134747ad6dd72fc266b774a14e61c16c5b31dc6e1",
+        "bytes": 1194
       }
     },
     {
@@ -5886,6 +6713,17 @@
         "pricingUrl": "https://runway.com/pricing",
         "modelUrl": "https://runway.com/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/runway.png",
+        "assetUrl": "https://runway.com/icon.png?icon.35ps9bmugbe1e.png",
+        "sourcePage": "https://runway.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Runway",
+        "checked": "2026-11-08",
+        "sha256": "f545e0e706d0c6be0e8602a8e8d685d4f43ab72880bd5e6a234916e765ff2b70",
+        "bytes": 4846
       }
     },
     {
@@ -6046,6 +6884,17 @@
         "pricingUrl": "https://pika.art/pricing",
         "modelUrl": "https://pika.art/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/pika.svg",
+        "assetUrl": "https://pika.art/icon.svg?icon.3bty87qirfeg8.svg",
+        "sourcePage": "https://pika.art/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Pika",
+        "checked": "2026-11-08",
+        "sha256": "824758826a4823324167b7ff4e0c6c7c3c59dbe615ec6f7474703aa463b4da31",
+        "bytes": 631
       }
     },
     {
@@ -6113,6 +6962,17 @@
         "pricingUrl": "https://kling.ai/",
         "modelUrl": "https://kling.ai/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/kling-ai.png",
+        "assetUrl": "https://s16-kling.klingai.com/kos/s101/nlav112918/kling-homepage-aio/logo-180x180.png",
+        "sourcePage": "https://kling.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Kuaishou",
+        "checked": "2026-11-08",
+        "sha256": "6cb6f7857be8c718a6d6768da67389e169abdacbe5402933378a19a812da9995",
+        "bytes": 3766
       }
     },
     {
@@ -6173,6 +7033,17 @@
         "pricingUrl": "https://lumalabs.ai/pricing",
         "modelUrl": "https://lumalabs.ai/news/ray3_14",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/luma-dream-machine.ico",
+        "assetUrl": "https://lumalabs.ai/favicons/favicon-black.ico",
+        "sourcePage": "https://lumalabs.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Luma",
+        "checked": "2026-11-08",
+        "sha256": "fb7e0157e3d27c8e6b65f083390ebd2a34fc2e28e5be7f8726d09c09d6e0aa36",
+        "bytes": 15406
       }
     },
     {
@@ -6228,6 +7099,17 @@
         "pricingUrl": "https://www.synthesia.io/pricing",
         "modelUrl": "https://www.synthesia.io/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/synthesia.png",
+        "assetUrl": "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/6618fd69d436784c0bba5e9e_webclip.png",
+        "sourcePage": "https://www.synthesia.io/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Synthesia",
+        "checked": "2026-11-08",
+        "sha256": "c7e6198818832392403352dff7289076dc9fdc1648fbb1543cb7cfec55a2916a",
+        "bytes": 3633
       }
     },
     {
@@ -6283,6 +7165,17 @@
         "pricingUrl": "https://www.heygen.com/pricing",
         "modelUrl": "https://www.heygen.com/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/heygen.ico",
+        "assetUrl": "https://www.heygen.com/favicon.ico?favicon.2m321y0geyyfh.ico",
+        "sourcePage": "https://www.heygen.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "HeyGen",
+        "checked": "2026-11-08",
+        "sha256": "88129ff619e6caffc7e6082f0aa7495c04220f8a45a86fa0dc235b44920b729c",
+        "bytes": 15406
       }
     },
     {
@@ -6342,6 +7235,17 @@
         "pricingUrl": "https://gemini.google/subscriptions/",
         "modelUrl": "https://deepmind.google/models/veo/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/veo.ico",
+        "assetUrl": "https://deepmind.google/favicon.ico",
+        "sourcePage": "https://deepmind.google/models/veo/",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "Google DeepMind",
+        "checked": "2026-11-08",
+        "sha256": "0683e96941bf43306bdf6a3b7e59d239dfad03296c11ce54ae5be3a6d3063b4f",
+        "bytes": 3528
       }
     },
     {
@@ -6374,6 +7278,17 @@
         "plans": [],
         "pricingUrl": "https://developers.openai.com/api/docs/deprecations",
         "billingNote": "Không có gói API đang cung cấp cho mục lịch sử này. Trạng thái này chỉ áp dụng API được dẫn nguồn."
+      },
+      "logo": {
+        "file": "assets/logos/sora-2-api.png",
+        "assetUrl": "https://developers.openai.com/favicon.png",
+        "sourcePage": "https://developers.openai.com/",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "OpenAI",
+        "checked": "2026-11-08",
+        "sha256": "8d5575ee667ff715cd3e3074d5296edc68d5aadd89720d203e13131b68b22a04",
+        "bytes": 1841
       }
     },
     {
@@ -6534,6 +7449,17 @@
         "pricingUrl": "https://elevenlabs.io/pricing",
         "modelUrl": "https://elevenlabs.io/docs/overview/models",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/elevenlabs.svg",
+        "assetUrl": "https://elevenlabs.io/icon.svg?c23f5371fdd26632",
+        "sourcePage": "https://elevenlabs.io/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "ElevenLabs",
+        "checked": "2026-11-08",
+        "sha256": "a8ccade64d9d38696c6f47a17ad1eb6d941d687bea0adc7af9b2ccce0e26c29a",
+        "bytes": 404
       }
     },
     {
@@ -6609,6 +7535,17 @@
         "pricingUrl": "https://suno.com/pricing",
         "modelUrl": "https://suno.com/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/suno.png",
+        "assetUrl": "https://cdn-o.suno.com/apple-touch-icon.png",
+        "sourcePage": "https://suno.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Suno",
+        "checked": "2026-11-08",
+        "sha256": "616d3f024f51e1f0c820a45b92cb6277277fa9c35455c8f512adfb658b58bf8f",
+        "bytes": 34688
       }
     },
     {
@@ -6645,6 +7582,17 @@
         "pricingUrl": "https://www.udio.com/",
         "modelUrl": "https://help.udio.com/en/articles/10715838-create-your-first-song",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/udio.ico",
+        "assetUrl": "https://www.udio.com/favicon.ico?favicon.0wbc3vz33genq.ico",
+        "sourcePage": "https://www.udio.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Udio",
+        "checked": "2026-11-08",
+        "sha256": "3764b3281d799d8ed4f1c07afba5bfd77c93fae014cdab46a795036333058dc5",
+        "bytes": 410598
       }
     },
     {
@@ -6706,6 +7654,17 @@
         "pricingUrl": "https://www.descript.com/pricing",
         "modelUrl": "https://www.descript.com/pricing",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/descript.svg",
+        "assetUrl": "https://static-cdn.descript.com/web/icons/favicon.svg",
+        "sourcePage": "https://www.descript.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Descript",
+        "checked": "2026-11-08",
+        "sha256": "62d80d495dd8e447ccaa2ed0ddccac833d9e6227bb33b136bd558e590a9d2b85",
+        "bytes": 1267
       }
     },
     {
@@ -6760,6 +7719,17 @@
         "pricingUrl": "https://www.langchain.com/pricing",
         "billingNote": "Chi phí thư viện, model API và hạ tầng triển khai là các phần riêng.",
         "modelUrl": "https://docs.langchain.com/oss/python/langchain/overview"
+      },
+      "logo": {
+        "file": "assets/logos/langchain.png",
+        "assetUrl": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69a17e4f0c916c644f4de1cd_webclip%20lg.png",
+        "sourcePage": "https://www.langchain.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "LangChain",
+        "checked": "2026-11-08",
+        "sha256": "0c60295f8003df255890bff79d9b006d5b3459f90e02c31c850e05b4365c9029",
+        "bytes": 6101
       }
     },
     {
@@ -6814,6 +7784,17 @@
         "pricingUrl": "https://www.langchain.com/pricing",
         "billingNote": "Chi phí thư viện, model API và hạ tầng triển khai là các phần riêng.",
         "modelUrl": "https://docs.langchain.com/oss/python/langgraph/overview"
+      },
+      "logo": {
+        "file": "assets/logos/langgraph.png",
+        "assetUrl": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69a17e4f0c916c644f4de1cd_webclip%20lg.png",
+        "sourcePage": "https://www.langchain.com/langgraph",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "LangChain",
+        "checked": "2026-11-08",
+        "sha256": "0c60295f8003df255890bff79d9b006d5b3459f90e02c31c850e05b4365c9029",
+        "bytes": 6101
       }
     },
     {
@@ -6863,6 +7844,17 @@
         "pricingUrl": "https://www.llamaindex.ai/pricing",
         "billingNote": "Chi phí thư viện, model API và hạ tầng triển khai là các phần riêng.",
         "modelUrl": "https://www.llamaindex.ai/"
+      },
+      "logo": {
+        "file": "assets/logos/llamaindex.svg",
+        "assetUrl": "https://www.llamaindex.ai/favicon.svg",
+        "sourcePage": "https://www.llamaindex.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "LlamaIndex",
+        "checked": "2026-11-08",
+        "sha256": "a8d30ba38c768826c131392fc97db9700ef7eeac9f139eb3298ed576958dad6d",
+        "bytes": 181762
       }
     },
     {
@@ -6912,6 +7904,17 @@
         "pricingUrl": "https://crewai.com/pricing",
         "billingNote": "Chi phí thư viện, model API và hạ tầng triển khai là các phần riêng.",
         "modelUrl": "https://crewai.com/"
+      },
+      "logo": {
+        "file": "assets/logos/crewai.ico",
+        "assetUrl": "https://crewai.com/favicon.ico?favicon.9df2505d.ico",
+        "sourcePage": "https://crewai.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "CrewAI",
+        "checked": "2026-11-08",
+        "sha256": "06d296767bd6a2acbf5aa4b1dafd318fc08762da6b0ee842eb2f05cf426cd2e9",
+        "bytes": 4286
       }
     },
     {
@@ -6955,6 +7958,17 @@
         "pricingUrl": "https://microsoft.github.io/autogen/stable/",
         "billingNote": "Chi phí thư viện, model API và hạ tầng triển khai là các phần riêng.",
         "modelUrl": "https://microsoft.github.io/autogen/stable/"
+      },
+      "logo": {
+        "file": "assets/logos/autogen.png",
+        "assetUrl": "https://microsoft.github.io/autogen/stable/_static/favicon-512x512.png",
+        "sourcePage": "https://microsoft.github.io/autogen/stable/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Microsoft",
+        "checked": "2026-11-08",
+        "sha256": "c1f90048923bdaa4e2eeb6ab70f3cc059dc706d43e7208f336102702fc231b81",
+        "bytes": 45618
       }
     },
     {
@@ -6999,6 +8013,17 @@
         "pricingUrl": "https://learn.microsoft.com/en-us/agent-framework/overview/",
         "billingNote": "Chi phí thư viện, model API và hạ tầng triển khai là các phần riêng.",
         "modelUrl": "https://learn.microsoft.com/en-us/agent-framework/overview/"
+      },
+      "logo": {
+        "file": "assets/logos/microsoft-agent-framework.svg",
+        "assetUrl": "https://raw.githubusercontent.com/microsoft/agent-framework/main/docs/assets/SVG/Microsoft%20Foundry%20Agent%20Framework%20-%20Color.svg",
+        "sourcePage": "https://github.com/microsoft/agent-framework/tree/main/docs/assets/SVG",
+        "kind": "brand-mark",
+        "scope": "product",
+        "publisher": "Microsoft",
+        "checked": "2026-11-08",
+        "sha256": "3f78eaa2e1fd3c49c43106ccf0a1cf5d8e15ad1c6680424a16d78a66a7045701",
+        "bytes": 5963
       }
     },
     {
@@ -7043,6 +8068,17 @@
         "pricingUrl": "https://developers.openai.com/api/docs/guides/agents/sdk",
         "billingNote": "Chi phí thư viện, model API và hạ tầng triển khai là các phần riêng.",
         "modelUrl": "https://developers.openai.com/api/docs/guides/agents/sdk"
+      },
+      "logo": {
+        "file": "assets/logos/openai-agents-sdk.png",
+        "assetUrl": "https://developers.openai.com/favicon.png",
+        "sourcePage": "https://developers.openai.com/",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "OpenAI",
+        "checked": "2026-11-08",
+        "sha256": "8d5575ee667ff715cd3e3074d5296edc68d5aadd89720d203e13131b68b22a04",
+        "bytes": 1841
       }
     },
     {
@@ -7089,6 +8125,17 @@
         "pricingUrl": "https://adk.dev/",
         "billingNote": "Chi phí thư viện, model API và hạ tầng triển khai là các phần riêng.",
         "modelUrl": "https://adk.dev/"
+      },
+      "logo": {
+        "file": "assets/logos/google-adk.png",
+        "assetUrl": "https://adk.dev/assets/agent-development-kit.png",
+        "sourcePage": "https://adk.dev/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Google",
+        "checked": "2026-11-08",
+        "sha256": "7b3a16ca4417a134f1463ae3722ac0a437467fdbf3f7d7c9f29a08fc0cff0fbf",
+        "bytes": 11976
       }
     },
     {
@@ -7133,6 +8180,17 @@
         "pricingUrl": "https://pydantic.dev/docs/ai/overview/",
         "billingNote": "Chi phí thư viện, model API và hạ tầng triển khai là các phần riêng.",
         "modelUrl": "https://pydantic.dev/docs/ai/overview/"
+      },
+      "logo": {
+        "file": "assets/logos/pydantic-ai.png",
+        "assetUrl": "https://pydantic.dev/docs/favicon.png",
+        "sourcePage": "https://pydantic.dev/docs/ai/overview/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Pydantic",
+        "checked": "2026-11-08",
+        "sha256": "956b0efb5cce98c87590f1b23ea945b43448a48e2da53175faca74a9c851e563",
+        "bytes": 876
       }
     },
     {
@@ -7175,6 +8233,17 @@
         "pricingUrl": "https://dspy.ai/current/",
         "billingNote": "Chi phí thư viện, model API và hạ tầng triển khai là các phần riêng.",
         "modelUrl": "https://dspy.ai/current/"
+      },
+      "logo": {
+        "file": "assets/logos/dspy.png",
+        "assetUrl": "https://dspy.ai/current/static/img/logo.png",
+        "sourcePage": "https://dspy.ai/current/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Stanford / community",
+        "checked": "2026-11-08",
+        "sha256": "eac5dafa895554e332b8134b04dd801b5d0b62171d52680410def5f7d43c21aa",
+        "bytes": 2191
       }
     },
     {
@@ -7237,6 +8306,17 @@
         "pricingUrl": "https://ollama.com/pricing",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://ollama.com/library"
+      },
+      "logo": {
+        "file": "assets/logos/ollama.png",
+        "assetUrl": "https://ollama.com/public/apple-touch-icon.png",
+        "sourcePage": "https://ollama.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Ollama",
+        "checked": "2026-11-08",
+        "sha256": "8a5d4f0444d756d1d64c6615eb163ecd71fba180bd07c4199e88461c921778d1",
+        "bytes": 5579
       }
     },
     {
@@ -7321,6 +8401,17 @@
         "pricingUrl": "https://lmstudio.ai/pricing",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://lmstudio.ai/pricing"
+      },
+      "logo": {
+        "file": "assets/logos/lm-studio-bionic.png",
+        "assetUrl": "https://lmstudio.ai/assets/marketing/logo-192x192.png",
+        "sourcePage": "https://lmstudio.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "LM Studio",
+        "checked": "2026-11-08",
+        "sha256": "e79ff2ac0fece5c0a76fcb8b20a29226794d11824ee7c7a2f521dcde0f88e12b",
+        "bytes": 12829
       }
     },
     {
@@ -7364,6 +8455,17 @@
         "pricingUrl": "https://vllm.ai/",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://docs.vllm.ai/en/latest/models/supported_models.html"
+      },
+      "logo": {
+        "file": "assets/logos/vllm.svg",
+        "assetUrl": "https://vllm.ai/vLLM-Logo.svg",
+        "sourcePage": "https://vllm.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "vLLM community",
+        "checked": "2026-11-08",
+        "sha256": "12a0812e247cef4b31160e0d0267142ffe491491537f3e275d8bc645b61eb1a8",
+        "bytes": 3502
       }
     },
     {
@@ -7422,6 +8524,17 @@
         "pricingUrl": "https://huggingface.co/pricing",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://huggingface.co/models"
+      },
+      "logo": {
+        "file": "assets/logos/hugging-face.svg",
+        "assetUrl": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+        "sourcePage": "https://huggingface.co/",
+        "kind": "brand-mark",
+        "scope": "product",
+        "publisher": "Hugging Face",
+        "checked": "2026-11-08",
+        "sha256": "3613c73f07ccae19118bfe6d2f8cd127183d08cf99468a708e090953e116ed0a",
+        "bytes": 4634
       }
     },
     {
@@ -7477,6 +8590,17 @@
         "pricingUrl": "https://openrouter.ai/pricing",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://openrouter.ai/models"
+      },
+      "logo": {
+        "file": "assets/logos/openrouter.png",
+        "assetUrl": "https://openrouter.ai/apple-touch-icon.png",
+        "sourcePage": "https://openrouter.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "OpenRouter",
+        "checked": "2026-11-08",
+        "sha256": "ec915bd303e5d8501f02a37029fa01ede150b507357ef4c9739efb720d0df445",
+        "bytes": 5891
       }
     },
     {
@@ -7526,6 +8650,17 @@
         "pricingUrl": "https://www.litellm.ai/",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://docs.litellm.ai/docs/providers"
+      },
+      "logo": {
+        "file": "assets/logos/litellm.svg",
+        "assetUrl": "https://docs.litellm.ai/img/brand/litellm-favicon.svg",
+        "sourcePage": "https://docs.litellm.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "BerriAI",
+        "checked": "2026-11-08",
+        "sha256": "96e310f8ea03304d747b5684ba93f9917d69572b4fc9096f4732e5c4d1786799",
+        "bytes": 2125
       }
     },
     {
@@ -7575,6 +8710,17 @@
         "pricingUrl": "https://www.together.ai/pricing",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://docs.together.ai/docs/serverless-models"
+      },
+      "logo": {
+        "file": "assets/logos/together-ai.png",
+        "assetUrl": "https://cdn.prod.website-files.com/69654e88dce9154b5f1206dd/69a59cff65ed0f267dd2fbe8_touchicon.png",
+        "sourcePage": "https://www.together.ai/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Together AI",
+        "checked": "2026-11-08",
+        "sha256": "b4755d2c1d2ac7c67ff2002ae2d237db5a9c6c592606d64625991e5a7cf8568f",
+        "bytes": 4267
       }
     },
     {
@@ -7624,6 +8770,17 @@
         "pricingUrl": "https://replicate.com/pricing",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://replicate.com/explore"
+      },
+      "logo": {
+        "file": "assets/logos/replicate.png",
+        "assetUrl": "https://static.replicateassets.com/fe/ad7fe3a706abfe81d42a93a7659b4395ee36d386/favicon-CKiqAkf2.png",
+        "sourcePage": "https://replicate.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Replicate",
+        "checked": "2026-11-08",
+        "sha256": "f37c94aa13c296973edb190f845161aaf4dc80eb18165e44bca1c090a7b638ae",
+        "bytes": 40197
       }
     },
     {
@@ -7670,6 +8827,17 @@
         "pricingUrl": "https://aws.amazon.com/bedrock/agentcore/pricing/",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://aws.amazon.com/bedrock/agentcore/"
+      },
+      "logo": {
+        "file": "assets/logos/bedrock-agentcore.png",
+        "assetUrl": "https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png",
+        "sourcePage": "https://aws.amazon.com/bedrock/agentcore/",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "AWS",
+        "checked": "2026-11-08",
+        "sha256": "f80d3ec6c5b2adee55267ecfcf2fc4131aa8551a546b7a1971b5e465c05c2403",
+        "bytes": 3061
       }
     },
     {
@@ -7715,6 +8883,17 @@
         "pricingUrl": "https://you.com/",
         "modelUrl": "https://you.com/",
         "billingNote": "Giá theo nguồn tại mốc đối chiếu; thuế, khu vực, kỳ thanh toán và hạn mức có thể khác. Có model trong danh mục không có nghĩa mọi gói đều bao gồm model đó."
+      },
+      "logo": {
+        "file": "assets/logos/you-com.svg",
+        "assetUrl": "https://you.com/icon.svg?icon.1r1kw8cf43bjt.svg",
+        "sourcePage": "https://you.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "You.com",
+        "checked": "2026-11-08",
+        "sha256": "9a9092a110da4f6283910961484810f92bb2e37e45c31c2f2972340c60c3f4b1",
+        "bytes": 841
       }
     },
     {
@@ -7764,6 +8943,17 @@
         "pricingUrl": "https://langfuse.com/pricing",
         "modelUrl": "https://langfuse.com/pricing",
         "billingNote": "Gói dịch vụ này không mặc định bao gồm thuê bao ChatGPT/Claude hoặc chi phí model bên ngoài."
+      },
+      "logo": {
+        "file": "assets/logos/langfuse.png",
+        "assetUrl": "https://langfuse.com/apple-touch-icon.png",
+        "sourcePage": "https://langfuse.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Langfuse / ClickHouse",
+        "checked": "2026-11-08",
+        "sha256": "3716a74d937c060454c2fb6ab4e6a33d2af411eac65a87335182581dec2a781d",
+        "bytes": 5533
       }
     },
     {
@@ -7813,6 +9003,17 @@
         "pricingUrl": "https://www.langchain.com/pricing",
         "modelUrl": "https://www.langchain.com/pricing",
         "billingNote": "Gói dịch vụ này không mặc định bao gồm thuê bao ChatGPT/Claude hoặc chi phí model bên ngoài."
+      },
+      "logo": {
+        "file": "assets/logos/langsmith.png",
+        "assetUrl": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69a17e4f0c916c644f4de1cd_webclip%20lg.png",
+        "sourcePage": "https://www.langchain.com/langsmith/observability",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "LangChain",
+        "checked": "2026-11-08",
+        "sha256": "0c60295f8003df255890bff79d9b006d5b3459f90e02c31c850e05b4365c9029",
+        "bytes": 6101
       }
     },
     {
@@ -7858,6 +9059,17 @@
         "pricingUrl": "https://arize.com/pricing/",
         "modelUrl": "https://arize.com/pricing/",
         "billingNote": "Gói dịch vụ này không mặc định bao gồm thuê bao ChatGPT/Claude hoặc chi phí model bên ngoài."
+      },
+      "logo": {
+        "file": "assets/logos/arize-phoenix.png",
+        "assetUrl": "https://arize.com/wp-content/themes/arize-2022/images/favicon.png",
+        "sourcePage": "https://arize.com/phoenix/",
+        "kind": "publisher-icon",
+        "scope": "publisher",
+        "publisher": "Arize",
+        "checked": "2026-11-08",
+        "sha256": "d9dbe71261c543efb52a3def6e0f89bcead8cd08a3b917d434c941377600d8b8",
+        "bytes": 403
       }
     },
     {
@@ -7901,6 +9113,17 @@
         "pricingUrl": "https://www.braintrust.dev/pricing",
         "modelUrl": "https://www.braintrust.dev/pricing",
         "billingNote": "Gói dịch vụ này không mặc định bao gồm thuê bao ChatGPT/Claude hoặc chi phí model bên ngoài."
+      },
+      "logo": {
+        "file": "assets/logos/braintrust.png",
+        "assetUrl": "https://www.braintrust.dev/icon180.png?v=2",
+        "sourcePage": "https://www.braintrust.dev/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Braintrust",
+        "checked": "2026-11-08",
+        "sha256": "aa4434ae1033d523f11d08761933ec317ef30c04ac543ec06ae7443d2fd38cb3",
+        "bytes": 3198
       }
     },
     {
@@ -7962,6 +9185,17 @@
         "pricingUrl": "https://qdrant.tech/pricing/",
         "modelUrl": "https://qdrant.tech/pricing/",
         "billingNote": "Gói dịch vụ này không mặc định bao gồm thuê bao ChatGPT/Claude hoặc chi phí model bên ngoài."
+      },
+      "logo": {
+        "file": "assets/logos/qdrant.png",
+        "assetUrl": "https://qdrant.tech/favicon/apple-touch-icon.png",
+        "sourcePage": "https://qdrant.tech/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Qdrant",
+        "checked": "2026-11-08",
+        "sha256": "559abf36a51a5aa8a75d381565eee1672984be3ac152f586af7d8d9f15862eeb",
+        "bytes": 4977
       }
     },
     {
@@ -8011,6 +9245,17 @@
         "pricingUrl": "https://www.pinecone.io/pricing/",
         "modelUrl": "https://www.pinecone.io/pricing/",
         "billingNote": "Gói dịch vụ này không mặc định bao gồm thuê bao ChatGPT/Claude hoặc chi phí model bên ngoài."
+      },
+      "logo": {
+        "file": "assets/logos/pinecone.ico",
+        "assetUrl": "https://www.pinecone.io/favicon.ico?favicon.16aah0kd0o17q.ico",
+        "sourcePage": "https://www.pinecone.io/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Pinecone",
+        "checked": "2026-11-08",
+        "sha256": "faa9c834fac8e86cd94f446ece9689edd0dd3203ff261453ffda1764879f5c68",
+        "bytes": 15086
       }
     },
     {
@@ -8060,6 +9305,17 @@
         "pricingUrl": "https://weaviate.io/pricing",
         "modelUrl": "https://weaviate.io/pricing",
         "billingNote": "Gói dịch vụ này không mặc định bao gồm thuê bao ChatGPT/Claude hoặc chi phí model bên ngoài."
+      },
+      "logo": {
+        "file": "assets/logos/weaviate.ico",
+        "assetUrl": "https://weaviate.io/img/favicon.ico",
+        "sourcePage": "https://weaviate.io/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Weaviate",
+        "checked": "2026-11-08",
+        "sha256": "93b6184e6cb19de4584b804191e9b399178423fbdd7dbc08c33ff86ca3ba024b",
+        "bytes": 15406
       }
     },
     {
@@ -8115,6 +9371,17 @@
         "pricingUrl": "https://www.trychroma.com/pricing",
         "modelUrl": "https://www.trychroma.com/pricing",
         "billingNote": "Gói dịch vụ này không mặc định bao gồm thuê bao ChatGPT/Claude hoặc chi phí model bên ngoài."
+      },
+      "logo": {
+        "file": "assets/logos/chroma.ico",
+        "assetUrl": "https://www.trychroma.com/img/favicon.ico",
+        "sourcePage": "https://www.trychroma.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Chroma / Replit",
+        "checked": "2026-11-08",
+        "sha256": "fbefa5cca4231c3f7ee4611a0a55050d07f0e107b12e363e2fc1f65705679df1",
+        "bytes": 285478
       }
     },
     {
@@ -8154,6 +9421,17 @@
         ],
         "pricingUrl": "https://modelcontextprotocol.io/docs/getting-started/intro",
         "billingNote": "Không có các gói Plus/Pro cho bản thân giao thức."
+      },
+      "logo": {
+        "file": "assets/logos/mcp.png",
+        "assetUrl": "https://modelcontextprotocol.io/mintlify-assets/_mintlify/favicons/mcp/ebiVJzri-bsiCfVZ/_generated/favicon/apple-touch-icon.png",
+        "sourcePage": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "MCP community",
+        "checked": "2026-11-08",
+        "sha256": "bf7a5a8d52fe292c6964ea4361018ecb346a065d8a374d0e1ea6fe56170fb566",
+        "bytes": 2869
       }
     },
     {
@@ -8194,6 +9472,17 @@
         ],
         "pricingUrl": "https://a2a-protocol.org/latest/",
         "billingNote": "Không có các gói Plus/Pro cho bản thân giao thức."
+      },
+      "logo": {
+        "file": "assets/logos/a2a.svg",
+        "assetUrl": "https://a2a-protocol.org/latest/assets/a2a_logo/icon/color/SVG/a2a_icon_color.svg",
+        "sourcePage": "https://a2a-protocol.org/latest/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "A2A project",
+        "checked": "2026-11-08",
+        "sha256": "ee46ec740f2180ddd5cc4376c55c5a7cf7bc1756aee72676f2f1b38ee7e07942",
+        "bytes": 44472
       }
     },
     {
@@ -8265,6 +9554,17 @@
         "pricingUrl": "https://browser-use.com/pricing",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://browser-use.com/pricing"
+      },
+      "logo": {
+        "file": "assets/logos/browser-use.png",
+        "assetUrl": "https://browser-use.com/apple-touch-icon.png",
+        "sourcePage": "https://browser-use.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Browser Use",
+        "checked": "2026-11-08",
+        "sha256": "79038a3f370c0a247ac307a43443cf6e17a113b3962b2488aca2d9d28b1243ab",
+        "bytes": 10261
       }
     },
     {
@@ -8320,6 +9620,17 @@
         "pricingUrl": "https://www.browserbase.com/pricing",
         "billingNote": "Phí phần mềm hoặc hosting và phí sử dụng model là hai khoản cần xem riêng.",
         "modelUrl": "https://www.browserbase.com/pricing"
+      },
+      "logo": {
+        "file": "assets/logos/browserbase.svg",
+        "assetUrl": "https://www.browserbase.com/favicon.svg",
+        "sourcePage": "https://www.browserbase.com/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Browserbase",
+        "checked": "2026-11-08",
+        "sha256": "32e32931a1c1d6b4c8f0f073ed5bfa7df5e4141eaf4174cba7dca5753917dbfd",
+        "bytes": 526
       }
     },
     {
@@ -8368,6 +9679,17 @@
         "pricingUrl": "https://www.stagehand.dev/",
         "billingNote": "Chi phí thư viện, model API và hạ tầng triển khai là các phần riêng.",
         "modelUrl": "https://docs.stagehand.dev/"
+      },
+      "logo": {
+        "file": "assets/logos/stagehand.png",
+        "assetUrl": "https://www.stagehand.dev/apple-icon.png?apple-icon.3_vqjztxzz_km.png",
+        "sourcePage": "https://www.stagehand.dev/",
+        "kind": "site-icon",
+        "scope": "product",
+        "publisher": "Browserbase",
+        "checked": "2026-11-08",
+        "sha256": "7d53033c68a38bd42a8a95e555938c7baf1a9e64132623c67ce58c411bdcb3c7",
+        "bytes": 2721
       }
     }
   ],

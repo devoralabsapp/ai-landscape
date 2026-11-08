@@ -829,7 +829,6 @@
   "Ghi chú biên tập": "Editorial notes",
   "Ghép framework, model/runtime, dữ liệu và đánh giá. MCP kết nối công cụ; A2A phục vụ giao tiếp giữa agent.": "Combine a framework, model/runtime, data and evaluation. MCP connects tools; A2A supports communication between agents.",
   "Giao diện": "Interface",
-  "Giao diện dùng ký hiệu chữ để nhận diện, không phải logo chính thức. Tên sản phẩm thuộc chủ sở hữu tương ứng. Bản đồ lấy cảm hứng từ CNCF Landscape và không liên kết với CNCF.": "Letter marks identify products rather than official logos. Product names belong to their owners. Inspired by CNCF Landscape without affiliation.",
   "Giao diện local không bảo đảm model và dữ liệu cũng được xử lý local.": "A local interface does not guarantee local model or data processing.",
   "Giao thức không có model hoặc gói Plus/Pro riêng.": "The protocol has no model lineup or Plus/Pro plans of its own.",
   "Giao thức kết nối": "Connection protocol",
@@ -1015,5 +1014,13 @@
   "Giảm chuyển động": "Reduce motion",
   "Hệ thống đang bật giảm chuyển động": "Your system requests reduced motion",
   "Đang giảm chuyển động theo lựa chọn của bạn hoặc cài đặt hệ thống. Nội dung và chức năng vẫn đầy đủ.": "Motion is reduced by your preference or system settings. All content and features remain available.",
-  "Đóng thông báo chuyển động": "Dismiss motion notice"
+  "Đóng thông báo chuyển động": "Dismiss motion notice",
+  "Logo và icon lấy từ website, bộ nhận diện hoặc repo chính thức của nhà phát hành. Phần Tổng quan ghi rõ nguồn ảnh và trường hợp dùng logo nhà phát hành hoặc họ sản phẩm. Tên và nhãn hiệu thuộc chủ sở hữu tương ứng. Bản đồ lấy cảm hứng từ CNCF Landscape và không liên kết với CNCF.": "Logos and icons come from publisher websites, brand kits or official repositories. Overview identifies each image source and any shared publisher or product-family identity. Names and trademarks belong to their respective owners. The map is inspired by CNCF Landscape and is not affiliated with CNCF.",
+  "Logo nhà phát hành": "Publisher logo",
+  "Logo dùng chung trong họ sản phẩm": "Shared product-family logo",
+  "Logo / icon sản phẩm": "Product logo / icon",
+  "NHẬN DIỆN & NGUỒN ẢNH": "IDENTITY & IMAGE SOURCES",
+  "Nguồn từ nhà phát hành": "Publisher source",
+  "Tệp ảnh gốc": "Original image file",
+  "Logo và nhãn hiệu thuộc chủ sở hữu tương ứng. Đối chiếu ngày 08/11/2026.": "Logos and trademarks belong to their respective owners. Checked on 8 November 2026."
 }

@@ -88,7 +88,7 @@ name|organization|kind|surfaces|hosting|openness|description|best|note|official 
 
 `surfaces` và `aliases` ngăn bằng dấu phẩy. Để trống `status` cho mục đang hoạt động. Cập nhật mốc `checked` và snapshot khi rà soát phiên bản mới. Chạy `npm run build` để sinh CSV, JSON và Markdown trước khi commit. Nếu thay số lượng mục, cập nhật README và mô tả HTML.
 
-Giao diện dùng ký hiệu chữ riêng thay logo nhà cung cấp. Tên và nhãn hiệu thuộc chủ sở hữu tương ứng. Font Be Vietnam Pro được tải từ Google Fonts, với system font dự phòng. Danh sách lưu và so sánh nằm trên trình duyệt, không có tài khoản hoặc backend.
+120 mục có logo/icon từ website, bộ nhận diện hoặc repo chính thức. Ảnh lưu tại `dist/assets/logos/`; `dist/logo-sources.json` ghi URL nguồn, tệp gốc, phạm vi nhận diện, ngày đối chiếu và SHA-256. Build sinh `logos.js` và đưa provenance vào JSON xuất. Phần Tổng quan của mỗi mục phân biệt logo sản phẩm, họ sản phẩm và nhà phát hành. Không dùng dịch vụ proxy logo, đổi màu hoặc cắt ảnh; chữ viết tắt chỉ dự phòng khi tệp ảnh không tải được. Tên, logo và nhãn hiệu thuộc chủ sở hữu tương ứng, không được cấp phép lại theo MIT của repo. Font Be Vietnam Pro được tải từ Google Fonts, với system font dự phòng. Danh sách lưu và so sánh nằm trên trình duyệt, không có tài khoản hoặc backend.
 
 ## Deploy Vercel
 

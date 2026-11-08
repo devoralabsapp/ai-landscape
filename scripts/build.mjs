@@ -4,6 +4,7 @@ import {loadCatalog} from './catalog.mjs';
 import {englishDictionary,englishCatalog} from './locales.mjs';
 
 const catalog=loadCatalog();
+writeFileSync(new URL('../dist/logos.js',import.meta.url),'/* Generated from logo-sources.json by npm run build. */\nconst LOGOS='+JSON.stringify(Object.fromEntries(catalog.tools.map(t=>[t.id,t.logo])))+';\n');
 writeFileSync(new URL('../dist/translations.en.js',import.meta.url),'/* Generated from translations.en.json by npm run build. */\nconst EN_TEXT='+JSON.stringify(englishDictionary)+';\n');
 const date='2026-11-08';
 const byCategory=new Map(catalog.categories.map(c=>[c.id,c]));
