@@ -1,8 +1,10 @@
 import './check.mjs';
 import {writeFileSync} from 'node:fs';
 import {loadCatalog} from './catalog.mjs';
+import {englishDictionary,englishCatalog} from './locales.mjs';
 
 const catalog=loadCatalog();
+writeFileSync(new URL('../dist/translations.en.js',import.meta.url),'/* Generated from translations.en.json by npm run build. */\nconst EN_TEXT='+JSON.stringify(englishDictionary)+';\n');
 const date='2026-11-08';
 const byCategory=new Map(catalog.categories.map(c=>[c.id,c]));
 const fields=[['Tên','name'],['Đơn vị','org'],['Nhóm',t=>byCategory.get(t.category).name],['Vai trò','kind'],['Giao diện',t=>t.surfaces.join(', ')],['Triển khai','hosting'],['Mô hình cung cấp','openness'],['Mô tả','description'],['Phù hợp khi','best'],['Ghi chú biên tập','note'],['Trạng thái','status'],['Nguồn chính thức','url'],['Đối chiếu','checked'],['Tên liên quan',t=>t.aliases.join(', ')],['Model / chế độ',t=>t.product.groups.flatMap(g=>g.models.map(m=>m.name)).join('; ')],['Gói sử dụng',t=>t.product.plans.map(p=>p.name+' — '+p.price).join('; ')],['Nguồn model',t=>t.product.modelUrl],['Nguồn gói',t=>t.product.pricingUrl]];
@@ -24,4 +26,10 @@ for(const layer of catalog.layers){
   }
 }
 writeFileSync(new URL('../AI-Landscape.vi.md',import.meta.url),md.trimEnd()+'\n');
+const en=englishCatalog(catalog);
+const enCategories=new Map(en.categories.map(c=>[c.id,c]));
+const enFields=fields.map(([label,fn])=>[label,label==='Nhóm'?(t=>enCategories.get(t.category).name):fn]);
+const enCsv='\uFEFF'+[fields.map(([n])=>cell(englishCatalog(n))).join(','),...en.tools.map(t=>enFields.map(([,fn])=>cell(englishCatalog(typeof fn==='function'?fn(t):t[fn]))).join(','))].join('\n')+'\n';
+writeFileSync(new URL('../dist/catalog.en.csv',import.meta.url),enCsv);
+writeFileSync(new URL('../dist/catalog.en.json',import.meta.url),JSON.stringify({snapshot:date,language:'en',...en},null,2)+'\n');
 console.log('Built catalog.csv, catalog.json and AI-Landscape.vi.md. Static site is ready in dist/.');

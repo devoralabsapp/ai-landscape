@@ -12,14 +12,16 @@
  <meta property="og:url" content="https://ai-landscape-mocha.vercel.app/">
  <link rel="canonical" href="https://ai-landscape-mocha.vercel.app/">
  <link rel="icon" type="image/svg+xml" href="favicon.svg">
- <link rel="stylesheet" href="styles.css">
- <script src="data.js" defer></script><script src="product-data.js" defer></script><script src="app.js" defer></script>
+ <script src="preferences.js"></script>
+ <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="themes.css">
+ <script src="data.js" defer></script><script src="product-data.js" defer></script><script src="translations.en.js" defer></script><script src="i18n.js" defer></script><script src="app.js" defer></script>
 </head>
 <body>
  <a class="skip" href="#explore">Đến bản đồ</a>
  <header class="topbar">
   <a class="brand" href="./" aria-label="AI Atlas, trang chủ"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>AI<span class="brand-light">Atlas</span><small>THE AI ECOSYSTEM, MAPPED.</small></span></a>
   <div class="top-nav"><button data-action="guide">Cách đọc bản đồ <span>↗</span></button><button data-action="method">Phương pháp & nguồn</button></div>
+  <div class="preferences"><label class="preference-field theme-field"><span class="sr-only">Theme</span><select id="theme-select" aria-label="Theme"></select></label><label class="preference-field language-field"><span class="sr-only">Ngôn ngữ</span><select id="language-select" aria-label="Ngôn ngữ"><option value="vi">Tiếng Việt</option><option value="en">English</option></select></label></div>
   <button class="saved-nav" id="saved-nav" data-action="saved" aria-pressed="false"><span aria-hidden="true">▱</span> Đã lưu <b id="saved-count">0</b></button>
   <button class="mobile-menu" data-action="menu" aria-label="Mở danh mục" aria-expanded="false">☰</button>
  </header>
@@ -50,6 +52,7 @@
  <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title"></dialog>
  <dialog id="info-dialog" class="info-dialog" aria-labelledby="info-title"></dialog>
  <dialog id="compare-dialog" class="compare-dialog" aria-labelledby="compare-title"></dialog>
+ <div id="preferences-status" class="sr-only" role="status" aria-live="polite"></div>
  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
  <noscript><p class="noscript">Bật JavaScript để tìm kiếm và xem bản đồ. Bạn cũng có thể tải <a href="catalog.csv">danh mục CSV</a> để đọc nội dung.</p></noscript>
 </body>

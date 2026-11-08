@@ -9,6 +9,8 @@ Bản đồ tương tác lấy cảm hứng từ [CNCF Landscape](https://landsc
 ## Chức năng
 
 - Bản đồ theo nhóm và chế độ danh mục có mô tả.
+- Tiếng Việt / English cho giao diện, 120 mục, model, gói và CSV/JSON.
+- Giao diện AI Atlas gốc cùng 6 theme chọn tay, lưu lựa chọn trong trình duyệt; hỗ trợ `?theme=...&lang=en`.
 - Tìm kiếm tiếng Việt có/không dấu, tên cũ, tên hãng, model, gói và công việc.
 - Lọc giao diện, mô hình cung cấp, local/self-host và vòng đời sản phẩm.
 - Chi tiết từng mục có ba tab: Model, Gói sử dụng và Tổng quan.
@@ -43,6 +45,12 @@ Mỗi mục trỏ đến nguồn chính thức: trang sản phẩm, tài liệu 
 Danh sách model và gói là snapshot có nguồn trong `dist/product-data.js`. Phân tầng model theo định vị của hãng trong cùng họ; không phải bảng điểm benchmark và không so ngang model ảnh, video, giọng nói với model hội thoại. Tên model API/Work/Codex không mặc định có trong mọi bộ chọn Chat. Công cụ BYOK, gateway và framework dùng catalog động của provider; mục chưa có danh mục đầy đủ được ghi rõ và dẫn catalog nguồn. Giá USD (khi nguồn xác nhận), thuế, kỳ thanh toán, quota và quốc gia hỗ trợ cần kiểm tra trực tiếp khi lựa chọn. Một số mục lịch sử được giữ lại với nhãn rõ ràng, như Relay.app đã đóng và Sora 2 **API** đã ngừng; trạng thái API không được suy rộng sang mọi sản phẩm Sora.
 
 Chưa bao quát mọi ngành dọc, plugin, checkpoint model hoặc nhà cung cấp địa phương. Dữ liệu không tự cập nhật. Gửi issue/PR để bổ sung hoặc sửa nguồn.
+
+## Theme & ngôn ngữ
+
+Sáu theme đầu theo thứ tự gallery của [Creative Theme System](https://github.com/devoralabsapp/creative-theme-system-skill): `retro`, `mono-os`, `chapter-desk`, `afterhours-fm`, `margin-notes`, `sticker-sprint`. Các palette và cấu trúc được chuyển sang thành phần thực tế của AI Atlas trong `dist/themes.css`; theme `atlas` giữ giao diện ban đầu. Thứ tự lựa chọn: URL → localStorage → mặc định. Đổi theme giữ bộ lọc, tìm kiếm, mục lưu và so sánh.
+
+Bản dịch được biên tập trong `dist/translations.en.json`. Build sinh `translations.en.js`, `catalog.en.csv` và `catalog.en.json`. `i18n.js` dùng cùng catalog dịch cho nội dung, nhãn, thông báo và accessibility; dữ liệu ID, filter value và URL giữ nguyên. Chuyển ngôn ngữ tải lại URL hiện tại, giữ bộ lọc và mục đang mở. Để thêm nội dung tiếng Việt, thêm bản dịch tương ứng và chạy build; check sẽ báo mục dữ liệu chưa dịch.
 
 ## Chạy local
 

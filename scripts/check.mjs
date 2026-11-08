@@ -1,7 +1,9 @@
 import assert from 'node:assert/strict';
+import './check-preferences.mjs';
 import {readFileSync,existsSync} from 'node:fs';
 import {Script} from 'node:vm';
 import {loadCatalog} from './catalog.mjs';
+import {englishDictionary,englishCatalog} from './locales.mjs';
 
 const {tools,categories,layers}=loadCatalog();
 assert.ok(tools.length>0,'Catalog is empty');
@@ -34,13 +36,21 @@ for(const t of tools){
 for(const required of ['ChatGPT','Claude','Gemini','Muse','Antigravity','OpenCode','OpenClaw','Qoder']){
   assert.ok(tools.some(t=>t.name===required),`Missing requested tool: ${required}`);
 }
-for(const f of ['app.js','data.js','product-data.js'])new Script(readFileSync(new URL('../dist/'+f,import.meta.url),'utf8'),{filename:f});
+for(const f of ['app.js','data.js','product-data.js','preferences.js','i18n.js','translations.en.js'])new Script(readFileSync(new URL('../dist/'+f,import.meta.url),'utf8'),{filename:f});
 const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
-for(const file of ['styles.css','app.js','data.js','product-data.js']){
+for(const file of ['styles.css','themes.css','app.js','data.js','product-data.js','preferences.js','i18n.js','translations.en.js']){
   assert.ok(html.includes(file),`Missing asset reference: ${file}`);
   assert.ok(existsSync(new URL('../dist/'+file,import.meta.url)),`Missing asset: ${file}`);
 }
 assert.match(html,/<html lang="vi">/);
 assert.ok(tools.find(t=>t.id==='chatgpt').product.plans.some(p=>p.name==='Plus'));
 assert.ok(tools.find(t=>t.id==='claude').product.groups.flatMap(g=>g.models).some(m=>m.name.includes('Sonnet')));
+const vietnamese=/[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/i;
+function checkEnglish(value){
+ if(typeof value==='string'&&vietnamese.test(value))assert.ok(!vietnamese.test(englishCatalog(value)),`Missing English translation: ${value}`);
+ else if(Array.isArray(value))value.forEach(checkEnglish);
+ else if(value&&typeof value==='object')Object.values(value).forEach(checkEnglish);
+}
+checkEnglish({tools,categories,layers});
+assert.ok(Object.keys(englishDictionary).length>700,'English catalog is incomplete');
 console.log(`Verified ${tools.length} unique records, ${categories.length} categories, ${layers.length} layers, requested tools, sources and JavaScript syntax.`);
