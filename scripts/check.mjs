@@ -39,7 +39,7 @@ for(const required of ['ChatGPT','Claude','Gemini','Muse','Antigravity','OpenCod
 }
 for(const f of ['app.js','data.js','product-data.js','preferences.js','i18n.js','translations.en.js','motion.js'])new Script(readFileSync(new URL('../dist/'+f,import.meta.url),'utf8'),{filename:f});
 const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
-for(const file of ['styles.css','themes.css','motion.css','app.js','data.js','product-data.js','preferences.js','i18n.js','translations.en.js','motion.js']){
+for(const file of ['styles.css','themes.css','motion.css','ai-illustration.css','app.js','data.js','product-data.js','preferences.js','i18n.js','translations.en.js','motion.js']){
   assert.ok(html.includes(file),`Missing asset reference: ${file}`);
   assert.ok(existsSync(new URL('../dist/'+file,import.meta.url)),`Missing asset: ${file}`);
 }

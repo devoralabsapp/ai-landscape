@@ -1,19 +1,19 @@
 /* AI Atlas motion, adapted from Web Motion System Skill:
  * 033 line reveal, 077 vector draw, 081 scroll reveal, 091 FLIP,
  * 099 tab transition, 111 press feedback, 238 stagger.
- * One owner; no business-state mutations or perpetual animation loops.
+ * Finite UI motion and separately owned ambient illustration loops. No app-state mutations.
  */
 class AtlasMotion {
  constructor(){
-  this.owned=new Map();this.channels=new WeakMap();this.seen=new Set();this.observed=new WeakSet();this.snapshots=new Map();
+  this.owned=new Map();this.ambient=new Map();this.artVisible=false;this.channels=new WeakMap();this.seen=new Set();this.observed=new WeakSet();this.snapshots=new Map();
   this.abort=new AbortController();this.frame=0;this.destroyed=false;this.ready=false;
   this.os=matchMedia('(prefers-reduced-motion: reduce)');this.siteReduced=preferenceRead('ai-atlas-motion')==='reduce';
   this.onPreference=()=>this.syncPreference();this.os.addEventListener('change',this.onPreference);
   const listen=(target,type,fn,options={})=>target.addEventListener(type,fn,{...options,signal:this.abort.signal});
   listen(window,'scroll',()=>this.schedule(),{passive:true});
-  listen(window,'resize',()=>{this.stop();this.placeTabIndicator();this.schedule();});
-  listen(document,'visibilitychange',()=>{if(document.hidden)this.stop();else this.schedule();});
-  listen(window,'pagehide',e=>{if(e.persisted){this.stop();this.observer?.disconnect();this.observed=new WeakSet();}else this.destroy();});
+  listen(window,'resize',()=>{this.stop();this.placeTabIndicator();if(this.ready)this.observeArt();this.schedule();});
+  listen(document,'visibilitychange',()=>{if(document.hidden)this.stop();else this.schedule();this.syncAmbient();});
+  listen(window,'pagehide',e=>{if(e.persisted){this.stop();this.pauseAmbient();this.observer?.disconnect();this.observed=new WeakSet();}else this.destroy();});
   listen(window,'pageshow',e=>{if(e.persisted)this.refresh();});
   listen(document,'pointerdown',e=>this.settleWithin(e.target.closest('.tool-tile,.list-row,[role="tabpanel"]')),{capture:true});
   listen(document,'focusin',e=>this.settleWithin(e.target.closest('.tool-tile,.list-row,[role="tabpanel"],dialog')));
@@ -54,24 +54,64 @@ class AtlasMotion {
   try{dismissed=sessionStorage.getItem('ai-atlas-motion-notice')==='dismissed';}catch{}
   if(notice)notice.hidden=!this.reduced||dismissed;
   const replay=document.querySelector('#motion-replay');if(replay)replay.disabled=this.reduced;
-  if(this.ready)this.refresh();this.schedule();
+  if(this.ready)this.refresh();this.syncAmbient();this.schedule();
  }
  intro(){
   if(this.reduced)return;
   const hero=document.querySelector('.hero');this.settleWithin(hero);
   hero.querySelectorAll('.hero-line').forEach((line,i)=>this.play(line,[{opacity:.15,transform:'translateY(26px)',clipPath:'inset(0 -8% 100% -8%)'},{opacity:1,transform:'none',clipPath:'inset(-22% -8% -22% -8%)'}],{duration:820,delay:i*90},'hero'));
-  hero.querySelectorAll('.hero-copy>.eyebrow,.hero-copy>p,.hero-actions .text-link>span,.hero-stats>div,.orbit-label,.planet').forEach((element,i)=>this.play(element,[{opacity:.25,translate:'0 13px'},{opacity:1,translate:'0 0'}],{duration:650,delay:Math.min(i,7)*55},'hero'));
-  hero.querySelectorAll('.orbit-stroke').forEach((line,i)=>this.play(line,[{strokeDashoffset:1,opacity:.2},{strokeDashoffset:0,opacity:1}],{duration:1100,delay:i*130},'hero'));
+  hero.querySelectorAll('.hero-copy>.eyebrow,.hero-copy>p,.hero-actions .text-link>span,.hero-stats>div,.ai-atlas-art').forEach((element,i)=>this.play(element,[{opacity:.25,translate:'0 13px'},{opacity:1,translate:'0 0'}],{duration:650,delay:Math.min(i,7)*55},'hero'));
+  hero.querySelectorAll('.ai-track').forEach((line,i)=>this.play(line,[{strokeDashoffset:1,opacity:.2},{strokeDashoffset:0,opacity:1}],{duration:1100,delay:i*130},'hero'));
  }
  schedule(){if(!this.frame&&!document.hidden&&!this.destroyed)this.frame=requestAnimationFrame(()=>{this.frame=0;this.measure();});}
  measure(){
-  const hero=document.querySelector('.hero'),scene=document.querySelector('.orbit-motion'),progress=document.querySelector('#reading-progress');
-  if(!hero)return;
-  const rect=hero.getBoundingClientRect(),max=document.documentElement.scrollHeight-innerHeight;
-  const travel=Math.max(0,Math.min(1,(scrollY)/(rect.height||1)));
-  // Read geometry first; only local decorative layers receive writes.
+  const progress=document.querySelector('#reading-progress'),max=document.documentElement.scrollHeight-innerHeight;
   if(progress)progress.style.transform=`scaleX(${max>0?Math.min(1,scrollY/max):0})`;
-  if(scene)scene.style.transform=this.reduced||innerWidth<=600?'none':`translateY(${-travel*8}px) rotate(${travel*24}deg)`;
+ }
+ loop(element,keyframes,options){
+  if(!element?.animate||this.destroyed||this.reduced)return;
+  const animation=element.animate(keyframes,{iterations:Infinity,easing:'linear',...options});
+  this.ambient.set(animation,element);
+ }
+ createAmbient(art){
+  const orbits=[{name:'a',rx:151,ry:76,tilt:-28,phase:0,duration:16000},{name:'b',rx:143,ry:85,tilt:48,phase:120,duration:21000},{name:'c',rx:139,ry:112,tilt:8,phase:245,duration:28000}];
+  for(const orbit of orbits){
+   const tilt=orbit.tilt*Math.PI/180;
+   const frames=Array.from({length:97},(_,i)=>{
+    const theta=(orbit.phase+i*360/96)*Math.PI/180;
+    const x=180+orbit.rx*Math.cos(theta)*Math.cos(tilt)-orbit.ry*Math.sin(theta)*Math.sin(tilt);
+    const y=180+orbit.rx*Math.cos(theta)*Math.sin(tilt)+orbit.ry*Math.sin(theta)*Math.cos(tilt);
+    return {transform:`translate(${x.toFixed(3)}px,${y.toFixed(3)}px)`};
+   });
+   this.loop(art.querySelector(`[data-orbit="${orbit.name}"]`),frames,{duration:orbit.duration});
+  }
+  this.loop(art.querySelector('.ai-halo'),[{transform:'rotate(0deg)'},{transform:'rotate(-360deg)'}],{duration:60000});
+  this.loop(art.querySelector('.ai-trace'),[{strokeDashoffset:1},{strokeDashoffset:0}],{duration:18000});
+  this.loop(art.querySelector('.ai-heart'),[{transform:'translateY(-3px) scale(.985)'},{transform:'translateY(3px) scale(1.015)'}],{duration:4400,direction:'alternate',easing:'ease-in-out'});
+  this.loop(art.querySelector('.ai-star-one'),[{opacity:.4},{opacity:1}],{duration:3800,direction:'alternate',easing:'ease-in-out'});
+ }
+ pauseAmbient(){for(const animation of this.ambient.keys())animation.pause();}
+ cancelAmbient(){for(const animation of this.ambient.keys())animation.cancel();this.ambient.clear();}
+ syncAmbient(){
+  const art=document.querySelector('.ai-illustration');if(!art)return;
+  if(this.destroyed||this.reduced){this.cancelAmbient();art.dataset.ambient=this.reduced?'reduced':'stopped';return;}
+  const active=this.artVisible&&!document.hidden;
+  if(active&&!this.ambient.size)this.createAmbient(art);
+  for(const animation of this.ambient.keys()){
+   if(active&&animation.playState==='paused')animation.play();
+   else if(!active&&animation.playState!=='paused')animation.pause();
+  }
+  art.dataset.ambient=active?'running':'paused';
+ }
+ observeArt(){
+  const art=document.querySelector('.ai-illustration');if(!art)return;
+  if(typeof IntersectionObserver==='undefined')this.artVisible=true;
+  else if(!this.artObserver||this.artInset!==Math.ceil(document.querySelector('.topbar')?.getBoundingClientRect().height||0)){
+   this.artObserver?.disconnect();this.artInset=Math.ceil(document.querySelector('.topbar')?.getBoundingClientRect().height||0);
+   this.artObserver=new IntersectionObserver(entries=>{for(const entry of entries){this.artVisible=entry.isIntersecting;this.syncAmbient();}},{threshold:0,rootMargin:`-${this.artInset}px 0px 0px 0px`});
+   this.artObserver.observe(art);
+  }
+  this.syncAmbient();
  }
  beforeResults(signature){
   this.resultsChanged=this.resultSignature!==undefined&&signature!==this.resultSignature;
@@ -132,7 +172,7 @@ class AtlasMotion {
   const bar=document.querySelector('#compare-bar');
   if(bar&&!bar.hidden&&this.barHidden!==false)this.play(bar,[{opacity:.2,translate:'0 16px'},{opacity:1,translate:'0 0'}],{duration:380},'bar');
   this.barHidden=bar?.hidden;
-  this.schedule();
+  this.syncAmbient();this.schedule();
  }
  feedback(id){
   const avatar=[...document.querySelectorAll('[data-entry]')].find(row=>row.dataset.entry===id)?.querySelector('.tool-avatar');
@@ -163,7 +203,7 @@ class AtlasMotion {
   panel.querySelectorAll('.product-intro,.model-copy,.plan-card,.detail-meta,.detail-section').forEach((el,i)=>this.play(el,[{opacity:.35,translate:'0 9px'},{opacity:1,translate:'0 0'}],{duration:300,delay:Math.min(i,5)*20},'tab-panel'));
  }
 
- start(){this.ready=true;this.intro();this.refresh();}
- destroy(){if(this.destroyed)return;this.destroyed=true;this.stop();this.abort.abort();this.os.removeEventListener('change',this.onPreference);this.observer?.disconnect();}
+ start(){this.ready=true;this.observeArt();this.intro();this.refresh();}
+ destroy(){if(this.destroyed)return;this.destroyed=true;this.stop();this.cancelAmbient();this.artObserver?.disconnect();this.abort.abort();this.os.removeEventListener('change',this.onPreference);this.observer?.disconnect();}
 }
 const atlasMotion=new AtlasMotion();

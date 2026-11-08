@@ -1,0 +1,24 @@
+/* Original vector AI nucleus. Palette adapts to the selected Atlas theme. */
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(250px,1fr) 135px;gap:22px;min-height:374px;padding:34px 38px}
+.hero-copy{min-width:0}.hero-stats{margin:0;padding-left:0;min-width:0}.hero-stats>div{padding-left:16px}
+.hero .ai-illustration{--ai-a:#72937e;--ai-b:#c28a65;position:relative;inset:auto;width:100%;max-width:360px;height:306px;margin:auto;transform:none;opacity:1;pointer-events:none}
+.ai-atlas-art{width:100%;height:100%;overflow:visible;display:block}
+.ai-haze-start{stop-color:var(--ai-a);stop-opacity:.17}.ai-haze-end{stop-color:var(--ai-a);stop-opacity:0}
+.ai-sphere-light{stop-color:var(--paper,#fff)}.ai-sphere-mid{stop-color:color-mix(in srgb,var(--paper,#fff) 92%,var(--ai-a))}.ai-sphere-edge{stop-color:color-mix(in srgb,var(--paper,#fff) 72%,var(--ai-a))}
+.ai-ink-a{stop-color:var(--ai-a)}.ai-ink-b{stop-color:var(--ai-b)}
+.ai-registration{fill:none;stroke:var(--ai-a);stroke-width:.6;opacity:.24}.ai-registration circle{stroke-dasharray:1 12}
+.ai-track{fill:none;stroke:url(#ai-orbit-ink);stroke-width:.9;opacity:.55;stroke-dasharray:1;stroke-dashoffset:0}.ai-track-soft{stroke-width:.7;opacity:.3}
+.ai-trace{fill:none;stroke:var(--ai-a);stroke-width:1.7;stroke-dasharray:.12 .88;stroke-linecap:round;opacity:.8}
+.ai-halo{fill:none;stroke:var(--ai-a);transform-origin:180px 180px}.ai-halo circle{stroke-width:.6;opacity:.3;stroke-dasharray:1 7}.ai-halo path{stroke-width:1.2;opacity:.7;stroke-linecap:round}
+.ai-heart{transform-origin:180px 180px}.ai-core-shadow{fill:var(--ai-a);opacity:.08}.ai-core{stroke:color-mix(in srgb,var(--ai-a) 50%,var(--paper,#fff));stroke-width:.8}.ai-core-rim{fill:none;stroke:var(--ai-a);stroke-width:.55;opacity:.18}
+.ai-monogram{fill:none;stroke:var(--ink);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.ai-circuit{fill:none;stroke:var(--ai-a);stroke-width:1;opacity:.45}.ai-circuit circle{fill:var(--paper,#fff)}
+.ai-shine{fill:none;stroke:var(--paper,#fff);stroke-width:2;stroke-linecap:round;opacity:.85}
+.ai-satellite-aura{fill:var(--ai-a);opacity:.12}.ai-satellite-dot{fill:var(--ai-a);stroke:var(--paper,#fff);stroke-width:1.5}.satellite-b .ai-satellite-dot{fill:var(--ai-b)}.satellite-b .ai-satellite-aura{fill:var(--ai-b)}.ai-satellite-glint{fill:var(--paper,#fff);opacity:.8}
+.ai-art-labels{font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:7px;font-weight:500;letter-spacing:1.5px;fill:var(--muted);opacity:.8}.ai-star{fill:none;stroke:var(--ai-b);stroke-width:1;stroke-linecap:round;transform-box:fill-box;transform-origin:center}
+html[data-theme=mono-os] .ai-illustration{--ai-a:#78818a;--ai-b:#a29481}html[data-theme=chapter-desk] .ai-illustration{--ai-a:#829266;--ai-b:#b7774d}html[data-theme=afterhours-fm] .ai-illustration{--ai-a:#b7cfbb;--ai-b:#e3c77a}html[data-theme=margin-notes] .ai-illustration{--ai-a:#ab8b9f;--ai-b:#c69876}html[data-theme=sticker-sprint] .ai-illustration{--ai-a:#6f9b8b;--ai-b:#ca906c}
+@media(min-width:1600px){.hero{grid-template-columns:minmax(0,1.1fr) minmax(310px,1fr) 160px;padding:38px 55px;min-height:414px}.hero .ai-illustration{height:338px;max-width:390px}}
+@media(max-width:1190px){.hero{grid-template-columns:minmax(0,1fr) minmax(225px,.9fr) 112px;padding:30px 27px;gap:16px}.hero .ai-illustration{height:278px}.hero-stats{min-width:0}}
+@media(max-width:1050px){.hero{grid-template-columns:minmax(0,1fr) minmax(235px,.85fr);gap:22px}.hero .ai-illustration{height:265px}.hero-stats{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:22px;margin:0;padding-top:8px}.hero-stats>div{border-left:1px solid var(--line);padding-left:16px;gap:5px}.hero-stats .stat-date{margin:0;padding-top:0;align-items:center}.hero-stats strong{font-size:30px}.hero-stats span{font-size:10px}}
+@media(max-width:600px){.hero{display:grid;grid-template-columns:1fr;gap:8px;padding:27px 22px 25px;min-height:0}.hero-copy{z-index:1}.hero-copy p{max-width:none}.hero .ai-illustration{grid-row:2;width:100%;height:251px;max-width:286px;margin:7px auto 8px;opacity:1;inset:auto;transform:none}.hero-stats{grid-column:1;grid-row:3;grid-template-columns:1fr 1fr 1.35fr;gap:12px;padding:0;margin:0}.hero-stats>div{padding-left:10px}.hero-stats .stat-date{padding-left:10px}.hero-stats strong{font-size:26px}.hero-stats span{font-size:9px}.hero-stats .stat-date span{font-size:8px}.hero h1{font-size:39px;margin-top:16px}.hero-actions{margin-top:16px}.ai-art-labels{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.ai-atlas-art *{animation:none!important;transition:none!important}}
