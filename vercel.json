@@ -3,5 +3,13 @@
   "framework": null,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "installCommand": "npm install --ignore-scripts"
+  "installCommand": "npm install --ignore-scripts",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "ai-landscape-mocha\\.vercel\\.app" }],
+      "destination": "https://ai.devoralabs.tech/:path*",
+      "permanent": true
+    }
+  ]
 }
