@@ -6,6 +6,12 @@
   "installCommand": "npm install --ignore-scripts",
   "redirects": [
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "ai-landscape-mocha\\.vercel\\.app" }],
+      "destination": "https://ai.devoralabs.tech/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "ai-landscape-mocha\\.vercel\\.app" }],
       "destination": "https://ai.devoralabs.tech/:path*",
