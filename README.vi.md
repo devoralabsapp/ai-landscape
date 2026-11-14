@@ -95,6 +95,8 @@ name|organization|kind|surfaces|hosting|openness|description|best|note|official 
 
 ## Deploy Vercel
 
-Import repo, chọn framework **Other**. `vercel.json` cấu hình lệnh build `npm run build` và thư mục output `dist`. Không cần biến môi trường. Git integration deploy lại khi push nhánh production `main`. Domain chính là `ai.devoralabs.tech`. Quy tắc chuyển hướng trong `vercel.json` giữ đường dẫn và tham số khi truy cập từ địa chỉ Vercel cũ.
+Import repo, chọn framework **Other**. `vercel.json` cấu hình lệnh build `npm run build` và thư mục output `dist`. Không cần biến môi trường. Git integration deploy lại khi push nhánh production `main`. Domain chính là `ai.devoralabs.tech`. Xem [handoff](handoff.md#known-deployment-issue) để biết trạng thái địa chỉ Vercel cũ.
+
+Tài liệu tiếp quản gồm [trạng thái dự án](handoff.md), [kiến trúc](architecture.md) và [hướng dẫn cho agent](agent.md).
 
 Mã nguồn và phần ghi chú tự biên tập: MIT. Tên, nhãn hiệu và nội dung của bên thứ ba giữ các quyền tương ứng; giấy phép repo không cấp quyền dùng nhãn hiệu hoặc thay đổi giấy phép của sản phẩm được liệt kê.

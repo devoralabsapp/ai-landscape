@@ -66,7 +66,13 @@ The six additional themes come from the [Creative Theme System](https://github.c
 
 ## Deployment
 
-Vercel builds the site with `npm run build` and serves `dist`. Pushes to `main` deploy to [ai.devoralabs.tech](https://ai.devoralabs.tech/). The previous public Vercel URL redirects to the custom domain and preserves paths and query parameters.
+Vercel builds the site with `npm run build` and serves `dist`. Pushes to `main` deploy to [ai.devoralabs.tech](https://ai.devoralabs.tech/). See the [handoff](handoff.md#known-deployment-issue) for the legacy hostname's routing status.
+
+## Maintainer documentation
+
+- [Handoff](handoff.md) for the current release, known issues and local deliverables.
+- [Architecture](architecture.md) for source files, build outputs and browser state.
+- [Agent guide](agent.md) for catalog, UI and release workflows.
 
 ## License
 
